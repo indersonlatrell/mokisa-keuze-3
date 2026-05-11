@@ -493,94 +493,102 @@ footer{background:#070402;padding:5rem 3.5rem 2.5rem;border-top:1px solid var(--
       <p class="s-body">Combine treatments for a complete wellness journey. All prices excl. 10% BTW.</p>
     </div>
     <div class="pkg-grid">
-      <div class="pkg-sidebar rv">
+      <div class="pkg-sidebar rv vis">
         <div class="pkg-tabs">
-          <button class="pkg-btn on" onclick="showPkg(event,'traditional')">Traditional <span class="arrow">→</span></button>
-          <button class="pkg-btn" onclick="showPkg(event,'therapeutic')">Therapeutic <span class="arrow">→</span></button>
+          <button class="pkg-btn on" onclick="showPkg(event,'therapeutic')">Therapeutic <span class="arrow">→</span></button>
           <button class="pkg-btn" onclick="showPkg(event,'podo')">Podo <span class="arrow">→</span></button>
-          <button class="pkg-btn" onclick="showPkg(event,'signature')">Signature <span class="arrow">→</span></button>
+          <button class="pkg-btn" onclick="showPkg(event,'sweti')">Sweti <span class="arrow">→</span></button>
+          <button class="pkg-btn" onclick="showPkg(event,'dampu')">Dampu <span class="arrow">→</span></button>
           <button class="pkg-btn" onclick="showPkg(event,'kids')">Kids <span class="arrow">→</span></button>
+          <button class="pkg-btn signature" onclick="showPkg(event,'signature')">Signature <span class="arrow">→</span></button>
         </div>
       </div>
-      <div class="rv d1">
-        <!-- Traditional -->
-        <div class="pkg-panel on" id="pp-traditional">
+
+      <div class="rv d1 vis">
+        <div class="active pkg-panel on" id="pp-therapeutic">
           <div class="pkg-head">
-            <div class="pkg-title">Traditional <i>Packages</i></div>
-            <p class="pkg-desc">Classic combinations of Sweti, Dampu, and massage crafted for complete healing and restoration.</p>
+            <div class="s-title">Therapeutic <i class="pkg-pkg">Pakketten</i></div>
+            <p class="pkg-desc">Combinaties van de traditionele behandelingen speciaal gericht op lichamelijke aandoeningen z.a. spierpijnen, pijnen op specifieke lichaamsdelen of chronische gewrichtspijnen.</p>
           </div>
           <div class="pkg-rows">
-            <div class="pkg-row"><div><div class="pkg-row-name">Sweti &amp; Dampu</div><div class="pkg-row-sub">90 min</div></div><div class="pkg-row-price">SRD 1,200</div></div>
-            <div class="pkg-row"><div><div class="pkg-row-name">Dampu &amp; Relax</div><div class="pkg-row-sub">120 min</div></div><div class="pkg-row-price">SRD 1,300</div></div>
-            <div class="pkg-row"><div><div class="pkg-row-name">Dampu &amp; Deep Tissue</div><div class="pkg-row-sub">120 min</div></div><div class="pkg-row-price">SRD 1,350</div></div>
-            <div class="pkg-row"><div><div class="pkg-row-name">Sweti &amp; Relax</div><div class="pkg-row-sub">90 min</div></div><div class="pkg-row-price">SRD 1,200</div></div>
-            <div class="pkg-row"><div><div class="pkg-row-name">Sweti, Dampu &amp; Relax</div><div class="pkg-row-sub">150 min</div></div><div class="pkg-row-price">SRD 1,750</div></div>
-            <div class="pkg-row"><div><div class="pkg-row-name">Sweti, Dampu &amp; Deep Tissue</div><div class="pkg-row-sub">150 min</div></div><div class="pkg-row-price">SRD 1,800</div></div>
-            <div class="pkg-row"><div><div class="pkg-row-name">Podo, Dampu &amp; Relax</div><div class="pkg-row-sub">150 min</div></div><div class="pkg-row-price">SRD 2,000</div></div>
-            <div class="pkg-row"><div><div class="pkg-row-name">Podo, Sweti &amp; Relax</div><div class="pkg-row-sub">120 min</div></div><div class="pkg-row-price">SRD 1,850</div></div>
-            <div class="pkg-row"><div><div class="pkg-row-name">Podo, Dampu &amp; Deep Tissue</div><div class="pkg-row-sub">120 min</div></div><div class="pkg-row-price">SRD 2,050</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Dampu &amp; Ali Skin</div><div class="pkg-row-price">SRD 1,745</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Ali Skin</div><div class="pkg-row-price">SRD 1,645</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Deeptissue</div><div class="pkg-row-price">SRD 1,545</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Sweti, Dampu &amp; Ali Skin</div><div class="pkg-row-price">SRD 2,385</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Podo, Dampu &amp; Ali Skin</div><div class="pkg-row-price">SRD 2,535</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Deep Tissue</div><div class="pkg-row-price">SRD 850</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Relax</div><div class="pkg-row-price">SRD 800</div></div>
           </div>
-          <div class="pkg-footer"><p class="pkg-note">*excl. 10% BTW</p><button class="btn-sm" onclick="document.getElementById('booking').openBM()">Request Date</button></div>
+          <div class="pkg-footer"><p class="pkg-note">*incl. 10% BTW</p><button class="btn-sm" onclick="openBM()">Datum aanvragen</button></div>
         </div>
-        <!-- Therapeutic -->
-        <div class="pkg-panel" id="pp-therapeutic">
-          <div class="pkg-head">
-            <div class="pkg-title">Therapeutic <i>Packages</i></div>
-            <p class="pkg-desc">Targeted combinations for muscle pain, joint issues, specific body parts and chronic complaints.</p>
-          </div>
-          <div class="pkg-rows">
-            <div class="pkg-row"><div class="pkg-row-name">Dampu &amp; Ali Skin</div><div class="pkg-row-price">SRD 1,400</div></div>
-            <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Ali Skin</div><div class="pkg-row-price">SRD 1,350</div></div>
-            <div class="pkg-row"><div class="pkg-row-name">Sweti, Dampu &amp; Ali Skin</div><div class="pkg-row-price">SRD 1,900</div></div>
-            <div class="pkg-row"><div class="pkg-row-name">Podo, Dampu &amp; Ali Skin</div><div class="pkg-row-price">SRD 2,100</div></div>
-          </div>
-          <div class="pkg-footer"><p class="pkg-note">*excl. 10% BTW</p><button class="btn-sm" onclick="document.getElementById('booking').openBM()">Request Date</button></div>
-        </div>
-        <!-- Podo -->
+
         <div class="pkg-panel" id="pp-podo">
           <div class="pkg-head">
-            <div class="pkg-title">Podo <i>Treatments</i></div>
+            <div class="s-title">Podo <i class="pkg-pkg">Behandelingen</i></div>
             <p class="pkg-desc">Body scrub with our signature açaí extract formula, combined with our most popular treatments.</p>
           </div>
           <div class="pkg-rows">
-            <div class="pkg-row"><div class="pkg-row-name">Full Body Scrub</div><div class="pkg-row-price">SRD 750</div></div>
-            <div class="pkg-row"><div class="pkg-row-name">Podoscrub &amp; Sweti</div><div class="pkg-row-price">SRD 1,250</div></div>
-            <div class="pkg-row"><div class="pkg-row-name">Podoscrub &amp; Dampu</div><div class="pkg-row-price">SRD 1,400</div></div>
-            <div class="pkg-row"><div class="pkg-row-name">Podoscrub &amp; Relax</div><div class="pkg-row-price">SRD 1,350</div></div>
-            <div class="pkg-row"><div class="pkg-row-name">Podoscrub &amp; Deep Tissue</div><div class="pkg-row-price">SRD 1,400</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Full Body Scrub</div><div class="pkg-row-price">SRD 900</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Podoscrub &amp; Sweti</div><div class="pkg-row-price">SRD 1,595</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Podoscrub &amp; Dampu</div><div class="pkg-row-price">SRD 1,695</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Podoscrub &amp; Relax</div><div class="pkg-row-price">SRD 1,645</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Podoscrub &amp; Deep Tissue</div><div class="pkg-row-price">SRD 1,695</div></div>
           </div>
-          <div class="pkg-footer"><p class="pkg-note">*excl. 10% BTW</p><button class="btn-sm" onclick="document.getElementById('booking').openBM()">Request Date</button></div>
+          <div class="pkg-footer"><p class="pkg-note">*incl. 10% BTW</p><button class="btn-sm" onclick="openBM()">Datum aanvragen</button></div>
         </div>
-        <!-- Signature -->
-        <div class="pkg-panel" id="pp-signature">
+
+        <div class="pkg-panel" id="pp-sweti">
           <div class="pkg-head">
-            <div class="pkg-title">Signature <i>Packages</i></div>
-            <p class="pkg-desc">The ultimate expression of Traditional Maroon wellness — our most celebrated curated experiences.</p>
+            <div class="s-title">Sweti <i class="pkg-pkg">Combinations</i></div>
+            <p class="pkg-desc">Combinaties met stoom voor reiniging, ontspanning, huidverzorging en herstel van het lichaam.</p>
           </div>
           <div class="pkg-rows">
-            <div class="pkg-row feat">
-              <div><div class="pkg-row-name">Package+</div><div class="pkg-row-sub">Sweti · Dampu · Full Body Podoscrub · Relax Massage · The ultimate Maroon experience</div></div>
-              <div class="pkg-row-price">SRD 2,500</div>
-            </div>
-            <div class="pkg-row feat">
-              <div><div class="pkg-row-name">Uma Package</div><div class="pkg-row-sub">Sweti · Dampu · Bakapasi · Full Body Podoscrub · Relax Massage · Women's complete renewal ritual</div></div>
-              <div class="pkg-row-price">SRD 2,750</div>
-            </div>
+            <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Ali Skin</div><div class="pkg-row-price">SRD 1,645</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Deeptissue</div><div class="pkg-row-price">SRD 1,545</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Dampu</div><div class="pkg-row-price">SRD 1,545</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Sweti, Dampu &amp; Ali Skin</div><div class="pkg-row-price">SRD 2,385</div></div>
           </div>
-          <div class="pkg-footer"><p class="pkg-note">*excl. 10% BTW</p><button class="btn-sm" onclick="document.getElementById('booking').openBM()">Request Date</button></div>
+          <div class="pkg-footer"><p class="pkg-note">*incl. 10% BTW</p><button class="btn-sm" onclick="openBM()">Datum aanvragen</button></div>
         </div>
-        <!-- Kids -->
+
+        <div class="pkg-panel" id="pp-dampu">
+          <div class="pkg-head">
+            <div class="s-title">Dampu <i class="pkg-pkg">Combinations</i></div>
+            <p class="pkg-desc">Gerichte combinaties voor spierpijn, gewrichtsklachten, specifieke lichaamsdelen en chronische klachten.</p>
+          </div>
+          <div class="pkg-rows">
+            <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Dampu</div><div class="pkg-row-price">SRD 1,545</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Dampu &amp; Relax</div><div class="pkg-row-price">SRD 1,495</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Dampu &amp; Deeptissue</div><div class="pkg-row-price">SRD 1,545</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Dampu, Podo &amp; Relax</div><div class="pkg-row-price">SRD 2,235</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Dampu, Podo &amp; Deeptissue</div><div class="pkg-row-price">SRD 2,285</div></div>
+          </div>
+          <div class="pkg-footer"><p class="pkg-note">*incl. 10% BTW</p><button class="btn-sm" onclick="openBM()">Datum aanvragen</button></div>
+        </div>
+
         <div class="pkg-panel" id="pp-kids">
           <div class="pkg-head">
-            <div class="pkg-title">Kids <i>Treatments</i></div>
-            <p class="pkg-desc">Gentle, caring treatments supporting healthy growth, immune strength, relaxation and radiant skin for the little ones.</p>
+            <div class="s-title">Kids <i class="pkg-pkg">Behandelingen</i></div>
+            <p class="pkg-desc">Zachte, zorgzame behandelingen ter ondersteuning van gezonde groei, weerstand, ontspanning en een stralende huid voor de kleintjes.</p>
           </div>
           <div class="pkg-rows">
             <div class="pkg-row"><div><div class="pkg-row-name">Pikin' Nengee</div><div class="pkg-row-sub">Kids massage (3–12 yrs) · Relieves stress, strengthens immune system, promotes good sleep</div></div><div class="pkg-row-price">SRD 550</div></div>
             <div class="pkg-row"><div><div class="pkg-row-name">Nyoni</div><div class="pkg-row-sub">Baby massage (0–3 yrs) · Supports healthy physical growth, relieves colic and poor sleep</div></div><div class="pkg-row-price">SRD 450</div></div>
             <div class="pkg-row"><div><div class="pkg-row-name">Pikin' Package</div><div class="pkg-row-sub">Podoscrub &amp; Relax Massage · Fresh, soft and radiant skin for kids</div></div><div class="pkg-row-price">SRD 1,000</div></div>
           </div>
-          <div class="pkg-footer"><p class="pkg-note">*excl. 10% BTW</p><button class="btn-sm" onclick="document.getElementById('booking').openBM()">Request Date</button></div>
+          <div class="pkg-footer"><p class="pkg-note">*incl. 10% BTW</p><button class="btn-sm" onclick="openBM()">Datum aanvragen</button></div>
+        </div>
+
+        <div class="pkg-panel" id="pp-signature">
+          <div class="pkg-head">
+            <div class="s-title">Signature <i class="pkg-pkg">Pakketten</i></div>
+            <p class="pkg-desc">De ultieme beleving van traditionele Marron wellness — onze meest bijzondere samengestelde ervaringen.</p>
+          </div>
+          <div class="pkg-rows">
+            <div class="pkg-row feat"><div><div class="pkg-row-name">Package+</div><div class="pkg-row-sub">Sweti · Dampu · Full Body Podoscrub · Relax Massage · The ultimate Maroon experience</div></div><div class="pkg-row-price">SRD 2,500</div></div>
+            <div class="pkg-row feat"><div><div class="pkg-row-name">Uma Package</div><div class="pkg-row-sub">Sweti · Dampu · Bakapasi · Full Body Podoscrub · Relax Massage · Women's complete renewal ritual</div></div><div class="pkg-row-price">SRD 2,750</div></div>
+          </div>
+          <div class="pkg-footer"><p class="pkg-note">*incl. 10% BTW</p><button class="btn-sm" onclick="openBM()">Datum aanvragen</button></div>
         </div>
       </div>
     </div>
