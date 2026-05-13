@@ -1026,6 +1026,8 @@ footer{background:#070402;padding:5rem 3.5rem 2.5rem;border-top:1px solid var(--
   .hero-img {
   position: absolute;
   inset: 0;
+   height: 100% !important;
+  width: 100% !important;
   background-image: url("./images/photo1.jpg") !important;
   background-size: cover !important;
   background-position: center center !important;
@@ -1278,15 +1280,16 @@ footer{background:#070402;padding:5rem 3.5rem 2.5rem;border-top:1px solid var(--
     padding-right:1.35rem!important;
   }
 
-  #home{
-    width:100%!important;
-    min-height:100svh!important;
-    height:auto!important;
-    padding:7rem 1.35rem 7.5rem!important;
-    display:flex!important;
-    align-items:flex-end!important;
-    overflow:hidden!important;
-  }
+ #home {
+  position: relative !important;
+  width: 100% !important;
+  height: 100vh !important;
+  min-height: 600px !important;
+  padding: 7rem 1.35rem 7.5rem !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  overflow: hidden !important;
+}
 
 .hero-img,
 .hero-media,
