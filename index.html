@@ -1023,17 +1023,13 @@ footer{background:#070402;padding:5rem 3.5rem 2.5rem;border-top:1px solid var(--
     padding:7rem 1.4rem 7rem!important;
   }
 
-  .hero-img{
-  position:absolute;
-  inset:0;
-  background-image:url("./images/photo1.jpg");
-  background-size:cover;
-  background-position:center top;
-  background-repeat:no-repeat;
-  position:absolute;
-   inset:0;
-   background-image: url("./images/photo1.jpg");
-
+  .hero-img {
+  position: absolute;
+  inset: 0;
+  background-image: url("./images/photo1.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
   .hero-img::after{
@@ -1293,18 +1289,18 @@ footer{background:#070402;padding:5rem 3.5rem 2.5rem;border-top:1px solid var(--
     overflow:hidden!important;
   }
 
-  .hero-img,
-  .hero-media,
-  .hero-bg{
-    left:0!important;
-    right:0!important;
-    width:100%!important;
-    max-width:100%!important;
-    overflow:hidden!important;
-    background-size:cover!important;
-    background-position:center center!important;
-    transform:none!important;
-  }
+.hero-img,
+.hero-media,
+.hero-bg {
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  background-size: cover !important;
+  background-position: center center !important;  /* change "center top" → "center center" */
+  transform: none !important;
+}
 
   .hero-content,
   .hero-copy,
