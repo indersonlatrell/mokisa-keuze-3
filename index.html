@@ -1029,17 +1029,16 @@ footer{background:#070402;padding:5rem 3.5rem 2.5rem;border-top:1px solid var(--
   background-image: url("./images/photo1.jpg") !important;
   background-size: cover !important;
   background-position: center center !important;
-  background-repeat: no-repeat !important;
+  z-index: 0 !important;
+  opacity: 1 !important;
 }
 
-  .hero-img::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-      linear-gradient(to bottom, rgba(15,9,5,.25), rgba(15,9,5,.82)),
-      linear-gradient(to right, rgba(15,9,5,.75), rgba(15,9,5,.25));
-  }
+ .hero-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(15,9,5,.85), rgba(15,9,5,.1));
+}
 
   .hero-content,
   .hero-copy,
