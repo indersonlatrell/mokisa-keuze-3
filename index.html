@@ -80,7 +80,6 @@ nav.stuck{background:rgba(15,9,5,0.96);backdrop-filter:blur(16px);padding:1rem 3
 .nav-ul{font-family: "Myriad Pro", "DM Sans", Arial, sans-serif !important;}
 /* HERO */
 #home{height:100vh;min-height:680px;position:relative;display:flex;align-items:flex-end;overflow:hidden}
-.hero-img{position:absolute;inset:0;background-image: url("./images/photo1.jpg");}
 .hero-overlay2{position:absolute;inset:0;background:linear-gradient(to right, rgba(10,6,2,.6) 0%, transparent 60%)}
 .hero-content{position:relative;z-index:2;padding:5rem 3.5rem;max-width:780px;animation:hUp 1.2s ease forwards}
 @keyframes hUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
@@ -1031,6 +1030,10 @@ footer{background:#070402;padding:5rem 3.5rem 2.5rem;border-top:1px solid var(--
   background-size:cover;
   background-position:center top;
   background-repeat:no-repeat;
+  position:absolute;
+   inset:0;
+   background-image: url("./images/photo1.jpg");
+
 }
 
   .hero-img::after{
