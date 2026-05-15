@@ -2826,8 +2826,10 @@ const I18N_NL_TO_EN = {
   "Gezondheidsklachten of speciale wensen voor de gast...": "Health conditions or special requests for the guest...",
   "Selecteer datum...": "Select date...",
   "incl. btw": "incl. VAT",
+  "Marron": "Maroon",
+  "marron": "maroon",
   "*incl. 10% BTW": "*incl. 10% VAT",
- "Waar Marron traditie": "Where Marron Tradition",
+ "Waar Marron traditie": "Where Maroon Tradition",
 "Heelt": "Heals",
 "Mokisa is Suriname\u2019s eerste traditionele Marron Wellness Centrum. Op deze bijzondere komen eeuwenoude N'Djuka-welzijnsbehandelingen perfect samen met hedendaagse zord. Onze therapeuten zijn gespecialiseerd in authentieke Marron-technieken.Met hun ervaren handen en gebruik van pure, natuurlijke kruidenextracten helpen zij u om uw natuurlijke balans en vitaliteit weer volledig te herstellen.": "Mokisa is Suriname's first traditional Maroon Wellness Centre. In this special place, age-old N'Djuka wellness treatments come together perfectly with contemporary care. Our therapists specialise in authentic Maroon techniques. With their skilled hands and use of pure, natural herbal extracts, they help you fully restore your natural balance and vitality.",
 "Elke behandeling bij Mokisa is diep geworteld in traditionele kennis, die al generaties lang liefdevol wordt doorgegeven.": "Every treatment at Mokisa is deeply rooted in traditional knowledge, lovingly passed down through generations.",
@@ -2915,6 +2917,8 @@ const I18N_EN_TO_NL = {
   "Health conditions or special requests for the guest...": "Gezondheidsklachten of speciale wensen voor de gast...",
   "Select date...": "Selecteer datum...",
   "incl. VAT": "incl. btw",
+  "Maroon": "Marron",
+  "maroon": "marron",
   "*incl. 10% VAT": "*incl. 10% BTW",
   "Therapeutic Treatments": "Therapeutische behandelingen",
   "Full Body Scrub": "Full Body Scrub",
@@ -2922,7 +2926,7 @@ const I18N_EN_TO_NL = {
   "Body Scrub": "Body Scrub",
   "Massage": "Massage",
   "Detox": "Detox",
- "Where Marron Tradition": "Waar Marron traditie",
+ "Where Maroon Tradition": "Waar Marron traditie",
 "Heals": "Heelt",
 "Mokisa is Suriname's first traditional Maroon Wellness Centre. In this special place, age-old N'Djuka wellness treatments come together perfectly with contemporary care. Our therapists specialise in authentic Maroon techniques. With their skilled hands and use of pure, natural herbal extracts, they help you fully restore your natural balance and vitality.": "Mokisa is Suriname's eerste traditionele Marron Wellness Centrum. Op deze bijzondere komen eeuwenoude N'Djuka-welzijnsbehandelingen perfect samen met hedendaagse zord. Onze therapeuten zijn gespecialiseerd in authentieke Marron-technieken.Met hun ervaren handen en gebruik van pure, natuurlijke kruidenextracten helpen zij u om uw natuurlijke balans en vitaliteit weer volledig te herstellen.",
 "Every treatment at Mokisa is deeply rooted in traditional knowledge, lovingly passed down through generations.": "Elke behandeling bij Mokisa is diep geworteld in traditionele kennis, die al generaties lang liefdevol wordt doorgegeven.",
@@ -2940,6 +2944,15 @@ function mokisaTranslateString(input, lang){
     if(out === key) out = val;
     else if(out.includes(key)) out = out.split(key).join(val);
   });
+
+  /* Final safety pass: translate the word Maroon/Marron everywhere,
+     even if a line was not listed exactly in the dictionary. */
+  if (lang === 'en') {
+    out = out.replace(/\bMarron\b/g, 'Maroon').replace(/\bmarron\b/g, 'maroon');
+  } else {
+    out = out.replace(/\bMaroon\b/g, 'Marron').replace(/\bmaroon\b/g, 'marron');
+  }
+
   return leading + out + trailing;
 }
 function setLang(lang){
