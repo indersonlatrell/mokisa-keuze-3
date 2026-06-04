@@ -3093,5 +3093,67 @@ function showTreatmentGroup(event, group){
 }
 </script>
 
+
+<style>
+.ali-skin-note{
+  margin-top:1rem;
+  padding:.9rem 1rem;
+  border:1px solid rgba(184,147,90,.35);
+  background:rgba(184,147,90,.08);
+  color:rgba(245,237,216,.72);
+  font-size:.82rem;
+  line-height:1.65;
+}
+.ali-skin-note strong{
+  color:var(--gold);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+  document.querySelectorAll('.t-row').forEach(function(row){
+    const name = row.querySelector('.t-name');
+    const price = row.querySelector('.t-price');
+
+    if(
+      name &&
+      price &&
+      name.textContent.trim().toLowerCase() === 'ali skin' &&
+      !row.querySelector('.ali-skin-note')
+    ){
+      const note = document.createElement('div');
+      note.className = 'ali-skin-note';
+      note.innerHTML = '<strong>Belangrijk om te weten:</strong> De Ali Skin behandeling wordt uitgevoerd door een mannelijke therapeut.';
+      price.insertAdjacentElement('afterend', note);
+    }
+  });
+
+  document.addEventListener('change', function(e){
+    if(!e.target.matches('select')) return;
+
+    const select = e.target;
+    const value = (select.value || '').toLowerCase();
+    const field = select.closest('.booking-field') || select.parentElement;
+
+    if(!field) return;
+
+    let note = field.querySelector('.booking-ali-skin-note');
+
+    if(value.includes('ali skin')){
+      if(!note){
+        note = document.createElement('div');
+        note.className = 'ali-skin-note booking-ali-skin-note';
+        note.innerHTML = '<strong>Belangrijk:</strong> De Ali Skin behandeling wordt uitgevoerd door een mannelijke therapeut.';
+        field.appendChild(note);
+      }
+    } else if(note){
+      note.remove();
+    }
+  });
+
+});
+</script>
+ 
 </body>
 </html>
