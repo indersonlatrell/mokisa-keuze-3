@@ -2095,6 +2095,39 @@ footer{
   background:#F7EAD8!important;
   color:#3A2412!important;
 }
+
+/* ===== FINAL FIX V6: readable stats + package description text ===== */
+.about-num .l{
+  color:#8A5F2D!important;
+  background:transparent!important;
+  opacity:1!important;
+  text-shadow:none!important;
+  font-family:"Myriad Pro","DM Sans",Arial,sans-serif!important;
+  font-size:.72rem!important;
+  font-weight:500!important;
+  letter-spacing:.12em!important;
+}
+
+.about-num .n{
+  color:#9A6A2D!important;
+  background:transparent!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+
+.pkg-row-sub,
+.pkg-desc,
+.s-body,
+.t-desc{
+  color:rgba(42,26,10,.78)!important;
+  opacity:1!important;
+}
+
+.pkg-row-sub{
+  font-size:.76rem!important;
+  line-height:1.55!important;
+}
+
 </style>
 </head>
 <body>
@@ -2415,9 +2448,9 @@ footer{
             <p class="pkg-desc">Zachte, zorgzame behandelingen ter ondersteuning van gezonde groei, weerstand, ontspanning en een stralende huid voor de kleintjes.</p>
           </div>
           <div class="pkg-rows">
-            <div class="pkg-row"><div><div class="pkg-row-name">Pikin' Nengee</div><div class="pkg-row-sub">Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap</div></div><div class="pkg-row-price">SRD 700</div></div>
-            <div class="pkg-row"><div><div class="pkg-row-name">Nyoni</div><div class="pkg-row-sub">Babymassage (0–3 jaar) · Ondersteunt gezonde lichamelijke groei, verlicht krampjes en slechte slaap</div></div><div class="pkg-row-price">SRD 550</div></div>
-            <div class="pkg-row"><div><div class="pkg-row-name">Pikin' Package</div><div class="pkg-row-sub">Podosiri Scrub &amp; Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind</div></div><div class="pkg-row-price">SRD 1,200</div></div>
+            <div class="pkg-row"><div><div class="pkg-row-name">Pikin' Nengee</div><div class="pkg-row-sub" data-nl="Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap" data-en="Kids massage (ages 3–12) · Relieves stress, strengthens the immune system and supports good sleep">Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap</div></div><div class="pkg-row-price">SRD 700</div></div>
+            <div class="pkg-row"><div><div class="pkg-row-name">Nyoni</div><div class="pkg-row-sub" data-nl="Babymassage (0–3 jaar) · Ondersteunt gezonde lichamelijke groei, verlicht krampjes en slechte slaap" data-en="Baby massage (ages 0–3) · Supports healthy physical growth, relieves cramps and poor sleep">Babymassage (0–3 jaar) · Ondersteunt gezonde lichamelijke groei, verlicht krampjes en slechte slaap</div></div><div class="pkg-row-price">SRD 550</div></div>
+            <div class="pkg-row"><div><div class="pkg-row-name">Pikin' Package</div><div class="pkg-row-sub" data-nl="Podosiri Scrub &amp; Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind" data-en="Podosiri Scrub &amp; Relax Massage · Created to give your child fresh, soft and radiant skin">Podosiri Scrub &amp; Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind</div></div><div class="pkg-row-price">SRD 1,200</div></div>
           </div>
           <div class="pkg-footer"><p class="pkg-note">*inclusief 10% BTW</p><button class="btn-sm" onclick="openBM()">Maak een afspraak</button></div>
         </div>
@@ -3120,7 +3153,7 @@ const I18N_NL_TO_EN = {
   "Volledige bodyscrub met açaí-extract, gecombineerd met onze populairste behandelingen.": "Full body scrub with açaí extract, combined with our most popular treatments.",
   "Zachte, zorgzame behandelingen ter ondersteuning van gezonde groei, weerstand, ontspanning en een stralende huid voor de kleintjes.": "Gentle, caring treatments that support healthy growth, immunity, relaxation and radiant skin for little ones.",
   "De ultieme beleving van traditionele Marron wellness — onze meest bijzondere samengestelde ervaringen.": "The ultimate experience of traditional Maroon wellness — our most special curated experiences.",
-  "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap": "Kids massage (ages 3–12) · Relieves stress, strengthens the immune system and supports good sleep",
+  "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap": "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap",
   "Babymassage (0–3 jaar) · Ondersteunt gezonde lichamelijke groei, verlicht krampjes en slechte slaap": "Baby massage (ages 0–3) · Supports healthy physical growth, relieves cramps and poor sleep",
   "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind": "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind",
   "Sweti · Dampu · Full Body Podoscrub · Relaxmassage · De ultieme Marron ervaring": "Sweti · Dampu · Full Body Podoscrub · Relax Massage · The ultimate Maroon experience",
@@ -3211,11 +3244,11 @@ const I18N_EN_TO_NL = {
   "Targeted combinations for muscle pain, joint complaints, specific body areas and chronic complaints.": "Gerichte combinaties voor spierpijn, gewrichtsklachten, specifieke lichaamsdelen en chronische klachten.",
   "Full body scrub with açaí extract, combined with our most popular treatments.": "Volledige bodyscrub met açaí-extract, gecombineerd met onze populairste behandelingen.",
   "Gentle, caring treatments that support healthy growth, immunity, relaxation and radiant skin for little ones.": "Zachte, zorgzame behandelingen ter ondersteuning van gezonde groei, weerstand, ontspanning en een stralende huid voor de kleintjes.",
-  "Kids massage (ages 3–12) · Relieves stress, strengthens the immune system and supports good sleep": "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap",
+  "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap": "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap",
   "Baby massage (ages 0–3) · Supports healthy physical growth, relieves cramps and poor sleep": "Babymassage (0–3 jaar) · Ondersteunt gezonde lichamelijke groei, verlicht krampjes en slechte slaap",
   "Podosiri Scrub &amp; Relax Massage · Created to give your child fresh, soft and radiant skin": "Podosiri Scrub &amp; Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind",
   "The ultimate experience of traditional Maroon wellness — our most special curated experiences.": "De ultieme beleving van traditionele Marron wellness — onze meest bijzondere samengestelde ervaringen.",
-  "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap": "Kids massage (ages 3–12) · Relieves stress, strengthens the immune system and supports good sleep",
+  "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap": "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap",
   "Babymassage (0–3 jaar) · Ondersteunt gezonde lichamelijke groei, verlicht krampjes en slechte slaap": "Baby massage (ages 0–3) · Supports healthy physical growth, relieves cramps and poor sleep",
   "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind": "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind",
   "Sweti · Dampu · Full Body Podoscrub · Relax Massage · The ultimate Maroon experience": "Sweti · Dampu · Full Body Podoscrub · Relaxmassage · De ultieme Marron ervaring",
@@ -3325,6 +3358,21 @@ Object.assign(I18N_NL_TO_EN, {
 });
 Object.assign(I18N_EN_TO_NL, {
   "The body is gently dabbed with a cloth soaked in a hot herbal infusion. This helps remove dead skin cells and open and cleanse the pores. The treatment also allows the body to fully relax while supporting healthy blood and oxygen circulation throughout the body.": "Het lichaam wordt gedept met een doek gedrenkt in een heet kruidenaftreksel. Hierbij worden dode huidcellen verwijderd en de lichaamsporiën geopend en gereinigd. Verder komt het lichaam volledig tot rust en wordt een gezonde bloed- en zuurstofcirculatie in het lichaam bevorderd.",
+  "Podosiri Scrub & Relax Massage · Created to give your child fresh, soft and radiant skin": "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind",
+  "Podosiri Scrub &amp; Relax Massage · Created to give your child fresh, soft and radiant skin": "Podosiri Scrub &amp; Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind"
+});
+
+
+/* ===== V6 translation fixes: Kids package rows ===== */
+Object.assign(I18N_NL_TO_EN, {
+  "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap": "Kids massage (ages 3–12) · Relieves stress, strengthens the immune system and supports good sleep",
+  "Babymassage (0–3 jaar) · Ondersteunt gezonde lichamelijke groei, verlicht krampjes en slechte slaap": "Baby massage (ages 0–3) · Supports healthy physical growth, relieves cramps and poor sleep",
+  "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind": "Podosiri Scrub & Relax Massage · Created to give your child fresh, soft and radiant skin",
+  "Podosiri Scrub &amp; Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind": "Podosiri Scrub &amp; Relax Massage · Created to give your child fresh, soft and radiant skin"
+});
+Object.assign(I18N_EN_TO_NL, {
+  "Kids massage (ages 3–12) · Relieves stress, strengthens the immune system and supports good sleep": "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap",
+  "Baby massage (ages 0–3) · Supports healthy physical growth, relieves cramps and poor sleep": "Babymassage (0–3 jaar) · Ondersteunt gezonde lichamelijke groei, verlicht krampjes en slechte slaap",
   "Podosiri Scrub & Relax Massage · Created to give your child fresh, soft and radiant skin": "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind",
   "Podosiri Scrub &amp; Relax Massage · Created to give your child fresh, soft and radiant skin": "Podosiri Scrub &amp; Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind"
 });
@@ -3463,5 +3511,31 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 </script>
  
+
+<script>
+/* ===== V6 hard fix: force data-nl/data-en content after every language switch ===== */
+(function(){
+  function mokisaApplyDataLanguage(lang){
+    document.querySelectorAll('[data-nl][data-en]').forEach(function(el){
+      el.innerHTML = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-nl');
+    });
+  }
+
+  var previousSetLang = window.setLang;
+  window.setLang = function(lang){
+    if(typeof previousSetLang === 'function'){
+      previousSetLang(lang);
+    }
+    mokisaApplyDataLanguage(lang);
+  };
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var activeBtn = document.querySelector('[data-lang-btn].on');
+    var lang = localStorage.getItem('mokisaLang') || (activeBtn ? activeBtn.getAttribute('data-lang-btn') : 'nl');
+    mokisaApplyDataLanguage(lang);
+  });
+})();
+</script>
+
 </body>
 </html>
