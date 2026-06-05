@@ -1838,37 +1838,48 @@ input[type="button"]{
 }
 
  /* ===== Softer readability theme ===== */
-:root{
-  --body-bg:#f7efe2;
-  --card-bg:#fff8ed;
-  --cream:#2A1A0A;
-  --sand:#7b5428;
-  --gold:#8f642f;
-  --gold2:#a9783b;
-  --bark:#2A1A0A;
-  --earth:#6b4422;
-  --border:rgba(143,100,47,.22);
-}
-
+/* ===== Softer readable theme, but keep hero image readable ===== */
 body{
-  background:var(--body-bg)!important;
+  background:#f7efe2!important;
   color:#2A1A0A!important;
 }
 
-section,
+section:not(#home),
 #treatments,
 #packages,
-#booking{
-  background:var(--body-bg)!important;
+#booking,
+footer{
+  background:#f7efe2!important;
+  color:#2A1A0A!important;
 }
 
-.t-row,
-.t-card,
-.form-box,
-.booking-card,
-.pkg-row{
-  background:var(--card-bg)!important;
-  color:#2A1A0A!important;
+#home{
+  background-image:url("./images/photo1.jpg")!important;
+  background-size:cover!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+}
+
+#home .hero-overlay2{
+  background:linear-gradient(
+    to right,
+    rgba(15,9,5,.62) 0%,
+    rgba(15,9,5,.38) 42%,
+    rgba(247,239,226,.18) 100%
+  )!important;
+}
+
+#home .mokisa-word,
+#home .hero-tag{
+  color:#fff!important;
+}
+
+#home .wellness-word{
+  color:#a9783b!important;
+}
+
+#home .hero-sub{
+  color:rgba(255,255,255,.78)!important;
 }
 
 .s-title,
@@ -1876,31 +1887,24 @@ section,
 .t-name,
 .pkg-row-name,
 .pkg-title,
-.t-category-title,
-.form-head{
+.t-category-title{
   color:#2A1A0A!important;
 }
 
 .s-body,
 .t-desc,
 .pkg-desc,
-.hero-sub,
-.c-val{
+.pkg-row-sub{
   color:rgba(42,26,10,.72)!important;
 }
 
-nav.stuck{
-  background:rgba(247,239,226,.96)!important;
+.t-row,
+.t-card,
+.pkg-row,
+.form-box,
+.booking-card{
+  background:#fff8ed!important;
 }
-
-.nav-ul a{
-  color:rgba(42,26,10,.72)!important;
-}
-
-.nav-ul a:hover{
-  color:var(--gold)!important;
-}
-
 </style>
 </head>
 <body>
