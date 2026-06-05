@@ -3286,6 +3286,32 @@ Object.assign(I18N_EN_TO_NL, {
   "incl. VAT": "incl. BTW"
 });
 
+
+/* ===== V4 translation fixes: Kids package + Ali Skin important note ===== */
+Object.assign(I18N_NL_TO_EN, {
+  "Podosiri Scrub & Relaxmassage · Frisse, zachte en stralende huid voor kinderen": "Podosiri Scrub & relaxation massage · Fresh, soft and radiant skin for children",
+  "Podosiri Scrub &amp; Relaxmassage · Frisse, zachte en stralende huid voor kinderen": "Podosiri Scrub &amp; relaxation massage · Fresh, soft and radiant skin for children",
+  "Pikin' Package": "Pikin' Package",
+  "Belangrijk om te weten:": "Important to know:",
+  "Belangrijk:": "Important:",
+  "De Ali Skin behandeling wordt uitgevoerd door een mannelijke therapeut.": "The Ali Skin treatment is performed by a male therapist."
+});
+Object.assign(I18N_EN_TO_NL, {
+  "Podosiri Scrub & relaxation massage · Fresh, soft and radiant skin for children": "Podosiri Scrub & Relaxmassage · Frisse, zachte en stralende huid voor kinderen",
+  "Podosiri Scrub &amp; relaxation massage · Fresh, soft and radiant skin for children": "Podosiri Scrub &amp; Relaxmassage · Frisse, zachte en stralende huid voor kinderen",
+  "Important to know:": "Belangrijk om te weten:",
+  "Important:": "Belangrijk:",
+  "The Ali Skin treatment is performed by a male therapist.": "De Ali Skin behandeling wordt uitgevoerd door een mannelijke therapeut."
+});
+
+function mokisaAliSkinNoteHtml(shortLabel){
+  const lang = localStorage.getItem('mokisaLang') || document.documentElement.lang || 'nl';
+  if(lang === 'en'){
+    return '<strong>' + (shortLabel ? 'Important:' : 'Important to know:') + '</strong> The Ali Skin treatment is performed by a male therapist.';
+  }
+  return '<strong>' + (shortLabel ? 'Belangrijk:' : 'Belangrijk om te weten:') + '</strong> De Ali Skin behandeling wordt uitgevoerd door een mannelijke therapeut.';
+}
+
 function mokisaTranslateString(input, lang){
   if(input === null || input === undefined) return input;
   const original = String(input);
@@ -3341,6 +3367,10 @@ function setLang(lang){
     if(!el.dataset.mokisaOriginalLabel) el.dataset.mokisaOriginalLabel = el.label;
     el.label = mokisaTranslateString(el.dataset.mokisaOriginalLabel, lang);
   });
+
+  document.querySelectorAll('.ali-skin-note').forEach(note => {
+    note.innerHTML = mokisaAliSkinNoteHtml(note.classList.contains('booking-ali-skin-note'));
+  });
 }
 document.addEventListener('DOMContentLoaded', function(){ setLang(localStorage.getItem('mokisaLang') || 'nl'); });
 function showTreatmentGroup(event, group){
@@ -3385,7 +3415,7 @@ document.addEventListener('DOMContentLoaded', function(){
     ){
       const note = document.createElement('div');
       note.className = 'ali-skin-note';
-      note.innerHTML = '<strong>Belangrijk om te weten:</strong> De Ali Skin behandeling wordt uitgevoerd door een mannelijke therapeut.';
+      note.innerHTML = mokisaAliSkinNoteHtml(false);
       price.insertAdjacentElement('afterend', note);
     }
   });
@@ -3405,7 +3435,7 @@ document.addEventListener('DOMContentLoaded', function(){
       if(!note){
         note = document.createElement('div');
         note.className = 'ali-skin-note booking-ali-skin-note';
-        note.innerHTML = '<strong>Belangrijk:</strong> De Ali Skin behandeling wordt uitgevoerd door een mannelijke therapeut.';
+        note.innerHTML = mokisaAliSkinNoteHtml(true);
         field.appendChild(note);
       }
     } else if(note){
