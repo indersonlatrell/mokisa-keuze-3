@@ -1837,74 +1837,238 @@ input[type="button"]{
   }
 }
 
- /* ===== Softer readability theme ===== */
-/* ===== Softer readable theme, but keep hero image readable ===== */
-body{
-  background:#f7efe2!important;
-  color:#2A1A0A!important;
+
+/* =====================================================
+   MOKISA LIGHT EARTH THEME - rebuilt, not just overridden
+   Keeps photos visible and restores readable text everywhere
+   ===================================================== */
+:root{
+  --cream:#2A1A0A;
+  --sand:#8A5F2D;
+  --gold:#9A6A2D;
+  --gold2:#B8843F;
+  --bark:#2A1A0A;
+  --earth:#6B4422;
+  --body-bg:#F7EFE2;
+  --card-bg:#FFF8ED;
+  --panel-bg:#F3E8D8;
+  --soft-bg:#FBF3E8;
+  --line:#DDC8AA;
+  --border:rgba(154,106,45,.28);
+  --text:#2A1A0A;
+  --muted:rgba(42,26,10,.70);
+  --faint:rgba(42,26,10,.48);
 }
 
-section:not(#home),
+html,body{
+  background:var(--body-bg)!important;
+  color:var(--text)!important;
+}
+
+body,
+section,
+#about,
 #treatments,
 #packages,
 #booking,
-footer{
-  background:#f7efe2!important;
-  color:#2A1A0A!important;
+.brochure-section{
+  background:var(--body-bg)!important;
 }
 
+/* Header */
+nav{
+  background:rgba(247,239,226,.74)!important;
+  border-bottom:1px solid rgba(154,106,45,.18)!important;
+  backdrop-filter:blur(14px)!important;
+}
+nav.stuck{
+  background:rgba(247,239,226,.96)!important;
+  border-bottom:1px solid var(--border)!important;
+}
+.logo img{filter:none!important;}
+.nav-ul a{color:rgba(42,26,10,.68)!important;}
+.nav-ul a:hover{color:var(--gold)!important;}
+.nav-cta,
+.btn-line{
+  color:var(--gold)!important;
+  border-color:var(--gold)!important;
+  background:rgba(255,248,237,.22)!important;
+}
+.nav-cta:hover,
+.btn-line:hover{
+  background:var(--gold)!important;
+  color:#fff8ed!important;
+}
+.lang-switch{
+  background:rgba(255,248,237,.22)!important;
+  border-color:var(--border)!important;
+}
+.lang-switch button{color:rgba(42,26,10,.52)!important;}
+.lang-switch button.on{color:var(--gold)!important;}
+.lang-switch span{color:rgba(154,106,45,.45)!important;}
+.burger span{background:var(--text)!important;}
+
+/* Hero: keep the real image, with readable dark-to-light overlay */
 #home{
-  background-image:url("./images/photo1.jpg")!important;
+  position:relative!important;
+  min-height:100vh!important;
+  height:auto!important;
+  padding:0!important;
+  display:flex!important;
+  align-items:flex-end!important;
+  overflow:hidden!important;
+  background-image:url('./images/photo1.jpg')!important;
   background-size:cover!important;
   background-position:center center!important;
   background-repeat:no-repeat!important;
 }
-
+.hero-overlay{display:none!important;}
 #home .hero-overlay2{
-  background:linear-gradient(
-    to right,
-    rgba(15,9,5,.62) 0%,
-    rgba(15,9,5,.38) 42%,
-    rgba(247,239,226,.18) 100%
-  )!important;
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  background:linear-gradient(90deg,
+    rgba(15,9,5,.66) 0%,
+    rgba(15,9,5,.48) 34%,
+    rgba(247,239,226,.34) 72%,
+    rgba(247,239,226,.74) 100%)!important;
+}
+#home .hero-content{
+  position:relative!important;
+  z-index:2!important;
+  padding:0 3.5rem 5rem!important;
+  max-width:780px!important;
+}
+#home .hero-tag{color:#A87635!important;}
+#home .mokisa-word{color:#fff!important;text-shadow:0 2px 22px rgba(0,0,0,.28)!important;}
+#home .wellness-word{color:#B8843F!important;text-shadow:0 2px 18px rgba(0,0,0,.16)!important;}
+#home .hero-sub{color:rgba(255,255,255,.82)!important;}
+#home .btn-fill{background:var(--gold)!important;color:#fff8ed!important;}
+#home .btn-fill:hover{background:var(--gold2)!important;}
+#home .btn-line{color:#fff!important;border-color:rgba(255,255,255,.55)!important;background:rgba(255,255,255,.08)!important;}
+#home .btn-line:hover{color:#fff8ed!important;background:var(--gold)!important;border-color:var(--gold)!important;}
+.hero-scroll{color:rgba(42,26,10,.45)!important;}
+.scroll-tick{background:linear-gradient(to bottom,var(--gold),transparent)!important;}
+
+/* Type */
+.s-title,.story,.t-name,.pkg-title,.pkg-row-name,.t-category-title,.form-head,
+.booking-title,.foot-brand,.final-ritual-title,h1,h2,h3{
+  color:var(--text)!important;
+}
+.pkg-pkg,.clean,.wellness-word{color:var(--sand)!important;}
+.eyebrow,.t-pill,.ts-kicker,.t-category-kicker,.pkg-row-price,.t-price,
+.foot-col-title,.c-lbl,.preference-label,.booking-field label{
+  color:var(--gold)!important;
+}
+.s-body,.t-desc,.pkg-desc,.t-category-note,.ts-note,.pkg-row-sub,.pkg-note,
+.c-val,.foot-tag,.foot-links a,.foot-links li,.booking-intro{
+  color:var(--muted)!important;
+}
+.t-price small{color:var(--faint)!important;}
+
+/* Cards / rows / panels */
+.t-category,.t-row,.t-card,.pkg-row,.pkg-footer,.form-box,.booking-card,
+.guest-section,.treatment-select-btn{
+  background:var(--card-bg)!important;
+  border-color:var(--border)!important;
+  color:var(--text)!important;
+}
+.t-category-head{
+  background:linear-gradient(90deg,rgba(154,106,45,.10),rgba(255,248,237,.66))!important;
+  border-bottom-color:var(--border)!important;
+}
+.t-rows{background:var(--line)!important;}
+.t-row:hover,.t-card:hover,.pkg-row:hover,.treatment-select-btn:hover,
+.treatment-select-btn.on{
+  background:#F3E8D8!important;
+  border-color:rgba(154,106,45,.42)!important;
+}
+.treatment-select-btn::before{background:linear-gradient(135deg,rgba(154,106,45,.12),transparent 55%)!important;}
+.ts-title{color:var(--text)!important;}
+.gold-divider{background:linear-gradient(to right,transparent,rgba(154,106,45,.46),transparent)!important;}
+.gold-rule,.pkg-row::before,.price-row::before,.treat-row::before,.treatment-row::before,.pkg-card::before,.package-card::before,.pkg-item::before{background:var(--gold)!important;}
+.marquee{background:var(--gold)!important;}
+.marquee-item{color:#fff8ed!important;}
+
+/* Package tabs */
+.pkg-btn{
+  color:rgba(42,26,10,.62)!important;
+  border-bottom-color:var(--border)!important;
+  background:transparent!important;
+}
+.pkg-btn:hover,.pkg-btn.on,.pkg-btn.active{
+  color:var(--gold)!important;
+  background:rgba(154,106,45,.09)!important;
+}
+.pkg-btn.signature{
+  background:linear-gradient(135deg,#7A4F20,#4B2A0D)!important;
+  color:#F7E4C2!important;
+  border-color:rgba(154,106,45,.55)!important;
 }
 
-#home .mokisa-word,
-#home .hero-tag{
-  color:#fff!important;
+/* Forms / modal */
+#bmodal{background:rgba(42,26,10,.46)!important;}
+.booking-card{background:#FFF8ED!important;}
+.booking-field input,.booking-field select,.booking-field textarea,
+#bmodal input,#bmodal textarea,.bmodal input,.bmodal textarea,
+.f-grp input,.f-grp select,.f-grp textarea{
+  background:#FBF3E8!important;
+  color:var(--text)!important;
+  border-color:var(--border)!important;
+  border-bottom-color:rgba(154,106,45,.55)!important;
+}
+.booking-field input::placeholder,.f-grp input::placeholder{color:rgba(42,26,10,.35)!important;}
+.preference-box{
+  background:#FBF3E8!important;
+  color:var(--muted)!important;
+  border-color:var(--border)!important;
+}
+.preference-options input:checked + .preference-box{
+  background:#F3E8D8!important;
+  color:var(--text)!important;
+  border-color:var(--gold)!important;
+}
+.booking-close,.bmodal-close{color:var(--gold)!important;border-color:var(--border)!important;}
+.btn-fill,.btn-sm,.f-submit{
+  background:var(--gold)!important;
+  color:#fff8ed!important;
+}
+.btn-fill:hover,.btn-sm:hover,.f-submit:hover{background:var(--gold2)!important;}
+
+/* Footer and editorial keep a premium contrast block */
+.editorial-mask{background:linear-gradient(to right,rgba(42,26,10,.80),rgba(42,26,10,.48),rgba(247,239,226,.10))!important;}
+.editorial-quote{color:#fff!important;}
+.editorial-attr{color:#F1D19A!important;}
+footer{
+  background:#EFE1CD!important;
+  border-top:1px solid var(--border)!important;
+}
+.foot-copy{color:var(--faint)!important;}
+.soc{border-color:var(--border)!important;color:var(--gold)!important;}
+
+/* Reveal fallback: content should never disappear if JS is delayed */
+.rv{opacity:1!important;transform:none!important;}
+
+@media(max-width:760px){
+  nav{background:rgba(247,239,226,.94)!important;}
+  .mob-nav{background:rgba(247,239,226,.98)!important;}
+  .mob-nav a{color:var(--text)!important;}
+  .mob-close{color:var(--gold)!important;}
+  .lang-switch{background:rgba(255,248,237,.92)!important;}
+  #home{
+    min-height:680px!important;
+    background-position:center center!important;
+  }
+  #home .hero-overlay2{
+    background:linear-gradient(to top,
+      rgba(15,9,5,.72) 0%,
+      rgba(15,9,5,.46) 45%,
+      rgba(247,239,226,.10) 100%)!important;
+  }
+  #home .hero-content{padding:0 1.35rem 6.8rem!important;}
+  #home .mokisa-word,#home .wellness-word{font-size:clamp(3.4rem,16vw,5rem)!important;}
 }
 
-#home .wellness-word{
-  color:#a9783b!important;
-}
-
-#home .hero-sub{
-  color:rgba(255,255,255,.78)!important;
-}
-
-.s-title,
-.story,
-.t-name,
-.pkg-row-name,
-.pkg-title,
-.t-category-title{
-  color:#2A1A0A!important;
-}
-
-.s-body,
-.t-desc,
-.pkg-desc,
-.pkg-row-sub{
-  color:rgba(42,26,10,.72)!important;
-}
-
-.t-row,
-.t-card,
-.pkg-row,
-.form-box,
-.booking-card{
-  background:#fff8ed!important;
-}
 </style>
 </head>
 <body>
@@ -2065,7 +2229,7 @@ footer{
             <div class="t-content">
               <div class="t-pill">Kruidenwrap</div>
               <div class="t-name">Dampu</div>
-              <p class="t-desc">Het lichaam wordt gewikkeld in een doek gedrenkt in warm kruidenextract. Verwijdert dode huidcellen, opent de poriën en bevordert diepe rust.</p>
+              <p class="t-desc">Het lichaam wordt gedept met een doek gedrenkt in een hete kruiden aftreksel. De dode lichaamscellen worden hierbij verwijderd en de lichaamsporien ontstopt. Verder komt het lichaam volledig tot rust en een goede bloed-en zuurstof circulatie in het lichaam wordt bevorderd</p>
               <div class="t-price">SRD 850 <small>incl. BTW</small></div>
             </div>
             <div class="t-image"><img src="images/Dampu.JPG" alt="Dampu"></div>
@@ -2164,15 +2328,13 @@ footer{
             <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Ali Skin</div><div class="pkg-row-price">SRD 1,645</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Sweti, Dampu &amp; Ali Skin</div><div class="pkg-row-price">SRD 2,385</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Podosiri, Dampu &amp; Ali Skin</div><div class="pkg-row-price">SRD 2,535</div></div>
-            <div class="pkg-row"><div class="pkg-row-name">Deep Tissue</div><div class="pkg-row-price">SRD 850</div></div>
-            <div class="pkg-row"><div class="pkg-row-name">Relax</div><div class="pkg-row-price">SRD 800</div></div>
           </div>
           <div class="pkg-footer"><p class="pkg-note">*inclusief 10% BTW</p><button class="btn-sm" onclick="openBM()">Maak een afspraak</button></div>
         </div>
 
         <div class="pkg-panel" id="pp-podo">
           <div class="pkg-head">
-            <div class="s-title">Podosiri <i class="pkg-pkg">Behandelingen</i></div>
+            <div class="s-title">Podosiri Scrub <i class="pkg-pkg">Behandelingen</i></div>
             <p class="pkg-desc">Full body scrub with açaí extract, combined with our most popular treatments.</p>
           </div>
           <div class="pkg-rows">
@@ -2191,13 +2353,14 @@ footer{
             <p class="pkg-desc">Combinaties met stoom voor reiniging, ontspanning, huidverzorging en herstel van het lichaam.</p>
           </div>
           <div class="pkg-rows">
+            <div class="pkg-row"><div class="pkg-row-name">Sweti</div><div class="pkg-row-price">SRD 750</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Dampu</div><div class="pkg-row-price">SRD 1,545</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Relax</div><div class="pkg-row-price">SRD 1,495</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Deeptissue</div><div class="pkg-row-price">SRD 1,545</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Sweti, Dampu &amp; Relax</div><div class="pkg-row-price">SRD 2,235</div></div>
            <div class="pkg-row"><div class="pkg-row-name">Sweti, Dampu &amp; Deeptissue</div><div class="pkg-row-price">SRD 2,285</div></div>
-           <div class="pkg-row"><div class="pkg-row-name">Sweti, Podosiri &amp; Relax</div><div class="pkg-row-price">SRD 2,285</div></div>
-           <div class="pkg-row"><div class="pkg-row-name">Sweti, Dampu &amp; Deeptissue</div><div class="pkg-row-price">SRD 2,335</div></div>
+           <div class="pkg-row"><div class="pkg-row-name">Sweti, Podosiri Scrub &amp; Relax</div><div class="pkg-row-price">SRD 2,285</div></div>
+           <div class="pkg-row"><div class="pkg-row-name">Sweti Scrub &amp; Deeptissue</div><div class="pkg-row-price">SRD 2,335</div></div>
           </div>
           <div class="pkg-footer"><p class="pkg-note">*inclusief 10% BTW</p><button class="btn-sm" onclick="openBM()">Maak een afspraak</button></div>
         </div>
@@ -2208,11 +2371,12 @@ footer{
             <p class="pkg-desc">Gerichte combinaties voor spierpijn, gewrichtsklachten, specifieke lichaamsdelen en chronische klachten.</p>
           </div>
           <div class="pkg-rows">
+            <div class="pkg-row"><div class="pkg-row-name">Dampu</div><div class="pkg-row-price">SRD 850</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Dampu</div><div class="pkg-row-price">SRD 1,545</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Dampu &amp; Relax</div><div class="pkg-row-price">SRD 1,595</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Dampu &amp; Deeptissue</div><div class="pkg-row-price">SRD 1,645</div></div>
-            <div class="pkg-row"><div class="pkg-row-name">Dampu, Podosiri &amp; Relax</div><div class="pkg-row-price">SRD 2,385</div></div>
-            <div class="pkg-row"><div class="pkg-row-name">Dampu, Podosiri &amp; Deeptissue</div><div class="pkg-row-price">SRD 2,435</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Dampu, Podosiri Scrub &amp; Relax</div><div class="pkg-row-price">SRD 2,385</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Dampu, Podosiri Scrub &amp; Deeptissue</div><div class="pkg-row-price">SRD 2,435</div></div>
           </div>
           <div class="pkg-footer"><p class="pkg-note">*inclusief 10% BTW</p><button class="btn-sm" onclick="openBM()">Maak een afspraak</button></div>
         </div>
@@ -2223,9 +2387,9 @@ footer{
             <p class="pkg-desc">Zachte, zorgzame behandelingen ter ondersteuning van gezonde groei, weerstand, ontspanning en een stralende huid voor de kleintjes.</p>
           </div>
           <div class="pkg-rows">
-            <div class="pkg-row"><div><div class="pkg-row-name">Pikin' Nengee</div><div class="pkg-row-sub">Kids massage (3–12 yrs) · Relieves stress, strengthens immune system, promotes good sleep</div></div><div class="pkg-row-price">SRD 550</div></div>
-            <div class="pkg-row"><div><div class="pkg-row-name">Nyoni</div><div class="pkg-row-sub">Baby massage (0–3 yrs) · Supports healthy physical growth, relieves colic and poor sleep</div></div><div class="pkg-row-price">SRD 450</div></div>
-            <div class="pkg-row"><div><div class="pkg-row-name">Pikin' Package</div><div class="pkg-row-sub">Podosiri Scrub &amp; Relax Massage · Fresh, soft and radiant skin for kids</div></div><div class="pkg-row-price">SRD 1,000</div></div>
+            <div class="pkg-row"><div><div class="pkg-row-name">Pikin' Nengee</div><div class="pkg-row-sub">Kids massage (3–12 yrs) · Relieves stress, strengthens immune system, promotes good sleep</div></div><div class="pkg-row-price">SRD 700</div></div>
+            <div class="pkg-row"><div><div class="pkg-row-name">Nyoni</div><div class="pkg-row-sub">Baby massage (0–3 yrs) · Supports healthy physical growth, relieves colic and poor sleep</div></div><div class="pkg-row-price">SRD 550</div></div>
+            <div class="pkg-row"><div><div class="pkg-row-name">Pikin' Package</div><div class="pkg-row-sub">Podosiri Scrub &amp; Relax Massage · Fresh, soft and radiant skin for kids</div></div><div class="pkg-row-price">SRD 1,200</div></div>
           </div>
           <div class="pkg-footer"><p class="pkg-note">*inclusief 10% BTW</p><button class="btn-sm" onclick="openBM()">Maak een afspraak</button></div>
         </div>
@@ -2236,8 +2400,8 @@ footer{
             <p class="pkg-desc">De ultieme beleving van traditionele Marron wellness — onze meest bijzondere samengestelde ervaringen.</p>
           </div>
           <div class="pkg-rows">
-            <div class="pkg-row feat"><div><div class="pkg-row-name">Package+</div><div class="pkg-row-sub">Sweti · Dampu · Full Body Podosiri Scrub · Relax Massage · The ultimate Maroon experience</div></div><div class="pkg-row-price">SRD 2,500</div></div>
-            <div class="pkg-row feat"><div><div class="pkg-row-name">Uma Package</div><div class="pkg-row-sub">Sweti · Dampu  · Full Body Podosiri Scrub · Relax Massage · Women's complete renewal ritual</div></div><div class="pkg-row-price">SRD 2,750</div></div>
+            <div class="pkg-row feat"><div><div class="pkg-row-name">Package+</div><div class="pkg-row-sub">Sweti · Dampu · Full Body Podosiri Scrub · Relax Massage · The ultimate Maroon experience</div></div><div class="pkg-row-price">SRD 2,900</div></div>
+            <div class="pkg-row feat"><div><div class="pkg-row-name">Uma Package</div><div class="pkg-row-sub">Sweti · Dampu  · Full Body Podosiri Scrub · Relax Massage · Women's complete renewal ritual</div></div><div class="pkg-row-price">SRD 3250</div></div>
           </div>
           <div class="pkg-footer"><p class="pkg-note">*inclusief 10% BTW</p><button class="btn-sm" onclick="openBM()">Maak een afspraak</button></div>
         </div>
@@ -2288,7 +2452,7 @@ footer{
       <div class="foot-col-title">Behandelingen</div>
       <ul class="foot-links">
         <li>Sweti</li><li>Dampu</li><li>Ali Skin</li>
-        <li>Deep Tissue</li><li>Relax Massage</li><li>Podosiri</li>
+        <li>Deep Tissue</li><li>Relax Massage</li><li>Podosiri Scrub</li>
       </ul>
     </div>
   </div>
@@ -2490,7 +2654,7 @@ Verstuurd via mokisawellness`;
               <option>Dampu &amp; Ali Skin — SRD 1,745</option>
               <option>Sweti &amp; Ali Skin — SRD 1,645</option>
               <option>Sweti, Dampu &amp; Ali Skin — SRD 2,385</option>
-              <option>Podosiri, Dampu &amp; Ali Skin — SRD 2,535</option>
+              <option>Podosiri Scrub, Dampu &amp; Ali Skin — SRD 2,535</option>
             </optgroup>
 
             <optgroup label="Podosiri pakketten">
@@ -2507,14 +2671,14 @@ Verstuurd via mokisawellness`;
               <option>Sweti &amp; Deeptissue — SRD 1,545</option>
               <option>Sweti, Dampu &amp; Relax — SRD 2,235</option>
               <option>Sweti, Dampu &amp; Deeptissue — SRD 2,285</option>
-              <option>Sweti, Podosiri &amp; Relax — SRD 2,285</option>
+              <option>Sweti, Podosiri Scrub &amp; Relax — SRD 2,285</option>
             </optgroup>
 
             <optgroup label="Dampu combinaties">
               <option>Dampu &amp; Relax — SRD 1,595</option>
               <option>Dampu &amp; Deeptissue — SRD 1,645</option>
-              <option>Dampu, Podosiri &amp; Relax — SRD 2,385</option>
-              <option>Dampu, Podosiri &amp; Deeptissue — SRD 2,435</option>
+              <option>Dampu, Podosiri Scrub &amp; Relax — SRD 2,385</option>
+              <option>Dampu, Podosiri Scrub &amp; Deeptissue — SRD 2,435</option>
             </optgroup>
 
             <optgroup label="Kinderbehandelingen">
