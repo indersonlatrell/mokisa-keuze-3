@@ -2760,7 +2760,7 @@ Verstuurd via mokisawellness`;
       </div>
 
 
-<button type="button" class="add-guest-btn" onclick="toggleGuest()">
+<button type="button" class="add-guest-btn" id="addGuestBtn">
   + Gast toevoegen
 </button>
       <div class="guest-section guest-entry" id="guestSection">
@@ -3630,17 +3630,6 @@ function mokisaAliSkinNoteHtml(shortLabel){
   return '<strong>' + (shortLabel ? 'Belangrijk:' : 'Belangrijk om te weten:') + '</strong> De Ali Skin behandeling wordt uitgevoerd door een mannelijke therapeut.';
 }
 </script>
- <script>
-document.addEventListener('DOMContentLoaded', function(){
-  document.querySelectorAll('.add-guest-btn').forEach(function(btn){
-    btn.addEventListener('click', function(e){
-      e.preventDefault();
-      e.stopPropagation();
-      toggleGuest();
-      return false;
-    });
-  });
-});
-</script>
+ 
 </body>
 </html>
