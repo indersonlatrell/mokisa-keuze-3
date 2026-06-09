@@ -3623,10 +3623,10 @@ function mokisaAliSkinNoteHtml(shortLabel){
   const lang = localStorage.getItem('mokisaLang') || document.documentElement.lang || 'nl';
 
   if(lang === 'en'){
-    return '<strong>Do you have any issue with a male therapist for your massage?</strong><br>The Ali Skin treatments are performed by a male therapist.';
+    return '<strong>' + (shortLabel ? 'Important:' : 'Important to know:') + '</strong> The Ali Skin treatment is performed by a male therapist.';
   }
 
-  return '<strong>Heeft u moeite met een heer voor uw massage?</strong><br>De Ali Skin behandelingen worden door een heer gedaan.';
+  return '<strong>' + (shortLabel ? 'Belangrijk:' : 'Belangrijk om te weten:') + '</strong> De Ali Skin behandeling wordt uitgevoerd door een mannelijke therapeut.';
 }
 </script>
 </body>
