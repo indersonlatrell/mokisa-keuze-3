@@ -3629,5 +3629,17 @@ function mokisaAliSkinNoteHtml(shortLabel){
   return '<strong>' + (shortLabel ? 'Belangrijk:' : 'Belangrijk om te weten:') + '</strong> De Ali Skin behandeling wordt uitgevoerd door een mannelijke therapeut.';
 }
 </script>
+ <script>
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.add-guest-btn').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      toggleGuest();
+      return false;
+    });
+  });
+});
+</script>
 </body>
 </html>
