@@ -2675,24 +2675,20 @@ Verstuurd via mokisawellness`;
         </div>
 
         <div class="preference-wrap">
-          <p class="preference-label">Voorkeur masseur/masseuse <span>*</span></p>
-          <div class="preference-options">
-            <label>
-              <input type="radio" name="masseuse" value="Vrouw" required>
-              <span class="preference-box"><span class="preference-icon">♀</span>Vrouw</span>
-            </label>
+  <p class="preference-label">Heeft u moeite met een heer voor uw massage? <span>*</span></p>
 
-            <label>
-              <input type="radio" name="masseuse" value="Man" required>
-              <span class="preference-box"><span class="preference-icon">♂</span>Man</span>
-            </label>
+  <div class="preference-options">
+    <label>
+      <input type="radio" name="masseuse" value="Ja" required>
+      <span class="preference-box"><span class="preference-icon">✓</span>Ja</span>
+    </label>
 
-            <label>
-              <input type="radio" name="masseuse" value="No preference" required>
-              <span class="preference-box"><span class="preference-icon">◇</span>Geen voorkeur</span>
-            </label>
-          </div>
-        </div>
+    <label>
+      <input type="radio" name="masseuse" value="Nee" required>
+      <span class="preference-box"><span class="preference-icon">✓</span>Nee</span>
+    </label>
+  </div>
+</div>
 
         <div class="booking-field full">
           <label for="wa_treatment">Behandeling / pakket <span>*</span></label>
@@ -2874,6 +2870,8 @@ Verstuurd via mokisawellness`;
 
 <script>
 /* WhatsApp booking: premium form */
+<script>
+/* WhatsApp booking: premium form */
 window.openBM = function(){
   var modal = document.getElementById('bmodal');
   if(modal){
@@ -2896,7 +2894,7 @@ window.sendWA = function(event){
   var first = document.getElementById('wa_first').value.trim();
   var last = document.getElementById('wa_last').value.trim();
   var phone = document.getElementById('wa_phone').value.trim();
-  
+
   var rawDate = document.getElementById('wa_date').value;
   var date = rawDate;
   if(rawDate){
@@ -2907,17 +2905,16 @@ window.sendWA = function(event){
   }
 
   var treatment = document.getElementById('wa_treatment').value;
-  var masseuseEl = document.querySelector('input[name="masseuse"]:checked');
+  var maleTherapistEl = document.querySelector('input[name="masseuse"]:checked');
   var notes = document.getElementById('wa_notes').value.trim();
 
-  if(!first || !phone || !date || !treatment || !masseuseEl){
-    alert('Please fill in all required fields.');
+  if(!first || !phone || !date || !treatment || !maleTherapistEl){
+    alert('Vul alle verplichte velden in.');
     return false;
   }
 
   var fullName = (first + ' ' + last).trim();
   var lang = document.documentElement.lang || 'nl';
-
 
   var guestSections = Array.prototype.slice.call(document.querySelectorAll('.guest-section.on'));
   var guests = [];
@@ -2934,14 +2931,14 @@ window.sendWA = function(event){
     var guestNotes = guestNotesEl ? guestNotesEl.value.trim() : '';
 
     if(!guestName || !guestTreatment || !guestMasseuseEl){
-      alert('Please complete the guest name, treatment, and masseuse preference, or remove the guest.');
+      alert('Vul de gegevens van de extra gast volledig in of verwijder de gast.');
       return false;
     }
 
     guests.push({
       name: guestName,
       treatment: guestTreatment,
-      masseuse: guestMasseuseEl.value,
+      maleTherapist: guestMasseuseEl.value,
       notes: guestNotes
     });
   }
@@ -2949,19 +2946,21 @@ window.sendWA = function(event){
   var guestMsg = guests.map(function(g, index){
     return '\n*Extra gast ' + (index + 1) + ':*\n' +
       '*Naam gast:* ' + g.name + '\n' +
-      '*Guest treatment / package:* ' + g.treatment + '\n' +
-      '*Guest masseuse preference:* ' + g.masseuse + '\n' +
-      '*Guest notes / health conditions:* ' + (g.notes || 'None') + '\n';
+      '*Behandeling / pakket gast:* ' + g.treatment + '\n' +
+      '*Heeft de gast moeite met een heer voor de massage?:* ' + g.maleTherapist + '\n' +
+      '*Notities / gezondheidsklachten gast:* ' + (g.notes || 'Geen') + '\n';
   }).join('');
 
   var msg =
-    (lang === 'nl' ? 'Hallo Mokisa, ik wil graag een boeking aanvragen.\n\n' : 'Hello Mokisa, I would like to request a booking.\n\n') +
-    '*Name:* ' + fullName + '\n' +
+    (lang === 'nl'
+      ? 'Hallo Mokisa, ik wil graag een boeking aanvragen.\n\n'
+      : 'Hello Mokisa, I would like to request a booking.\n\n') +
+    '*Naam:* ' + fullName + '\n' +
     '*WhatsApp:* ' + phone + '\n' +
-    '*Preferred date:* ' + date + '\n' +
-    '*Masseuse preference:* ' + masseuseEl.value + '\n' +
+    '*Gewenste datum:* ' + date + '\n' +
     '*Behandeling / pakket:* ' + treatment + '\n' +
-    '*Notes / Health conditions:* ' + (notes || 'None') + '\n' +
+    '*Heeft u moeite met een heer voor uw massage?:* ' + maleTherapistEl.value + '\n' +
+    '*Notities / gezondheidsklachten:* ' + (notes || 'Geen') + '\n' +
     guestMsg +
     '\nVerstuurd via mokisawellness';
 
@@ -2969,6 +2968,89 @@ window.sendWA = function(event){
   closeBM();
   return false;
 };
+
+window.guestCount = 1;
+
+window.toggleGuest = function(){
+  var firstSection = document.getElementById('guestSection');
+  if(!firstSection) return;
+
+  if(!firstSection.classList.contains('on')){
+    firstSection.classList.add('on');
+    return;
+  }
+
+  window.guestCount += 1;
+  var newSection = firstSection.cloneNode(true);
+  newSection.id = 'guestSection_' + window.guestCount;
+  newSection.classList.add('on');
+
+  newSection.querySelectorAll('input, textarea').forEach(function(el){
+    if(el.type === 'radio'){
+      el.checked = false;
+      el.name = 'guest_masseuse_' + window.guestCount;
+    } else {
+      el.value = '';
+    }
+
+    if(el.id){
+      el.id = el.id + '_' + window.guestCount;
+    }
+  });
+
+  newSection.querySelectorAll('select').forEach(function(el){
+    el.selectedIndex = 0;
+    if(el.id){
+      el.id = el.id + '_' + window.guestCount;
+    }
+  });
+
+  newSection.querySelectorAll('label[for]').forEach(function(label){
+    var oldFor = label.getAttribute('for');
+    if(oldFor){
+      label.setAttribute('for', oldFor + '_' + window.guestCount);
+    }
+  });
+
+  firstSection.parentNode.insertBefore(newSection, document.querySelector('.booking-submit'));
+};
+
+window.removeGuest = function(button){
+  var section = button ? button.closest('.guest-section') : document.getElementById('guestSection');
+  if(!section) return;
+
+  if(section.id === 'guestSection'){
+    section.classList.remove('on');
+    section.querySelectorAll('input[type="text"], textarea').forEach(function(el){ el.value = ''; });
+    section.querySelectorAll('select').forEach(function(el){ el.selectedIndex = 0; });
+    section.querySelectorAll('input[type="radio"]').forEach(function(el){ el.checked = false; });
+  } else {
+    section.remove();
+  }
+};
+
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.wa-floating-book, .nav-cta, button').forEach(function(el){
+    var text = (el.textContent || '').toLowerCase();
+    if(el.classList.contains('wa-floating-book') || text.indexOf('request date') !== -1 || text.indexOf('book via whatsapp') !== -1){
+      el.addEventListener('click', function(e){
+        if(el.tagName.toLowerCase() !== 'button' || el.type !== 'submit'){
+          e.preventDefault();
+          openBM();
+          return false;
+        }
+      });
+    }
+  });
+
+  var modal = document.getElementById('bmodal');
+  if(modal){
+    modal.addEventListener('click', function(e){
+      if(e.target === modal) closeBM();
+    });
+  }
+});
+</script>
 
 
 window.guestCount = 1;
