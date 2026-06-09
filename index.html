@@ -3536,6 +3536,16 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 })();
 </script>
+<script>
+function mokisaAliSkinNoteHtml(shortLabel){
+  const lang = localStorage.getItem('mokisaLang') || document.documentElement.lang || 'nl';
 
+  if(lang === 'en'){
+    return '<strong>Do you have any objection to a male therapist for your massage?</strong>';
+  }
+
+  return '<strong>Heeft u moeite met een heer voor uw massage?</strong>';
+}
+</script>
 </body>
 </html>
