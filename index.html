@@ -918,11 +918,11 @@ footer{background:#EFE1CD!important;border-top:1px solid var(--border)!important
             <p class="preference-label" data-nl="Heeft de gast moeite met een heer voor de massage? <span>*</span>" data-en="Does the guest have any issue with a male therapist for the massage? <span>*</span>">Heeft de gast moeite met een heer voor de massage? <span>*</span></p>
             <div class="preference-options">
               <label>
-                <input type="radio" name="guest_masseuse_1" class="guest-masseuse" value="Ja" required>
+                <input type="radio" name="guest_masseuse_1" class="guest-masseuse" value="Ja">
                 <span class="preference-box" data-nl="<span class='preference-icon'>✓</span>Ja" data-en="<span class='preference-icon'>✓</span>Yes"><span class="preference-icon">✓</span>Ja</span>
               </label>
               <label>
-                <input type="radio" name="guest_masseuse_1" class="guest-masseuse" value="Nee" required>
+                <input type="radio" name="guest_masseuse_1" class="guest-masseuse" value="Nee">
                 <span class="preference-box" data-nl="<span class='preference-icon'>✓</span>Nee" data-en="<span class='preference-icon'>✓</span>No"><span class="preference-icon">✓</span>Nee</span>
               </label>
             </div>
@@ -1035,9 +1035,18 @@ function showTreatmentGroup(event, group){
 
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
   a.addEventListener('click', function(e){
-    var t = document.querySelector(a.getAttribute('href'));
+    var href = a.getAttribute('href');
+
+    /* href="#" is used for buttons that open the booking modal.
+       Calling document.querySelector('#') throws an error and can stop
+       the WhatsApp booking flow, so only handle real section anchors here. */
+    if(!href || href === '#') return;
+
+    var t = document.querySelector(href);
     if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
-    document.getElementById('mn').classList.remove('on');
+
+    var mobileNav = document.getElementById('mn');
+    if(mobileNav) mobileNav.classList.remove('on');
   });
 });
 
@@ -1112,11 +1121,19 @@ window.sendWA = function(event){
 
 window.guestCount = 1;
 
+function setGuestRequired(section, required){
+  if(!section) return;
+  section.querySelectorAll('.guest-masseuse').forEach(function(el){
+    el.required = required;
+  });
+}
+
 window.toggleGuest = function(){
   var firstSection = document.getElementById('guestSection');
   if(!firstSection) return;
   if(!firstSection.classList.contains('on')){
     firstSection.classList.add('on');
+    setGuestRequired(firstSection, true);
     return;
   }
   window.guestCount += 1;
@@ -1124,7 +1141,11 @@ window.toggleGuest = function(){
   newSection.id = 'guestSection_' + window.guestCount;
   newSection.classList.add('on');
   newSection.querySelectorAll('input, textarea').forEach(function(el){
-    if(el.type === 'radio'){ el.checked = false; el.name = 'guest_masseuse_' + window.guestCount; }
+    if(el.type === 'radio'){
+      el.checked = false;
+      el.name = 'guest_masseuse_' + window.guestCount;
+      el.required = true;
+    }
     else { el.value = ''; }
     if(el.id){ el.id = el.id + '_' + window.guestCount; }
   });
@@ -1144,6 +1165,7 @@ window.removeGuest = function(button){
   if(!section) return;
   if(section.id === 'guestSection'){
     section.classList.remove('on');
+    setGuestRequired(section, false);
     section.querySelectorAll('input[type="text"], textarea').forEach(function(el){ el.value = ''; });
     section.querySelectorAll('select').forEach(function(el){ el.selectedIndex = 0; });
     section.querySelectorAll('input[type="radio"]').forEach(function(el){ el.checked = false; });
