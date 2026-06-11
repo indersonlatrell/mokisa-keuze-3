@@ -118,36 +118,9 @@ nav.stuck{background:rgba(15,9,5,0.96);backdrop-filter:blur(16px);padding:1rem 3
 .about-img-overlay img{width:100%;height:100%;object-fit:cover}
 .about-text-col{padding:3rem 4.5rem 3rem 5rem;display:flex;flex-direction:column;justify-content:center}
 .eyebrow{font-size:.65rem;font-weight:400;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
-.s-title{
-  font-family:"Playfair display",cursive;
-  font-size:clamp(2rem,4vw,3.2rem);
-  font-weight:400;
-  line-height:1.1;
-  color:#fff;
-  margin-bottom:1rem;
-  flex-wrap: nowrap;
-  display:flex;
-  align-items: baseline;
-  gap:.18em;
-}
- .story{
-  font-family:"Playfair Display",cursive;
-  font-weight:400;
-  line-height:1.1;
-  display: flex;
-  align-items: baseline; /* aligns text naturally */
-  gap: 0.4rem;
-  flex-wrap: nowrap;
-  white-space: nowrap;
-} 
- }
- .clean{
-  font-family:"Tropical Brush",cursive;
-  
-  color: var(--sand);
-  position: relative;
-  top: 0.15em;
- }
+.s-title{font-family:"Playfair display",cursive;font-size:clamp(2rem,4vw,3.2rem);font-weight:400;line-height:1.1;color:#fff;margin-bottom:1rem;flex-wrap: nowrap;display:flex;align-items: baseline;gap:.18em;}
+.story{font-family:"Playfair Display",cursive;font-weight:400;line-height:1.1;display: flex;align-items: baseline;gap: 0.4rem;flex-wrap: nowrap;white-space: nowrap;}
+.clean{font-family:"Tropical Brush",cursive;color: var(--sand);position: relative;top: 0.15em;}
 .gold-rule{width:48px;height:1px;background:var(--gold);margin:1.75rem 0}
 .s-body{font-family:"Playfair Display";font-size:.92rem;font-weight:300;line-height:1.95;color:rgba(240,234,224,.6)}
 .s-body+.s-body{margin-top:1.1rem}
@@ -168,7 +141,6 @@ nav.stuck{background:rgba(15,9,5,0.96);backdrop-filter:blur(16px);padding:1rem 3
 .treatments-hd{text-align:center;max-width:620px;margin:0 auto 5rem;display:flex;flex-direction:column;align-items:center}
 .treatments-hd .eyebrow,.treatments-hd .gold-rule{align-self:center}
 .treatments-hd .s-body{text-align:center}
-
 .treatment-selector{max-width:900px;margin:0 auto 3rem;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
 .treatment-select-btn{border:1px solid rgba(184,147,90,.28);background:rgba(184,147,90,.04);color:var(--cream);text-align:left;padding:1.5rem 1.65rem;cursor:pointer;transition:all .35s ease;position:relative;overflow:hidden}
 .treatment-select-btn::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(184,147,90,.18),transparent 55%);opacity:0;transition:opacity .35s ease}
@@ -188,54 +160,13 @@ nav.stuck{background:rgba(15,9,5,0.96);backdrop-filter:blur(16px);padding:1rem 3
 .t-category-kicker{font-size:.64rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:.65rem}
 .t-category-title{font-family:"Playfair Display",serif;font-size:clamp(1.7rem,3vw,2.6rem);font-weight:400;color:#fff;margin:0}
 .t-category-note{max-width:420px;font-size:.82rem;line-height:1.75;color:rgba(240,234,224,.55);margin:0}
-.t-row{
-  background:var(--card-bg);
-  padding:2.75rem 2.25rem;
-  position:relative;
-  overflow:hidden;
-  transition:background .4s;
-
-  display:grid;
-  grid-template-columns:1fr 320px;
-  gap:40px;
-  align-items:center;
-}
+.t-row{background:var(--card-bg);padding:2.75rem 2.25rem;position:relative;overflow:hidden;transition:background .4s;display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:center;}
 .t-row::after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold2));transform:scaleX(0);transition:transform .45s ease;transform-origin:left}
 .t-row:hover{background:#1f130a}
 .t-row:hover::after{transform:scaleX(1)}
- .t-image{
-  width:100%;
-  height:220px;
-  overflow:hidden;
-  border-radius:10px;
-}
-
-.t-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-@media (max-width:768px){
-
-  .treatment-selector{
-    grid-template-columns:1fr;
-  }
-
-  .treatment-select-btn{
-    padding:1.25rem;
-  }
-
-  .t-row{
-    grid-template-columns:1fr;
-  }
-
-  .t-image{
-    height:200px;
-  }
-
-}
+.t-image{width:100%;height:220px;overflow:hidden;border-radius:10px;}
+.t-image img{width:100%;height:100%;object-fit:cover;display:block;}
+@media (max-width:768px){.treatment-selector{grid-template-columns:1fr;}.treatment-select-btn{padding:1.25rem;}.t-row{grid-template-columns:1fr;}.t-image{height:200px;}}
 .t-card{background:var(--card-bg);padding:2.75rem 2.25rem;position:relative;overflow:hidden;transition:background .4s}
 .t-card::after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold2));transform:scaleX(0);transition:transform .45s ease;transform-origin:left}
 .t-card:hover{background:#1f130a}
@@ -243,15 +174,14 @@ nav.stuck{background:rgba(15,9,5,0.96);backdrop-filter:blur(16px);padding:1rem 3
 .t-card.span2{grid-column:span 2}
 .t-pill{display:inline-block;border:1px solid rgba(184,147,90,.4);color:var(--gold);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;padding:.3rem .85rem;margin-bottom:1.25rem}
 .t-name{font-family:"Playfair Display",serif;font-size:1.55rem;font-weight:400;color:#fff;margin-bottom:.85rem}
-.t-desc{font-family:"Myriad Pro Semibold";
-        font-size:.83rem;font-weight:300;line-height:1.85;color:rgba(240,234,224,.5);margin-bottom:1.5rem}
+.t-desc{font-size:.83rem;font-weight:300;line-height:1.85;color:rgba(240,234,224,.5);margin-bottom:1.5rem}
 .t-price{font-family:"Playfair Display",serif;font-size:1.35rem;font-weight:400;color:var(--gold)}
 .t-price small{font-family:"Playfair Display",serif;font-size:.62rem;font-weight:300;color:rgba(240,234,224,.3);letter-spacing:.08em;margin-left:.3rem}
 
 /* EDITORIAL BREAK */
 .editorial{position:relative;height:520px;overflow:hidden;display:flex;align-items:center}
 .editorial-bg{position:absolute;inset:0;background-image:url("./images/Photo 9.JPG");background-size:cover;background-position:center center;background-attachment:fixed;}
- .editorial-mask{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,6,2,.88) 0%,rgba(10,6,2,.6) 45%,rgba(10,6,2,.1) 100%)}
+.editorial-mask{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,6,2,.88) 0%,rgba(10,6,2,.6) 45%,rgba(10,6,2,.1) 100%)}
 .editorial-txt{position:relative;z-index:2;padding:0 3.5rem;max-width:600px}
 .editorial-quote{font-family:"Playfair Display",serif;font-size:clamp(1.5rem,3vw,2.4rem);font-style:italic;font-weight:400;line-height:1.45;color:#fff;margin-bottom:1.5rem}
 .editorial-attr{font-size:.72rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
@@ -261,7 +191,6 @@ nav.stuck{background:rgba(15,9,5,0.96);backdrop-filter:blur(16px);padding:1rem 3
 #packages .eyebrow{color:var(--gold)}
 .pkg-grid{display:grid;grid-template-columns:300px 1fr;gap:3.5rem;max-width:1300px;margin:3.5rem auto 0;align-items:start}
 .pkg-sidebar{position:sticky;top:100px}
-
 .pkg-btn{background:none;border:none;border-bottom:1px solid var(--border);text-align:left;padding:1.1rem 1.5rem;font-family:"Playfair Display",serif;font-size:.76rem;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:rgba(240,234,224,.4);cursor:pointer;transition:all .3s;display:flex;justify-content:space-between;align-items:center}
 .pkg-btn:last-child{border-bottom:none}
 .pkg-btn .arrow{opacity:0;transition:opacity .3s;color:var(--gold)}
@@ -270,16 +199,8 @@ nav.stuck{background:rgba(15,9,5,0.96);backdrop-filter:blur(16px);padding:1rem 3
 .pkg-panel{display:none}
 .pkg-panel.on{display:block}
 .pkg-head{margin-bottom:2.5rem}
-.pkg-title{font-family:"Myriad Pro",serif;font-size:2rem;font-weight:400;
-           color:#fff;margin-bottom:.5rem;
-            display:flex;
-  align-items:flex-end;
-  gap:.18em;
-          }
-
- .pkg-pkg{font-family:'TropicalBrush', cursive !important;
-  font-size:clamp(4rem,6vw,8rem);
-  color: var(--sand);}
+.pkg-title{font-family:"Myriad Pro",serif;font-size:2rem;font-weight:400;color:#fff;margin-bottom:.5rem;display:flex;align-items:flex-end;gap:.18em;}
+.pkg-pkg{font-family:'TropicalBrush', cursive !important;font-size:clamp(4rem,6vw,8rem);color: var(--sand);}
 .pkg-desc{font-size:.85rem;font-weight:300;line-height:1.85;color:rgba(240,234,224,.45);max-width:520px}
 .pkg-rows{display:flex;flex-direction:column;gap:2px}
 .pkg-row{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.4rem;background:rgba(184,147,90,.04);border:1px solid rgba(184,147,90,.1);transition:all .3s;gap:1.5rem}
@@ -293,38 +214,6 @@ nav.stuck{background:rgba(15,9,5,0.96);backdrop-filter:blur(16px);padding:1rem 3
 .pkg-note{font-size:.68rem;font-weight:300;color:rgba(240,234,224,.3);letter-spacing:.06em}
 .btn-sm{background:var(--gold);color:var(--bark);padding:.65rem 1.75rem;font-family:"Playfair Display",serif;font-size:.68rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;border:none;cursor:pointer;transition:all .3s;white-space:nowrap}
 .btn-sm:hover{background:var(--gold2)}
-
-/* BROCHURE IMAGES */
-.brochure-section{padding:6rem 3.5rem;background:var(--body-bg)}
-.brochure-title-wrap{text-align:center;margin-bottom:4rem}
-.brochure-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1300px;margin:0 auto}
-.brochure-card{position:relative;overflow:hidden;cursor:pointer}
-.brochure-card img{width:100%;height:280px;object-fit:cover;display:block;transition:transform .6s ease}
-.brochure-card:hover img{transform:scale(1.05)}
-.brochure-label{position:absolute;bottom:0;left:0;right:0;padding:1.5rem 1.25rem;background:linear-gradient(to top,rgba(10,6,2,.85),transparent);font-family:"Playfair Display",serif;font-size:1.1rem;font-style:italic;color:#fff}
-
-/* BOOKING */
-#booking{padding:8rem 3.5rem;background:var(--card-bg)}
-.booking-wrap{display:grid;grid-template-columns:1fr 1.35fr;gap:7rem;max-width:1300px;margin:0 auto;align-items:start}
-.booking-left .s-body{margin-top:1rem}
-.contact-list{margin-top:2.5rem;display:flex;flex-direction:column;gap:1.25rem}
-.c-row{display:flex;gap:1.1rem;align-items:flex-start}
-.c-ico{width:38px;height:38px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.9rem;flex-shrink:0}
-.c-lbl{font-size:.62rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem}
-.c-val{font-size:.88rem;font-weight:300;color:rgba(240,234,224,.7)}
-.form-box{background:#0d0704;border:1px solid var(--border);padding:3rem}
-.form-head{font-family:"Playfair Display",serif;font-size:1.5rem;font-weight:400;color:#fff;margin-bottom:2rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)}
-.f-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
-.f-full{grid-column:1/-1}
-.f-grp{display:flex;flex-direction:column;gap:.4rem}
-.f-grp label{font-size:.62rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:rgba(240,234,224,.4)}
-.f-grp input,.f-grp select,.f-grp textarea{background:rgba(255,255,255,.04);border:1px solid rgba(184,147,90,.2);border-bottom:1px solid rgba(184,147,90,.4);padding:.8rem 1rem;font-family:"Playfair Display",serif;font-size:.88rem;font-weight:300;color:#fff;outline:none;transition:all .3s;width:100%;-webkit-appearance:none}
-.f-grp input::placeholder{color:rgba(255,255,255,.2)}
-.f-grp input:focus,.f-grp select:focus,.f-grp textarea:focus{border-color:var(--gold);background:rgba(184,147,90,.06)}
-.f-grp select option{background:#1a1008;color:#fff}
-.f-grp textarea{height:90px;resize:none}
-.f-submit{width:100%;background:var(--gold);color:var(--bark);padding:1.1rem;font-family:"Playfair Display",serif;font-size:.75rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;border:none;cursor:pointer;margin-top:1.25rem;transition:all .3s}
-.f-submit:hover{background:var(--gold2)}
 
 /* FOOTER */
 footer{background:#070402;padding:5rem 3.5rem 2.5rem;border-top:1px solid var(--border)}
@@ -363,7 +252,6 @@ footer{background:#070402;padding:5rem 3.5rem 2.5rem;border-top:1px solid var(--
   .gallery-strip{grid-template-columns:1fr 1fr;height:auto}
   .gallery-cell{height:180px}
   .editorial-bg{background-attachment:scroll}
-  .brochure-grid{grid-template-columns:1fr 1fr}
   .pkg-sidebar{position:static}
   .pkg-tabs{flex-direction:row;overflow-x:auto}
   .pkg-btn{white-space:nowrap;border-bottom:none;border-right:1px solid var(--border)}
@@ -371,1683 +259,177 @@ footer{background:#070402;padding:5rem 3.5rem 2.5rem;border-top:1px solid var(--
   .f-row{grid-template-columns:1fr}
 }
 @media(max-width:520px){
-  .brochure-grid{grid-template-columns:1fr}
-  .gallery-strip{grid-template-columns:1fr}
-  .gallery-cell{height:220px}
   .about-nums{flex-wrap:wrap;gap:1.5rem}
   .hero-scroll{display:none}
 }
 
-  
-  .mopt{transition:all .3s}
-  input:focus,select:focus,textarea:focus{border-color:#B8935A !important;outline:none}
-  input[type=date]{color-scheme:dark}
-
-/* MOBILE RESPONSIVE FIXES */
-@media (max-width: 768px) {
-  nav {
-    padding: 1rem 1.2rem;
-  }
-
-  nav.stuck {
-    padding: 0.8rem 1.2rem;
-  }
-
-  .nav-ul,
-  .nav-cta {
-    display: none;
-  }
-
-  .burger {
-    display: flex;
-  }
-
-
-
-  .hero-content {
-    padding: 0 1.2rem 4rem;
-    width: 100%;
-  }
-
-  h1 {
-    font-size: clamp(2.5rem, 12vw, 4rem);
-    line-height: 1.05;
-  }
-
-  h2 {
-    font-size: clamp(2rem, 9vw, 3rem);
-    line-height: 1.1;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  section {
-    padding-left: 1.2rem !important;
-    padding-right: 1.2rem !important;
-  }
-
-  .grid,
-  .cards,
-  .services-grid,
-  .about-grid,
-  .contact-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .btn,
-  button,
-  input,
-  select,
-  textarea {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .modal,
-  .booking-modal,
-  .form-box {
-    width: 92vw !important;
-    max-width: 92vw !important;
-    padding: 1.2rem !important;
-  }
-} 
-
-
-/* ===== FINAL POLISH: gold dividers, WhatsApp booking, empty booking cleanup ===== */
-.gold-divider{
-  width:100%;
-  height:1px;
-  background:linear-gradient(to right,transparent,rgba(184,147,90,.72),rgba(212,169,106,.45),rgba(184,147,90,.72),transparent);
-  margin:4.5rem 0;
-}
-.gold-rule{
-  width:74px;
-  height:1px;
-  background:var(--gold);
-  margin:1.6rem 0 2.2rem;
-}
-.pkg-row,.price-row,.treat-row,.treatment-row,.pkg-card,.package-card,.pkg-item{
-  position:relative;
-  border-top:1px solid rgba(184,147,90,.18);
-}
-.pkg-row::before,.price-row::before,.treat-row::before,.treatment-row::before,.pkg-card::before,.package-card::before,.pkg-item::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:88px;
-  height:1px;
-  background:var(--gold);
-}
-.bottom-booking-cta,.booking-empty,.booking-spacer,.empty-booking,.booking-fill,.booking-filler{
-  display:none!important;
-  height:0!important;
-  min-height:0!important;
-  padding:0!important;
-  margin:0!important;
-  overflow:hidden!important;
-}
-.wa-floating-book{
-  position:fixed;
-  right:1.4rem;
-  bottom:1.4rem;
-  z-index:999;
-  display:flex;
-  align-items:center;
-  gap:.65rem;
-  background:#25D366;
-  color:#fff;
-  padding:.9rem 1.25rem;
-  border-radius:999px;
-  text-decoration:none;
-  font-family:"Playfair Display",serif;
-  font-size:.72rem;
-  font-weight:400;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  box-shadow:0 18px 45px rgba(0,0,0,.35);
-  transition:transform .3s ease,background .3s ease,box-shadow .3s ease;
-}
-.wa-floating-book:hover{
-  transform:translateY(-3px);
-  background:#1db954;
-  box-shadow:0 22px 55px rgba(0,0,0,.48);
-}
-.final-ritual-panel{
-  padding:4.25rem 3.5rem;
-  background:
-    radial-gradient(circle at 18% 40%,rgba(184,147,90,.14),transparent 30%),
-    radial-gradient(circle at 82% 62%,rgba(212,169,106,.09),transparent 34%),
-    linear-gradient(135deg,rgba(42,26,10,.62),rgba(15,9,5,.94));
-  border-top:1px solid rgba(184,147,90,.24);
-  border-bottom:1px solid rgba(184,147,90,.16);
-  position:relative;
-  overflow:hidden;
-}
-.final-ritual-panel::before{
-  content:"Mokisa";
-  position:absolute;
-  left:50%;
-  bottom:-1.1rem;
-  transform:translateX(-50%);
-  font-family:"Tropical Brush",cursive;
-  font-size:10rem;
-  line-height:1;
-  color:rgba(184,147,90,.055);
-  pointer-events:none;
-}
-.final-ritual-inner{
-  max-width:980px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:1fr auto 1fr;
-  align-items:center;
-  gap:3rem;
-  position:relative;
-  z-index:2;
-}
-.final-ritual-line{
-  height:1px;
-  background:linear-gradient(to right,transparent,rgba(184,147,90,.58),transparent);
-}
-.final-ritual-content{text-align:center}
-.final-ritual-kicker{
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:.28em;
-  font-size:.68rem;
-  margin-bottom:1rem;
-}
-.final-ritual-title{
-  font-size:2.35rem;
-  font-weight:400;
-  line-height:1;
-}
-.final-ritual-title .clean{
-  color:var(--sand);
-  font-size:1.35em;
-  margin-left:.2rem;
-}
-.final-ritual-text{
-  max-width:530px;
-  margin:1.45rem auto 0;
-  color:rgba(245,237,216,.68);
-  font-size:.95rem;
-  line-height:1.8;
-  font-style:italic;
-}
-.final-ritual-symbols{
-  display:flex;
-  justify-content:center;
-  gap:1.8rem;
-  margin-top:2rem;
-  color:var(--gold);
-  opacity:.78;
-  letter-spacing:.4em;
-}
-@media(max-width:760px){
-  .wa-floating-book{right:1rem;bottom:1rem;padding:.85rem 1rem;font-size:.65rem}
-  .final-ritual-panel{padding:3rem 1.5rem}
-  .final-ritual-inner{grid-template-columns:1fr;gap:1.5rem}
-  .final-ritual-line{display:none}
-  .final-ritual-title{font-size:1.9rem}
-  .final-ritual-panel::before{font-size:6rem}
-}
-
-
-
-/* ===== Package preview + equal divider fix ===== */
-.pkg-tabs button,
-.pkg-tab{
-  position:relative;
-}
-
-.pkg-tabs button::after,
-.pkg-tab::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-1px;
-  width:130px;
-  height:1px;
-  background:rgba(184,147,90,.26);
-}
-
-.pkg-tabs button.on::after,
-.pkg-tabs button.active::after,
-.pkg-tab.on::after,
-.pkg-tab.active::after{
-  background:rgba(184,147,90,.6);
-}
-
-/* Show first package preview by default */
-.pkg-panel{
-  display:none;
-}
-
-.pkg-panel.on,
-.pkg-panel.active{
-  display:block!important;
-}
-
-
-
-/* ===== Restored Pakketten Section Fix ===== */
-#packages{
-  display:block!important;
-  visibility:visible!important;
-  opacity:1!important;
-}
-
-#packages .pkg-tabs{
-  display:flex;
-  flex-direction:column;
-  align-items:stretch;
-}
-
-#packages .pkg-tabs button,
-#packages .pkg-tab{
-  width:130px;
-  max-width:130px;
-  min-width:130px;
-  text-align:left;
-  border-bottom:1px solid rgba(184,147,90,.26)!important;
-}
-
-#packages .pkg-tabs button.on,
-#packages .pkg-tabs button.active,
-#packages .pkg-tab.on,
-#packages .pkg-tab.active{
-  color:var(--gold);
-  border-bottom-color:rgba(184,147,90,.65)!important;
-}
-
-#packages .pkg-panel{
-  display:none;
-}
-
-#packages .pkg-panel.on,
-#packages .pkg-panel.active{
-  display:block!important;
-}
-
-
-
-
-/* ===== FIX: Package tabs replace instead of stacking ===== */
-#packages .pkg-panel{
-  display:none!important;
-}
-
-#packages .pkg-panel.on,
-#packages .pkg-panel.active{
-  display:block!important;
-}
-
-#packages .pkg-panel:not(.on):not(.active){
-  display:none!important;
-}
-
-#packages .pkg-tabs button,
-#packages .pkg-tab{
-  cursor:pointer;
-}
-
-
-/* ===== FIX: WhatsApp modal/button response ===== */
-#bmodal,
-.bmodal{
-  position:fixed;
-  inset:0;
-  z-index:1200;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:1.5rem;
-  background:rgba(5,3,2,.84);
-}
-
-#bmodal.on,
-.bmodal.on{
-  display:flex!important;
-}
-
-#bmodal .bmodal-card,
-.bmodal .bmodal-card{
-  width:min(520px,100%);
-  background:#140c06;
-  border:1px solid rgba(184,147,90,.35);
-  padding:2rem;
-  position:relative;
-  box-shadow:0 30px 80px rgba(0,0,0,.5);
-}
-
-.bmodal-close{
-  position:absolute;
-  top:1rem;
-  right:1rem;
-  background:none;
-  border:0;
-  color:var(--gold);
-  font-size:1.8rem;
-  cursor:pointer;
-}
-
-#bmodal input,
-#bmodal textarea,
-.bmodal input,
-.bmodal textarea{
-  width:100%;
-  margin-bottom:.85rem;
-  background:#0f0905;
-  border:1px solid rgba(184,147,90,.25);
-  color:#F5EDD8;
-  padding:.9rem;
-  font-family:"Playfair Display",serif;
-}
-
-#bmodal textarea,
-.bmodal textarea{
-  min-height:100px;
-  resize:vertical;
-}
-
-#bmodal button[type="submit"],
-.bmodal button[type="submit"]{
-  width:100%;
-  background:var(--gold);
-  border:1px solid var(--gold);
-  color:#2A1A0A;
-  padding:.9rem 1rem;
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  font-family:"Playfair Display",serif;
-  cursor:pointer;
-}
-
-
-/* ===== Premium WhatsApp Booking Form ===== */
-#bmodal{
-  position:fixed;
-  inset:0;
-  z-index:1600;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:1.25rem;
-  background:rgba(5,3,2,.86);
-  backdrop-filter:blur(10px);
-}
-
-#bmodal.on{
-  display:flex!important;
-}
-
-.booking-card{
-  width:min(760px,100%);
-  max-height:92vh;
-  overflow:auto;
-  background:#2a1508;
-  border:1px solid rgba(184,147,90,.34);
-  box-shadow:0 35px 95px rgba(0,0,0,.62);
-  padding:2.2rem;
-  position:relative;
-}
-
-.booking-close{
-  position:absolute;
-  top:1rem;
-  right:1rem;
-  width:38px;
-  height:38px;
-  border:1px solid rgba(184,147,90,.35);
-  background:transparent;
-  color:var(--gold);
-  font-size:1.5rem;
-  cursor:pointer;
-}
-
-.booking-title{
-  font-size:2.4rem;
-  line-height:1;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  margin-bottom:.9rem;
-}
-
-.booking-intro{
-  color:rgba(245,237,216,.55);
-  font-size:.95rem;
-  margin-bottom:1.7rem;
-}
-
-.booking-line{
-  height:1px;
-  background:rgba(184,147,90,.34);
-  margin:0 0 1.7rem;
-}
-
-.booking-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:1rem 1.1rem;
-}
-
-.booking-field{
-  display:flex;
-  flex-direction:column;
-  gap:.48rem;
-}
-
-.booking-field.full{
-  grid-column:1 / -1;
-}
-
-.booking-field label,
-.preference-label{
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:.22em;
-  font-size:.66rem;
-}
-
-.booking-field label span,
-.preference-label span{
-  color:#ef6f42;
-}
-
-.booking-field input,
-.booking-field select,
-.booking-field textarea{
-  width:100%;
-  background:#351d0f;
-  border:1px solid rgba(184,147,90,.22);
-  border-bottom-color:rgba(184,147,90,.58);
-  color:#F5EDD8;
-  padding:1rem;
-  font-family:"Playfair Display",serif;
-  font-size:.95rem;
-  outline:none;
-}
-
-.booking-field input:focus,
-.booking-field select:focus,
-.booking-field textarea:focus{
-  border-color:rgba(212,169,106,.85);
-}
-
-.booking-field textarea{
-  min-height:105px;
-  resize:vertical;
-}
-
-.preference-wrap{
-  grid-column:1 / -1;
-  margin-top:.2rem;
-}
-
-.preference-options{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:.75rem;
-  margin-top:.55rem;
-}
-
-.preference-options input{
-  position:absolute;
-  opacity:0;
-  pointer-events:none;
-}
-
-.preference-box{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:.7rem;
-  min-height:82px;
-  border:1px solid rgba(184,147,90,.42);
-  background:rgba(26,16,8,.35);
-  color:rgba(245,237,216,.62);
-  cursor:pointer;
-  text-transform:uppercase;
-  letter-spacing:.14em;
-  font-size:.68rem;
-  transition:all .25s ease;
-}
-
-.preference-icon{
-  color:var(--gold);
-  font-size:1.4rem;
-  line-height:1;
-}
-
-.preference-options input:checked + .preference-box{
-  background:rgba(184,147,90,.18);
-  border-color:var(--gold);
-  color:#F5EDD8;
-}
-
-.booking-submit{
-  width:100%;
-  margin-top:1.2rem;
-  border:0;
-  background:#25D366;
-  color:#fff;
-  padding:1rem 1.2rem;
-  font-family:"Playfair Display",serif;
-  font-size:.76rem;
-  font-weight:700;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  cursor:pointer;
-}
-
-.booking-submit:hover{
-  background:#1db954;
-}
-
-@media(max-width:700px){
-  .booking-card{
-    padding:1.5rem;
-  }
-
-  .booking-grid{
-    grid-template-columns:1fr;
-  }
-
-  .preference-options{
-    grid-template-columns:1fr;
-  }
-
-  .booking-title{
-    font-size:1.9rem;
-  }
-}
-
-
-/* Native calendar date picker styling */
-#wa_date{
-  color-scheme:dark;
-}
-
-#wa_date::-webkit-calendar-picker-indicator{
-  cursor:pointer;
-  filter:invert(77%) sepia(26%) saturate(559%) hue-rotate(358deg) brightness(88%) contrast(85%);
-}
-
-
-/* ===== Mobile Responsiveness Fix ===== */
-@media(max-width:760px){
-
-  html, body{
-    width:100%;
-    max-width:100%;
-    overflow-x:hidden!important;
-  }
-
-  nav{
-    padding:1.15rem 1.25rem!important;
-  }
-
-  nav.stuck{
-    padding:1rem 1.25rem!important;
-  }
-
-  .logo{
-    font-size:1.45rem!important;
-  }
-
-  .nav-ul,
-  .nav-cta{
-    display:none!important;
-  }
-
-  .burger{
-    display:flex!important;
-  }
-
-
- 
-.hero-img{position:absolute;
-          inset:0;
-          background-image:url("./images/photo1.jpg");
-          background-size:cover;
-          background-position:center center;
-          background-repeat:no-repeat;}
-
- .hero-img::after {
-  display: none !important;
-}
-
-  .hero-content,
-  .hero-copy,
-  .hero-text{
-    position:relative!important;
-    z-index:2!important;
-    width:100%!important;
-    max-width:100%!important;
-    padding:0!important;
-    margin:0!important;
-  }
-
-  #home h1,
-  .hero-title{
-    font-size:clamp(2.45rem, 12vw, 4.2rem)!important;
-    line-height:.95!important;
-    max-width:100%!important;
-  }
-
-  #home .clean,
-  .hero-title .clean{
-    font-size:1.15em!important;
-  }
-
-  .hero-eyebrow,
-  #home .eyebrow{
-    font-size:.68rem!important;
-    line-height:1.7!important;
-    letter-spacing:.26em!important;
-    max-width:92%!important;
-  }
-
-  .hero-sub,
-  #home p{
-    font-size:1rem!important;
-    line-height:1.6!important;
-    max-width:92%!important;
-  }
-
-  .hero-actions,
-  .hero-btns{
-    display:flex!important;
-    flex-direction:column!important;
-    gap:1rem!important;
-    width:100%!important;
-    max-width:100%!important;
-  }
-
-  .hero-actions a,
-  .hero-actions button,
-  .hero-btns a,
-  .hero-btns button,
-  .btn,
-  .btn-outline{
-    width:100%!important;
-    max-width:100%!important;
-    text-align:center!important;
-    justify-content:center!important;
-    padding:1rem 1.2rem!important;
-  }
-
-  section{
-    padding:4.5rem 1.35rem!important;
-  }
-
-  .about-wrap,
-  .pkg-grid,
-  .treat-grid,
-  .rv,
-  .grid{
-    grid-template-columns:1fr!important;
-    display:grid!important;
-    gap:2rem!important;
-  }
-
-  .about-img-col,
-  .about-img{
-    min-height:260px!important;
-  }
-
-  .story{
-    flex-wrap:wrap!important;
-    white-space:normal!important;
-    font-size:clamp(1.9rem, 8vw, 3rem)!important;
-  }
-
-  .pkg-tabs{
-    width:100%!important;
-    display:grid!important;
-    grid-template-columns:repeat(2, 1fr)!important;
-    gap:0!important;
-    border:1px solid rgba(184,147,90,.22)!important;
-  }
-
-  .pkg-tabs button,
-  .pkg-tab,
-  #packages .pkg-tabs button,
-  #packages .pkg-tab{
-    width:100%!important;
-    max-width:none!important;
-    min-width:0!important;
-    padding:1rem!important;
-    text-align:center!important;
-    border-bottom:1px solid rgba(184,147,90,.22)!important;
-  }
-
-  #packages .pkg-tabs button::after,
-  #packages .pkg-tab::after{
-    display:none!important;
-  }
-
-  .pkg-panel{
-    padding:0!important;
-    border:0!important;
-    background:transparent!important;
-  }
-
-  .pkg-list,
-  .treat-list{
-    width:100%!important;
-  }
-
-  .pkg-row,
-  .price-row,
-  .treat-row,
-  .treatment-row{
-    display:grid!important;
-    grid-template-columns:1fr!important;
-    gap:.7rem!important;
-    padding:1rem!important;
-  }
-
-  .pkg-row .price,
-  .price,
-  .amount{
-    text-align:left!important;
-    font-size:1.15rem!important;
-  }
-
-  .wa-floating-book{
-    left:1rem!important;
-    right:1rem!important;
-    bottom:1rem!important;
-    width:auto!important;
-    justify-content:center!important;
-    padding:.95rem 1rem!important;
-    font-size:.68rem!important;
-    z-index:1500!important;
-  }
-
-  .booking-card{
-    width:100%!important;
-    max-height:88svh!important;
-    padding:1.35rem!important;
-  }
-
-  .booking-title{
-    font-size:1.75rem!important;
-  }
-
-  .booking-grid{
-    grid-template-columns:1fr!important;
-  }
-
-  .preference-options{
-    grid-template-columns:1fr!important;
-  }
-
-  .booking-field input,
-  .booking-field select,
-  .booking-field textarea{
-    font-size:16px!important;
-  }
-}
-
-
-/* =====================================================
-   REAL MOBILE USABILITY FIX
-   Prevents sideways panning and makes all content fit.
-   ===================================================== */
-@media (max-width: 760px){
-
-  html,
-  body{
-    width:100%!important;
-    max-width:100%!important;
-    overflow-x:hidden!important;
-    position:relative!important;
-  }
-
-  body{
-    touch-action:pan-y!important;
-  }
-
-  body *{
-    box-sizing:border-box!important;
-  }
-
-  img,
-  video,
-  canvas,
-  iframe{
-    max-width:100%!important;
-    height:auto!important;
-  }
-
-  nav{
-    left:0!important;
-    right:0!important;
-    width:100%!important;
-    max-width:100%!important;
-    padding:1.15rem 1.4rem!important;
-  }
-
-  .nav-ul,
-  .nav-cta{
-    display:none!important;
-  }
-
-  .burger{
-    display:flex!important;
-  }
-
-  .logo{
-    font-size:1.45rem!important;
-    max-width:70vw!important;
-  }
-
-  section,
-  header,
-  footer,
-  main{
-    width:100%!important;
-    max-width:100%!important;
-    overflow:hidden!important;
-    padding-left:1.35rem!important;
-    padding-right:1.35rem!important;
-  }
-
-#home {
-  position: relative !important;
-  width: 100% !important;
-  height: 100vh !important;
-  min-height: 600px !important;
-  padding: 7rem 1.35rem 7.5rem !important;
-  display: flex !important;
-  align-items: flex-end !important;
-  overflow: hidden !important;
-  background-image: url("./images/photo1.jpg") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-}
-
-
-
-  .hero-content,
-  .hero-copy,
-  .hero-text,
-  .hero-inner{
-    width:100%!important;
-    max-width:100%!important;
-    min-width:0!important;
-    margin-left:0!important;
-    margin-right:0!important;
-    padding-left:0!important;
-    padding-right:0!important;
-    transform:none!important;
-  }
-
-  #home h1,
-  .hero-title,
-  h1{
-    max-width:100%!important;
-    width:100%!important;
-    font-size:clamp(2.15rem, 11vw, 3.6rem)!important;
-    line-height:1!important;
-    white-space:normal!important;
-    overflow-wrap:break-word!important;
-    word-break:normal!important;
-  }
-
-  #home p,
-  .hero-sub,
-  .hero-eyebrow,
-  .eyebrow{
-    max-width:100%!important;
-    width:100%!important;
-    white-space:normal!important;
-    overflow-wrap:break-word!important;
-  }
-
-  .hero-actions,
-  .hero-btns{
-    width:100%!important;
-    display:flex!important;
-    flex-direction:column!important;
-    gap:1rem!important;
-  }
-
-  .hero-actions a,
-  .hero-actions button,
-  .hero-btns a,
-  .hero-btns button,
-  .btn,
-  .btn-outline{
-    width:100%!important;
-    max-width:100%!important;
-    min-width:0!important;
-    text-align:center!important;
-    justify-content:center!important;
-    padding:1rem 1.1rem!important;
-  }
-
-  .about-wrap,
-  .about-text-col,
-  .about-img-col,
-  .pkg-grid,
-  .treat-grid,
-  .rv,
-  .grid{
-    width:100%!important;
-    max-width:100%!important;
-    min-width:0!important;
-    display:grid!important;
-    grid-template-columns:1fr!important;
-    gap:2rem!important;
-    overflow:hidden!important;
-  }
-
-  .story,
-  h2,
-  h3{
-    width:100%!important;
-    max-width:100%!important;
-    min-width:0!important;
-    white-space:normal!important;
-    flex-wrap:wrap!important;
-    overflow-wrap:break-word!important;
-    word-break:normal!important;
-    font-size:clamp(2rem, 9vw, 3rem)!important;
-    line-height:1.05!important;
-  }
-
-  .story .clean,
-  h2 .clean,
-  h3 .clean{
-    display:inline!important;
-    font-size:1.05em!important;
-    position:static!important;
-  }
-
-  p,
-  li,
-  .body,
-  .s-body{
-    max-width:100%!important;
-    white-space:normal!important;
-    overflow-wrap:break-word!important;
-    word-break:normal!important;
-    line-height:1.75!important;
-  }
-
-  .pkg-tabs{
-    width:100%!important;
-    max-width:100%!important;
-    display:grid!important;
-    grid-template-columns:repeat(2, minmax(0, 1fr))!important;
-    border:1px solid rgba(184,147,90,.22)!important;
-    overflow:hidden!important;
-  }
-
-  .pkg-tabs button,
-  .pkg-tab,
-  #packages .pkg-tabs button,
-  #packages .pkg-tab{
-    width:100%!important;
-    max-width:none!important;
-    min-width:0!important;
-    padding:1rem .6rem!important;
-    text-align:center!important;
-    border-bottom:1px solid rgba(184,147,90,.22)!important;
-    white-space:normal!important;
-  }
-
-  #packages .pkg-tabs button::after,
-  #packages .pkg-tab::after{
-    display:none!important;
-  }
-
-  .pkg-panel,
-  .pkg-list,
-  .treat-list{
-    width:100%!important;
-    max-width:100%!important;
-    min-width:0!important;
-    overflow:hidden!important;
-  }
-
-  .pkg-row,
-  .price-row,
-  .treat-row,
-  .treatment-row{
-    width:100%!important;
-    max-width:100%!important;
-    min-width:0!important;
-    display:grid!important;
-    grid-template-columns:1fr!important;
-    gap:.7rem!important;
-    padding:1rem!important;
-  }
-
-  .price,
-  .amount,
-  .pkg-price{
-    text-align:left!important;
-    font-size:1.1rem!important;
-  }
-
-  .wa-floating-book{
-    left:1rem!important;
-    right:1rem!important;
-    bottom:1rem!important;
-    width:auto!important;
-    max-width:calc(100vw - 2rem)!important;
-    justify-content:center!important;
-    padding:.95rem 1rem!important;
-    font-size:.68rem!important;
-    z-index:1500!important;
-  }
-
-  #bmodal{
-    padding:1rem!important;
-    overflow-x:hidden!important;
-  }
-
-  .booking-card{
-    width:100%!important;
-    max-width:100%!important;
-    max-height:88svh!important;
-    padding:1.35rem!important;
-  }
-
-  .booking-grid,
-  .preference-options{
-    grid-template-columns:1fr!important;
-  }
-
-  .booking-field input,
-  .booking-field select,
-  .booking-field textarea{
-    font-size:16px!important;
-  }
-}
-
-/* Hard stop any accidental horizontal scroll on all sizes */
-html, body{
-  overflow-x:hidden!important;
-}
-
-
-/* ===== FIX: Pakketten tabs display one matching section ===== */
+.mopt{transition:all .3s}
+input:focus,select:focus,textarea:focus{border-color:#B8935A !important;outline:none}
+input[type=date]{color-scheme:dark}
+
+.gold-divider{width:100%;height:1px;background:linear-gradient(to right,transparent,rgba(184,147,90,.72),rgba(212,169,106,.45),rgba(184,147,90,.72),transparent);margin:4.5rem 0;}
+.gold-rule{width:74px;height:1px;background:var(--gold);margin:1.6rem 0 2.2rem;}
+.pkg-row,.price-row,.treat-row,.treatment-row,.pkg-card,.package-card,.pkg-item{position:relative;border-top:1px solid rgba(184,147,90,.18);}
+.pkg-row::before,.price-row::before,.treat-row::before,.treatment-row::before,.pkg-card::before,.package-card::before,.pkg-item::before{content:"";position:absolute;top:0;left:0;width:88px;height:1px;background:var(--gold);}
+.wa-floating-book{position:fixed;right:1.4rem;bottom:1.4rem;z-index:999;display:flex;align-items:center;gap:.65rem;background:#25D366;color:#fff;padding:.9rem 1.25rem;border-radius:999px;text-decoration:none;font-family:"Playfair Display",serif;font-size:.72rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 18px 45px rgba(0,0,0,.35);transition:transform .3s ease,background .3s ease,box-shadow .3s ease;}
+.wa-floating-book:hover{transform:translateY(-3px);background:#1db954;box-shadow:0 22px 55px rgba(0,0,0,.48);}
+@media(max-width:760px){.wa-floating-book{right:1rem;bottom:1rem;padding:.85rem 1rem;font-size:.65rem}}
+
+/* Package tabs */
+.pkg-tabs button,.pkg-tab{position:relative;}
+.pkg-tabs button::after,.pkg-tab::after{content:"";position:absolute;left:0;bottom:-1px;width:130px;height:1px;background:rgba(184,147,90,.26);}
+.pkg-tabs button.on::after,.pkg-tabs button.active::after,.pkg-tab.on::after,.pkg-tab.active::after{background:rgba(184,147,90,.6);}
+#packages{display:block!important;visibility:visible!important;opacity:1!important;}
+#packages .pkg-tabs{display:flex;flex-direction:column;align-items:stretch;}
+#packages .pkg-tabs button,#packages .pkg-tab{width:130px;max-width:130px;min-width:130px;text-align:left;border-bottom:1px solid rgba(184,147,90,.26)!important;}
+#packages .pkg-tabs button.on,#packages .pkg-tabs button.active,#packages .pkg-tab.on,#packages .pkg-tab.active{color:var(--gold);border-bottom-color:rgba(184,147,90,.65)!important;}
 #packages .pkg-panel{display:none!important;}
-#packages .pkg-panel.on{display:block!important;}
-#packages .pkg-btn{cursor:pointer;}
-#packages .s-title i.
+#packages .pkg-panel.on,#packages .pkg-panel.active{display:block!important;}
+#packages .pkg-panel:not(.on):not(.active){display:none!important;}
+#packages .pkg-tabs button,#packages .pkg-tab{cursor:pointer;}
 
-/* ===== FIX: Package panels display correctly ===== */
-#packages .pkg-panel{
-  display:none;
-}
+/* Modal */
+#bmodal{position:fixed;inset:0;z-index:1600;display:none;align-items:center;justify-content:center;padding:1.25rem;background:rgba(5,3,2,.86);backdrop-filter:blur(10px);}
+#bmodal.on{display:flex!important;}
+.booking-card{width:min(760px,100%);max-height:92vh;overflow:auto;background:#2a1508;border:1px solid rgba(184,147,90,.34);box-shadow:0 35px 95px rgba(0,0,0,.62);padding:2.2rem;position:relative;}
+.booking-close{position:absolute;top:1rem;right:1rem;width:38px;height:38px;border:1px solid rgba(184,147,90,.35);background:transparent;color:var(--gold);font-size:1.5rem;cursor:pointer;}
+.booking-title{font-size:2.4rem;line-height:1;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.9rem;}
+.booking-intro{color:rgba(245,237,216,.55);font-size:.95rem;margin-bottom:1.7rem;}
+.booking-line{height:1px;background:rgba(184,147,90,.34);margin:0 0 1.7rem;}
+.booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.1rem;}
+.booking-field{display:flex;flex-direction:column;gap:.48rem;}
+.booking-field.full{grid-column:1 / -1;}
+.booking-field label,.preference-label{color:var(--gold);text-transform:uppercase;letter-spacing:.22em;font-size:.66rem;}
+.booking-field label span,.preference-label span{color:#ef6f42;}
+.booking-field input,.booking-field select,.booking-field textarea{width:100%;background:#351d0f;border:1px solid rgba(184,147,90,.22);border-bottom-color:rgba(184,147,90,.58);color:#F5EDD8;padding:1rem;font-family:"Playfair Display",serif;font-size:.95rem;outline:none;}
+.booking-field input:focus,.booking-field select:focus,.booking-field textarea:focus{border-color:rgba(212,169,106,.85);}
+.booking-field textarea{min-height:105px;resize:vertical;}
+.preference-wrap{grid-column:1 / -1;margin-top:.2rem;}
+.preference-options{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin-top:.55rem;}
+.preference-options input{position:absolute;opacity:0;pointer-events:none;}
+.preference-box{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;min-height:82px;border:1px solid rgba(184,147,90,.42);background:rgba(26,16,8,.35);color:rgba(245,237,216,.62);cursor:pointer;text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;transition:all .25s ease;}
+.preference-icon{color:var(--gold);font-size:1.4rem;line-height:1;}
+.preference-options input:checked + .preference-box{background:rgba(184,147,90,.18);border-color:var(--gold);color:#F5EDD8;}
+.booking-submit{width:100%;margin-top:1.2rem;border:0;background:#25D366;color:#fff;padding:1rem 1.2rem;font-family:"Playfair Display",serif;font-size:.76rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;}
+.booking-submit:hover{background:#1db954;}
+@media(max-width:700px){.booking-card{padding:1.5rem;}.booking-grid{grid-template-columns:1fr;}.preference-options{grid-template-columns:1fr;}.booking-title{font-size:1.9rem;}}
 
-#packages .pkg-panel.on,
-#packages .pkg-panel.active{
-  display:block;
-}
+#wa_date{color-scheme:dark;}
+#wa_date::-webkit-calendar-picker-indicator{cursor:pointer;filter:invert(77%) sepia(26%) saturate(559%) hue-rotate(358deg) brightness(88%) contrast(85%);}
 
+/* Add guest button */
+.add-guest-btn{margin-top:1rem;width:100%;background:transparent;border:1px dashed rgba(214,168,90,.55);color:#2A1A0A;padding:.95rem 1rem;font-family:"Playfair Display",serif;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:all .25s ease;}
+.add-guest-btn:hover{background:rgba(214,168,90,.1);border-color:rgba(214,168,90,.9);transform:translateY(-1px);}
+.guest-section{display:none;margin-top:1.25rem;padding:1.25rem;border:1px solid rgba(214,168,90,.28);background:rgba(15,9,5,.32);}
+.guest-section.on{display:block;}
+.guest-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem;}
+.guest-head h3{font-size:1rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:#f1d19a;}
+.remove-guest-btn{background:transparent;border:0;color:rgba(245,237,216,.58);font-family:"Playfair Display",serif;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;}
+.remove-guest-btn:hover{color:#f1d19a;}
+@media(max-width:700px){.guest-section{padding:1rem;}.guest-head{align-items:flex-start;flex-direction:column;}}
 
-/* ===== Premium Signature Button ===== */
-.pkg-btn{
-  position:relative;
-  transition:
-    background .25s ease,
-    border-color .25s ease,
-    transform .25s ease,
-    box-shadow .25s ease;
-}
+/* Language switcher */
+.lang-switch{display:flex;align-items:center;gap:.35rem;margin-left:1rem;border:1px solid rgba(184,147,90,.35);padding:.35rem .55rem;}
+.lang-switch button{background:transparent;border:0;color:rgba(255,255,255,.55);font-family:"Playfair Display",serif;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;padding:.15rem .25rem;}
+.lang-switch button.on{color:var(--gold);}
+.lang-switch span{color:rgba(184,147,90,.45);font-size:.65rem;}
+@media(max-width:760px){.lang-switch{position:fixed;top:1.1rem;right:4.4rem;z-index:160;margin-left:0;background:rgba(15,9,5,.78);backdrop-filter:blur(10px);}}
 
-.pkg-btn:hover{
-  background:rgba(184,147,90,.08) !important;
-  border-color:rgba(184,147,90,.45) !important;
-  transform:translateX(4px);
-}
+@media(max-width:768px){.mokisa-word,.wellness-word{font-size:clamp(4rem,16vw,5rem)!important;}}
 
-.pkg-btn.on,
-.pkg-btn.active{
-  background:rgba(184,147,90,.12);
-  border-color:rgba(184,147,90,.55);
-}
+/* Button fonts */
+.btn-fill,.btn-line,.btn-sm,.pkg-btn,.treatment-select-btn,button,input[type="submit"],input[type="button"]{font-family:"Myriad Pro", "DM Sans", Arial, sans-serif !important;}
 
-.pkg-btn.signature{
-  background:linear-gradient(
-    135deg,
-    rgba(88,54,18,.95),
-    rgba(43,24,8,.95)
-  ) !important;
-
-  border:1px solid rgba(214,168,90,.55) !important;
-  color:#f1d19a !important;
-  box-shadow:0 0 22px rgba(214,168,90,.12);
-}
-
-.pkg-btn.signature:hover{
-  transform:translateX(6px);
-  background:linear-gradient(
-    135deg,
-    rgba(120,74,24,.98),
-    rgba(58,32,10,.98)
-  ) !important;
-
-  box-shadow:0 0 28px rgba(214,168,90,.22);
-}
-
-
-/* ===== Add Guest Booking Form ===== */
-.add-guest-btn{
-  margin-top:1rem;
-  width:100%;
-  background:transparent;
-  border:1px dashed rgba(214,168,90,.55);
-  color:#2A1A0A;
-  padding:.95rem 1rem;
-  font-family:"Playfair Display",serif;
-  font-size:.72rem;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-  cursor:pointer;
-  transition:all .25s ease;
-}
-
-.add-guest-btn:hover{
-  background:rgba(214,168,90,.1);
-  border-color:rgba(214,168,90,.9);
-  transform:translateY(-1px);
-}
-
-.guest-section{
-  display:none;
-  margin-top:1.25rem;
-  padding:1.25rem;
-  border:1px solid rgba(214,168,90,.28);
-  background:rgba(15,9,5,.32);
-}
-
-.guest-section.on{
-  display:block;
-}
-
-.guest-head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:1rem;
-  margin-bottom:1rem;
-}
-
-.guest-head h3{
-  font-size:1rem;
-  font-weight:400;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:#f1d19a;
-}
-
-.remove-guest-btn{
-  background:transparent;
-  border:0;
-  color:rgba(245,237,216,.58);
-  font-family:"Playfair Display",serif;
-  font-size:.68rem;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  cursor:pointer;
-}
-
-.remove-guest-btn:hover{
-  color:#f1d19a;
-}
-
-@media(max-width:700px){
-  .guest-section{
-    padding:1rem;
-  }
-
-  .guest-head{
-    align-items:flex-start;
-    flex-direction:column;
-  }
-}
-
-
-/* ===== Language Switcher ===== */
-.lang-switch{
-  display:flex;
-  align-items:center;
-  gap:.35rem;
-  margin-left:1rem;
-  border:1px solid rgba(184,147,90,.35);
-  padding:.35rem .55rem;
-}
-
-.lang-switch button{
-  background:transparent;
-  border:0;
-  color:rgba(255,255,255,.55);
-  font-family:"Playfair Display",serif;
-  font-size:.66rem;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  cursor:pointer;
-  padding:.15rem .25rem;
-}
-
-.lang-switch button.on{
-  color:var(--gold);
-}
-
-.lang-switch span{
-  color:rgba(184,147,90,.45);
-  font-size:.65rem;
-}
-
+/* Mobile fixes */
 @media(max-width:760px){
-  .lang-switch{
-    position:fixed;
-    top:1.1rem;
-    right:4.4rem;
-    z-index:160;
-    margin-left:0;
-    background:rgba(15,9,5,.78);
-    backdrop-filter:blur(10px);
-  }
+  html,body{width:100%!important;max-width:100%!important;overflow-x:hidden!important;position:relative!important;}
+  body{touch-action:pan-y!important;}
+  nav{left:0!important;right:0!important;width:100%!important;max-width:100%!important;padding:1.15rem 1.4rem!important;}
+  .nav-ul,.nav-cta{display:none!important;}
+  .burger{display:flex!important;}
+  .logo{font-size:1.45rem!important;max-width:70vw!important;}
+  section,header,footer,main{width:100%!important;max-width:100%!important;overflow:hidden!important;padding-left:1.35rem!important;padding-right:1.35rem!important;}
+  #home{position:relative!important;width:100%!important;height:100vh!important;min-height:600px!important;padding:7rem 1.35rem 7.5rem!important;display:flex!important;align-items:flex-end!important;overflow:hidden!important;background-image:url("./images/photo1.jpg")!important;background-size:cover!important;background-position:center center!important;background-repeat:no-repeat!important;}
+  .about-wrap,.about-text-col,.about-img-col,.pkg-grid,.rv,.grid{width:100%!important;max-width:100%!important;min-width:0!important;display:grid!important;grid-template-columns:1fr!important;gap:2rem!important;overflow:hidden!important;}
+  .pkg-tabs{width:100%!important;max-width:100%!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;border:1px solid rgba(184,147,90,.22)!important;overflow:hidden!important;}
+  .pkg-tabs button,.pkg-tab,#packages .pkg-tabs button,#packages .pkg-tab{width:100%!important;max-width:none!important;min-width:0!important;padding:1rem .6rem!important;text-align:center!important;border-bottom:1px solid rgba(184,147,90,.22)!important;white-space:normal!important;}
+  .wa-floating-book{left:1rem!important;right:1rem!important;bottom:1rem!important;width:auto!important;max-width:calc(100vw - 2rem)!important;justify-content:center!important;padding:.95rem 1rem!important;font-size:.68rem!important;z-index:1500!important;}
+  #bmodal{padding:1rem!important;overflow-x:hidden!important;}
+  .booking-card{width:100%!important;max-width:100%!important;max-height:88svh!important;padding:1.35rem!important;}
+  .booking-grid,.preference-options{grid-template-columns:1fr!important;}
+  .booking-field input,.booking-field select,.booking-field textarea{font-size:16px!important;}
 }
 
+html,body{overflow-x:hidden!important;}
 
-@media(max-width:768px){
-  .mokisa-word,.wellness-word{font-size:clamp(4rem,16vw,5rem)!important;}
-}
-
-
-/* Mobile fix: keep "Heals" next to "Tradition" in the About title */
-@media (max-width: 600px){
-  #about .about-story-title{
-    display:block !important;
-    white-space:normal !important;
-    font-size:clamp(2.05rem, 9vw, 3rem) !important;
-    line-height:1.05 !important;
-  }
-
-  #about .about-story-title .pkg-pkg{
-    display:inline !important;
-    margin-left:.28rem !important;
-    white-space:nowrap !important;
-    font-size:.95em !important;
-    font-family:'TropicalBrush', cursive !important;
-    color:var(--sand) !important;
-  }
-}
-
-
-
-/* ===== MOBILE BRUSH TITLE + BUTTON FONT FIXES ===== */
-.btn-fill,
-.btn-line,
-.btn-sm,
-.pkg-btn,
-.treatment-select-btn,
-button,
-input[type="submit"],
-input[type="button"]{
-  font-family:"Myriad Pro", "DM Sans", Arial, sans-serif !important;
-}
-
-@media(max-width:700px){
-  /* Let section headings wrap naturally instead of forcing one long row */
-  .story,
-  .pkg-title,
-  .s-title,
-  .treatment-heading,
-  .packages-main-title,
-  .pkg-head .s-title{
-    display:block !important;
-    white-space:normal !important;
-    max-width:100% !important;
-    width:100% !important;
-    overflow:hidden !important;
-    line-height:1.05 !important;
-  }
-
-  /* Individuale Behandelingen: stack the brush word below and keep it inside the screen */
-  .treatment-heading .pkg-pkg,
-  #treatments .story .pkg-pkg{
-    display:block !important;
-    margin-left:0 !important;
-    margin-top:.15rem !important;
-    max-width:100% !important;
-    white-space:normal !important;
-    overflow-wrap:anywhere !important;
-    word-break:normal !important;
-    font-size:clamp(2.45rem, 14vw, 4.2rem) !important;
-    line-height:.9 !important;
-  }
-
-  /* Gecombineerde Behandelingen: keep the brush word responsive */
-  .packages-main-title .brush{
-    display:block !important;
-    max-width:100% !important;
-    font-size:clamp(1.7rem, 8vw, 2.6rem) !important;
-    line-height:1.05 !important;
-  }
-
-  .packages-main-title .pkg-pkg{
-    display:block !important;
-    margin-left:0 !important;
-    max-width:100% !important;
-    white-space:normal !important;
-    overflow-wrap:anywhere !important;
-    font-size:clamp(2.35rem, 13vw, 4rem) !important;
-    line-height:.9 !important;
-  }
-
-  /* Package panel titles like Therapeutische Behandelingen */
-  .pkg-head .s-title{
-    font-size:clamp(1.65rem, 7.5vw, 2.25rem) !important;
-  }
-
-  .pkg-head .s-title .pkg-pkg{
-    display:inline !important;
-    margin-left:.25rem !important;
-    max-width:100% !important;
-    white-space:normal !important;
-    overflow-wrap:anywhere !important;
-    font-size:clamp(2.1rem, 11vw, 3.4rem) !important;
-    line-height:.9 !important;
-    vertical-align:baseline !important;
-  }
-
-  /* Button readability */
-  .btn-fill,
-  .btn-line,
-  .btn-sm,
-  .pkg-btn,
-  .treatment-select-btn,
-  button{
-    font-family:"Myriad Pro", "DM Sans", Arial, sans-serif !important;
-    letter-spacing:.1em !important;
-  }
-}
-
-
-/* ===== ABOUT HEADING LAYOUT FIX ===== */
-#about .about-story-title{
-  display:flex !important;
-  flex-direction:row !important;
-  align-items:flex-end !important;
-  gap:.45rem !important;
-  flex-wrap:wrap !important;
-  white-space:normal !important;
-  overflow:visible !important;
-  line-height:1.05 !important;
-  max-width:100% !important;
-}
-
-#about .about-story-title .pkg-pkg{
-  font-family:'TropicalBrush', cursive !important;
-  color:var(--sand) !important;
-  display:inline-block !important;
-  white-space:nowrap !important;
-  margin-left:.1rem !important;
-  line-height:.82 !important;
-  transform:translateY(.08em) !important;
-  overflow:visible !important;
-}
-
-@media(min-width:769px){
-  #about .about-story-title{
-    flex-wrap:nowrap !important;
-    white-space:nowrap !important;
-    font-size:clamp(2.6rem, 4.2vw, 4.5rem) !important;
-  }
-
-  #about .about-story-title .pkg-pkg{
-    font-size:clamp(3.4rem, 5.8vw, 6.8rem) !important;
-  }
-}
-
-@media(max-width:768px){
-  #about .about-story-title{
-    font-size:clamp(2.05rem, 8.8vw, 2.75rem) !important;
-    line-height:1.03 !important;
-    gap:.25rem !important;
-  }
-
-  #about .about-story-title .pkg-pkg{
-    font-size:clamp(2.2rem, 11vw, 3.2rem) !important;
-    margin-left:.08rem !important;
-    transform:translateY(.04em) !important;
-  }
-}
-
-
-/* =====================================================
-   MOKISA LIGHT EARTH THEME - rebuilt, not just overridden
-   Keeps photos visible and restores readable text everywhere
-   ===================================================== */
+/* LIGHT EARTH THEME */
 :root{
-  --cream:#2A1A0A;
-  --sand:#8A5F2D;
-  --gold:#9A6A2D;
-  --gold2:#B8843F;
-  --bark:#2A1A0A;
-  --earth:#6B4422;
-  --body-bg:#F7EFE2;
-  --card-bg:#FFF8ED;
-  --panel-bg:#F3E8D8;
-  --soft-bg:#FBF3E8;
-  --line:#DDC8AA;
-  --border:rgba(154,106,45,.28);
-  --text:#2A1A0A;
-  --muted:rgba(42,26,10,.70);
-  --faint:rgba(42,26,10,.48);
+  --cream:#2A1A0A;--sand:#8A5F2D;--gold:#9A6A2D;--gold2:#B8843F;--bark:#2A1A0A;--earth:#6B4422;
+  --body-bg:#F7EFE2;--card-bg:#FFF8ED;--panel-bg:#F3E8D8;--soft-bg:#FBF3E8;--line:#DDC8AA;
+  --border:rgba(154,106,45,.28);--text:#2A1A0A;--muted:rgba(42,26,10,.70);--faint:rgba(42,26,10,.48);
 }
-
-html,body{
-  background:var(--body-bg)!important;
-  color:var(--text)!important;
-}
-
-body,
-section,
-#about,
-#treatments,
-#packages,
-#booking,
-.brochure-section{
-  background:var(--body-bg)!important;
-}
-
-/* Header */
-nav{
-  background:rgba(247,239,226,.74)!important;
-  border-bottom:1px solid rgba(154,106,45,.18)!important;
-  backdrop-filter:blur(14px)!important;
-}
-nav.stuck{
-  background:rgba(247,239,226,.96)!important;
-  border-bottom:1px solid var(--border)!important;
-}
-.logo img{filter:none!important;}
+html,body{background:var(--body-bg)!important;color:var(--text)!important;}
+body,section,#about,#treatments,#packages,#booking{background:var(--body-bg)!important;}
+nav{background:rgba(247,239,226,.74)!important;border-bottom:1px solid rgba(154,106,45,.18)!important;backdrop-filter:blur(14px)!important;}
+nav.stuck{background:rgba(247,239,226,.96)!important;border-bottom:1px solid var(--border)!important;}
 .nav-ul a{color:rgba(42,26,10,.68)!important;}
 .nav-ul a:hover{color:var(--gold)!important;}
-.nav-cta,
-.btn-line{
-  color:var(--gold)!important;
-  border-color:var(--gold)!important;
-  background:rgba(255,248,237,.22)!important;
-}
-.nav-cta:hover,
-.btn-line:hover{
-  background:var(--gold)!important;
-  color:#fff8ed!important;
-}
-.lang-switch{
-  background:rgba(255,248,237,.22)!important;
-  border-color:var(--border)!important;
-}
+.nav-cta,.btn-line{color:var(--gold)!important;border-color:var(--gold)!important;background:rgba(255,248,237,.22)!important;}
+.nav-cta:hover,.btn-line:hover{background:var(--gold)!important;color:#fff8ed!important;}
+.lang-switch{background:rgba(255,248,237,.22)!important;border-color:var(--border)!important;}
 .lang-switch button{color:rgba(42,26,10,.52)!important;}
 .lang-switch button.on{color:var(--gold)!important;}
-.lang-switch span{color:rgba(154,106,45,.45)!important;}
 .burger span{background:var(--text)!important;}
-
-/* Hero: keep the real image, with readable dark-to-light overlay */
-#home{
-  position:relative!important;
-  min-height:100vh!important;
-  height:auto!important;
-  padding:0!important;
-  display:flex!important;
-  align-items:flex-end!important;
-  overflow:hidden!important;
-  background-image:url('./images/photo1.jpg')!important;
-  background-size:cover!important;
-  background-position:center center!important;
-  background-repeat:no-repeat!important;
-}
+#home{position:relative!important;min-height:100vh!important;height:auto!important;padding:0!important;display:flex!important;align-items:flex-end!important;overflow:hidden!important;background-image:url('./images/photo1.jpg')!important;background-size:cover!important;background-position:center center!important;background-repeat:no-repeat!important;}
 .hero-overlay{display:none!important;}
-#home .hero-overlay2{
-  position:absolute!important;
-  inset:0!important;
-  display:block!important;
-  background:linear-gradient(90deg,
-    rgba(15,9,5,.66) 0%,
-    rgba(15,9,5,.48) 34%,
-    rgba(247,239,226,.34) 72%,
-    rgba(247,239,226,.74) 100%)!important;
-}
-#home .hero-content{
-  position:relative!important;
-  z-index:2!important;
-  padding:0 3.5rem 5rem!important;
-  max-width:780px!important;
-}
+#home .hero-overlay2{position:absolute!important;inset:0!important;display:block!important;background:linear-gradient(90deg,rgba(15,9,5,.66) 0%,rgba(15,9,5,.48) 34%,rgba(247,239,226,.34) 72%,rgba(247,239,226,.74) 100%)!important;}
+#home .hero-content{position:relative!important;z-index:2!important;padding:0 3.5rem 5rem!important;max-width:780px!important;}
 #home .hero-tag{color:#A87635!important;}
 #home .mokisa-word{color:#fff!important;text-shadow:0 2px 22px rgba(0,0,0,.28)!important;}
 #home .wellness-word{color:#B8843F!important;text-shadow:0 2px 18px rgba(0,0,0,.16)!important;}
 #home .hero-sub{color:rgba(255,255,255,.82)!important;}
 #home .btn-fill{background:var(--gold)!important;color:#fff8ed!important;}
-#home .btn-fill:hover{background:var(--gold2)!important;}
 #home .btn-line{color:#fff!important;border-color:rgba(255,255,255,.55)!important;background:rgba(255,255,255,.08)!important;}
-#home .btn-line:hover{color:#fff8ed!important;background:var(--gold)!important;border-color:var(--gold)!important;}
-.hero-scroll{color:rgba(42,26,10,.45)!important;}
-.scroll-tick{background:linear-gradient(to bottom,var(--gold),transparent)!important;}
-
-/* Type */
-.s-title,.story,.t-name,.pkg-title,.pkg-row-name,.t-category-title,.form-head,
-.booking-title,.foot-brand,.final-ritual-title,h1,h2,h3{
-  color:var(--text)!important;
-}
+.s-title,.story,.t-name,.pkg-title,.pkg-row-name,.t-category-title,.booking-title,h1,h2,h3{color:var(--text)!important;}
 .pkg-pkg,.clean,.wellness-word{color:var(--sand)!important;}
-.eyebrow,.t-pill,.ts-kicker,.t-category-kicker,.pkg-row-price,.t-price,
-.foot-col-title,.c-lbl,.preference-label,.booking-field label{
-  color:var(--gold)!important;
-}
-.s-body,.t-desc,.pkg-desc,.t-category-note,.ts-note,.pkg-row-sub,.pkg-note,
-.c-val,.foot-tag,.foot-links a,.foot-links li,.booking-intro{
-  color:var(--muted)!important;
-}
-.t-price small{color:var(--faint)!important;}
-
-/* Cards / rows / panels */
-.t-category,.t-row,.t-card,.pkg-row,.pkg-footer,.form-box,.booking-card,
-.guest-section,.treatment-select-btn{
-  background:var(--card-bg)!important;
-  border-color:var(--border)!important;
-  color:var(--text)!important;
-}
-.t-category-head{
-  background:linear-gradient(90deg,rgba(154,106,45,.10),rgba(255,248,237,.66))!important;
-  border-bottom-color:var(--border)!important;
-}
+.eyebrow,.t-pill,.ts-kicker,.t-category-kicker,.pkg-row-price,.t-price,.foot-col-title,.c-lbl,.preference-label,.booking-field label{color:var(--gold)!important;}
+.s-body,.t-desc,.pkg-desc,.t-category-note,.ts-note,.pkg-row-sub,.pkg-note,.c-val,.foot-tag,.foot-links a,.foot-links li,.booking-intro{color:var(--muted)!important;}
+.t-category,.t-row,.t-card,.pkg-row,.pkg-footer,.booking-card,.guest-section,.treatment-select-btn{background:var(--card-bg)!important;border-color:var(--border)!important;color:var(--text)!important;}
+.t-category-head{background:linear-gradient(90deg,rgba(154,106,45,.10),rgba(255,248,237,.66))!important;border-bottom-color:var(--border)!important;}
 .t-rows{background:var(--line)!important;}
-.t-row:hover,.t-card:hover,.pkg-row:hover,.treatment-select-btn:hover,
-.treatment-select-btn.on{
-  background:#F3E8D8!important;
-  border-color:rgba(154,106,45,.42)!important;
-}
-.treatment-select-btn::before{background:linear-gradient(135deg,rgba(154,106,45,.12),transparent 55%)!important;}
+.t-row:hover,.t-card:hover,.pkg-row:hover,.treatment-select-btn:hover,.treatment-select-btn.on{background:#F3E8D8!important;border-color:rgba(154,106,45,.42)!important;}
 .ts-title{color:var(--text)!important;}
 .gold-divider{background:linear-gradient(to right,transparent,rgba(154,106,45,.46),transparent)!important;}
-.gold-rule,.pkg-row::before,.price-row::before,.treat-row::before,.treatment-row::before,.pkg-card::before,.package-card::before,.pkg-item::before{background:var(--gold)!important;}
+.gold-rule,.pkg-row::before,.price-row::before,.treat-row::before,.treatment-row::before{background:var(--gold)!important;}
 .marquee{background:var(--gold)!important;}
 .marquee-item{color:#fff8ed!important;}
-
-/* Package tabs */
-.pkg-btn{
-  color:rgba(42,26,10,.62)!important;
-  border-bottom-color:var(--border)!important;
-  background:transparent!important;
-}
-.pkg-btn:hover,.pkg-btn.on,.pkg-btn.active{
-  color:var(--gold)!important;
-  background:rgba(154,106,45,.09)!important;
-}
-.pkg-btn.signature{
-  background:linear-gradient(135deg,#7A4F20,#4B2A0D)!important;
-  color:#F7E4C2!important;
-  border-color:rgba(154,106,45,.55)!important;
-}
-
-/* Forms / modal */
+.pkg-btn{color:rgba(42,26,10,.62)!important;border-bottom-color:var(--border)!important;background:transparent!important;}
+.pkg-btn:hover,.pkg-btn.on,.pkg-btn.active{color:var(--gold)!important;background:rgba(154,106,45,.09)!important;}
+.pkg-btn.signature{background:linear-gradient(135deg,#7A4F20,#4B2A0D)!important;color:#F7E4C2!important;border-color:rgba(154,106,45,.55)!important;}
 #bmodal{background:rgba(42,26,10,.46)!important;}
 .booking-card{background:#FFF8ED!important;}
-.booking-field input,.booking-field select,.booking-field textarea,
-#bmodal input,#bmodal textarea,.bmodal input,.bmodal textarea,
-.f-grp input,.f-grp select,.f-grp textarea{
-  background:#FBF3E8!important;
-  color:var(--text)!important;
-  border-color:var(--border)!important;
-  border-bottom-color:rgba(154,106,45,.55)!important;
-}
-.booking-field input::placeholder,.f-grp input::placeholder{color:rgba(42,26,10,.35)!important;}
-.preference-box{
-  background:#FBF3E8!important;
-  color:var(--muted)!important;
-  border-color:var(--border)!important;
-}
-.preference-options input:checked + .preference-box{
-  background:#F3E8D8!important;
-  color:var(--text)!important;
-  border-color:var(--gold)!important;
-}
-.booking-close,.bmodal-close{color:var(--gold)!important;border-color:var(--border)!important;}
-.btn-fill,.btn-sm,.f-submit{
-  background:var(--gold)!important;
-  color:#fff8ed!important;
-}
+.booking-field input,.booking-field select,.booking-field textarea{background:#FBF3E8!important;color:var(--text)!important;border-color:var(--border)!important;border-bottom-color:rgba(154,106,45,.55)!important;}
+.booking-field input::placeholder{color:rgba(42,26,10,.35)!important;}
+.preference-box{background:#FBF3E8!important;color:var(--muted)!important;border-color:var(--border)!important;}
+.preference-options input:checked + .preference-box{background:#F3E8D8!important;color:var(--text)!important;border-color:var(--gold)!important;}
+.booking-close{color:var(--gold)!important;border-color:var(--border)!important;}
+.btn-fill,.btn-sm,.f-submit{background:var(--gold)!important;color:#fff8ed!important;}
 .btn-fill:hover,.btn-sm:hover,.f-submit:hover{background:var(--gold2)!important;}
-
-/* Footer and editorial keep a premium contrast block */
 .editorial-mask{background:linear-gradient(to right,rgba(42,26,10,.80),rgba(42,26,10,.48),rgba(247,239,226,.10))!important;}
 .editorial-quote{color:#fff!important;}
 .editorial-attr{color:#F1D19A!important;}
-footer{
-  background:#EFE1CD!important;
-  border-top:1px solid var(--border)!important;
-}
+footer{background:#EFE1CD!important;border-top:1px solid var(--border)!important;}
 .foot-copy{color:var(--faint)!important;}
 .soc{border-color:var(--border)!important;color:var(--gold)!important;}
-
-/* Reveal fallback: content should never disappear if JS is delayed */
 .rv{opacity:1!important;transform:none!important;}
+.about-num .l{color:#8A5F2D!important;background:transparent!important;opacity:1!important;font-size:.72rem!important;font-weight:500!important;}
+.about-num .n{color:#9A6A2D!important;background:transparent!important;opacity:1!important;}
+.pkg-row-sub,.pkg-desc,.s-body,.t-desc{color:rgba(42,26,10,.78)!important;opacity:1!important;}
+.pkg-row-sub{font-size:.76rem!important;line-height:1.55!important;}
+
+/* Ali Skin note */
+.ali-skin-note,.booking-ali-skin-note{margin-top:1.15rem!important;padding:1rem 1.15rem!important;background:#F3E8D8!important;border:1px solid rgba(154,106,45,.34)!important;color:#3A2412!important;font-family:"Playfair Display",serif!important;font-size:.88rem!important;line-height:1.65!important;opacity:1!important;visibility:visible!important;}
+.ali-skin-note strong,.booking-ali-skin-note strong{color:#9A6A2D!important;font-weight:500!important;}
 
 @media(max-width:760px){
   nav{background:rgba(247,239,226,.94)!important;}
@@ -2055,84 +437,20 @@ footer{
   .mob-nav a{color:var(--text)!important;}
   .mob-close{color:var(--gold)!important;}
   .lang-switch{background:rgba(255,248,237,.92)!important;}
-  #home{
-    min-height:680px!important;
-    background-position:center center!important;
-  }
-  #home .hero-overlay2{
-    background:linear-gradient(to top,
-      rgba(15,9,5,.72) 0%,
-      rgba(15,9,5,.46) 45%,
-      rgba(247,239,226,.10) 100%)!important;
-  }
+  #home{min-height:680px!important;background-position:center center!important;}
+  #home .hero-overlay2{background:linear-gradient(to top,rgba(15,9,5,.72) 0%,rgba(15,9,5,.46) 45%,rgba(247,239,226,.10) 100%)!important;}
   #home .hero-content{padding:0 1.35rem 6.8rem!important;}
   #home .mokisa-word,#home .wellness-word{font-size:clamp(3.4rem,16vw,5rem)!important;}
 }
 
-
-
-/* ===== Fix: readable Ali Skin important note on light theme ===== */
-.ali-skin-note,
-.booking-ali-skin-note{
-  margin-top:1.15rem!important;
-  padding:1rem 1.15rem!important;
-  background:#F3E8D8!important;
-  border:1px solid rgba(154,106,45,.34)!important;
-  color:#3A2412!important;
-  font-family:"Playfair Display",serif!important;
-  font-size:.88rem!important;
-  line-height:1.65!important;
-  opacity:1!important;
-  visibility:visible!important;
-}
-.ali-skin-note strong,
-.booking-ali-skin-note strong{
-  color:#9A6A2D!important;
-  font-weight:500!important;
-}
-#bmodal .ali-skin-note,
-#bmodal .booking-ali-skin-note{
-  background:#F7EAD8!important;
-  color:#3A2412!important;
-}
-
-/* ===== FINAL FIX V6: readable stats + package description text ===== */
-.about-num .l{
-  color:#8A5F2D!important;
-  background:transparent!important;
-  opacity:1!important;
-  text-shadow:none!important;
-  font-family:"Myriad Pro","DM Sans",Arial,sans-serif!important;
-  font-size:.72rem!important;
-  font-weight:500!important;
-  letter-spacing:.12em!important;
-}
-
-.about-num .n{
-  color:#9A6A2D!important;
-  background:transparent!important;
-  opacity:1!important;
-  text-shadow:none!important;
-}
-
-.pkg-row-sub,
-.pkg-desc,
-.s-body,
-.t-desc{
-  color:rgba(42,26,10,.78)!important;
-  opacity:1!important;
-}
-
-.pkg-row-sub{
-  font-size:.76rem!important;
-  line-height:1.55!important;
-}
-
+/* About heading */
+#about .about-story-title{display:flex!important;flex-direction:row!important;align-items:flex-end!important;gap:.45rem!important;flex-wrap:wrap!important;white-space:normal!important;overflow:visible!important;line-height:1.05!important;max-width:100%!important;}
+#about .about-story-title .pkg-pkg{font-family:'TropicalBrush',cursive!important;color:var(--sand)!important;display:inline-block!important;white-space:nowrap!important;margin-left:.1rem!important;line-height:.82!important;transform:translateY(.08em)!important;overflow:visible!important;}
+@media(min-width:769px){#about .about-story-title{flex-wrap:nowrap!important;white-space:nowrap!important;font-size:clamp(2.6rem,4.2vw,4.5rem)!important;}#about .about-story-title .pkg-pkg{font-size:clamp(3.4rem,5.8vw,6.8rem)!important;}}
+@media(max-width:768px){#about .about-story-title{font-size:clamp(2.05rem,8.8vw,2.75rem)!important;line-height:1.03!important;gap:.25rem!important;}#about .about-story-title .pkg-pkg{font-size:clamp(2.2rem,11vw,3.2rem)!important;}}
 </style>
 </head>
 <body>
-
-
 
 <div class="mob-nav" id="mn">
   <button class="mob-close" onclick="document.getElementById('mn').classList.remove('on')">✕</button>
@@ -2140,39 +458,37 @@ footer{
   <a href="#about" onclick="document.getElementById('mn').classList.remove('on')">Over ons</a>
   <a href="#treatments" onclick="document.getElementById('mn').classList.remove('on')">Behandelingen</a>
   <a href="#packages" onclick="document.getElementById('mn').classList.remove('on')">Pakketten</a>
-  <a href="#" onclick="event.preventDefault();openBM()" onclick="document.getElementById('mn').classList.remove('on')">Request an appointment</a>
+  <a href="#" onclick="event.preventDefault();openBM();document.getElementById('mn').classList.remove('on')">Maak een afspraak</a>
 </div>
 
 <nav id="nav">
-<a href="#home" class="logo"><img src="./images/Logo Hoek-01.png" alt="Mokisa" style="height:48px;object-fit:contain;"></a>  <ul class="nav-ul">
+  <a href="#home" class="logo"><img src="./images/Logo Hoek-01.png" alt="Mokisa" style="height:48px;object-fit:contain;"></a>
+  <ul class="nav-ul">
     <li><a href="#about">Over ons</a></li>
     <li><a href="#treatments">Behandelingen</a></li>
     <li><a href="#packages">Pakketten</a></li>
     <li><a href="#" onclick="event.preventDefault();openBM()" class="nav-cta">Maak een afspraak</a></li>
   </ul>
-  
-<div class="lang-switch" aria-label="Language switcher">
-  <button type="button" class="on" data-lang-btn="nl" onclick="setLang('nl')">NL</button>
-  <span>/</span>
-  <button type="button" data-lang-btn="en" onclick="setLang('en')">EN</button>
-</div>
-
-<div class="burger" onclick="document.getElementById('mn').classList.add('on')">
+  <div class="lang-switch" aria-label="Language switcher">
+    <button type="button" class="on" data-lang-btn="nl" onclick="setLang('nl')">NL</button>
+    <span>/</span>
+    <button type="button" data-lang-btn="en" onclick="setLang('en')">EN</button>
+  </div>
+  <div class="burger" onclick="document.getElementById('mn').classList.add('on')">
     <span></span><span></span><span></span>
   </div>
 </nav>
 
 <!-- HERO -->
-<section id="home" style="padding:0;background-image:url('./images/photo1.jpg');background-size:cover;background-position:center center;background-repeat:no-repeat;">  <div class="hero-overlay"></div>
+<section id="home" style="padding:0;background-image:url('./images/photo1.jpg');background-size:cover;background-position:center center;background-repeat:no-repeat;">
+  <div class="hero-overlay"></div>
   <div class="hero-overlay2"></div>
   <div class="hero-content">
     <p class="hero-tag">Traditioneel Marron Wellness Centrum · Paramaribo, Suriname</p>
-
     <div class="hero-title">
       <h1 class="mokisa-word">Mokisa</h1>
       <h1 class="wellness-word">Wellness</h1>
     </div>
-
     <p class="hero-sub">Ervaar wellness op een andere manier</p>
     <div class="hero-btns">
       <a class="btn-fill" href="#treatments">Bekijk de behandelingen</a>
@@ -2188,24 +504,8 @@ footer{
 <!-- MARQUEE -->
 <div class="marquee">
   <div class="marquee-inner">
-    <span class="marquee-item">Sweti</span>
-    <span class="marquee-item">Dampu</span>
-    <span class="marquee-item">Ali Skin</span>
-    <span class="marquee-item">Relax Massage</span>
-    <span class="marquee-item">Deep Tissue</span>
-    <span class="marquee-item">Podosiri</span>
-    <span class="marquee-item">Uma Package</span>
-    <span class="marquee-item">Package+</span>
-    <span class="marquee-item">Kinderbehandelingen</span>
-    <span class="marquee-item">Sweti</span>
-    <span class="marquee-item">Dampu</span>
-    <span class="marquee-item">Ali Skin</span>
-    <span class="marquee-item">Relax Massage</span>
-    <span class="marquee-item">Deep Tissue</span>
-    <span class="marquee-item">Podosiri</span>
-    <span class="marquee-item">Uma Package</span>
-    <span class="marquee-item">Package+</span>
-    <span class="marquee-item">Kinderbehandelingen</span>
+    <span class="marquee-item">Sweti</span><span class="marquee-item">Dampu</span><span class="marquee-item">Ali Skin</span><span class="marquee-item">Relax Massage</span><span class="marquee-item">Deep Tissue</span><span class="marquee-item">Podosiri</span><span class="marquee-item">Uma Package</span><span class="marquee-item">Package+</span><span class="marquee-item">Kinderbehandelingen</span>
+    <span class="marquee-item">Sweti</span><span class="marquee-item">Dampu</span><span class="marquee-item">Ali Skin</span><span class="marquee-item">Relax Massage</span><span class="marquee-item">Deep Tissue</span><span class="marquee-item">Podosiri</span><span class="marquee-item">Uma Package</span><span class="marquee-item">Package+</span><span class="marquee-item">Kinderbehandelingen</span>
   </div>
 </div>
 <div style="height:1px;background:linear-gradient(to right,transparent,rgba(184,147,90,0.35),transparent)"></div>
@@ -2213,17 +513,15 @@ footer{
 <!-- ABOUT -->
 <section id="about" style="padding:8rem 3.5rem">
   <div class="about-wrap">
-   <div class="about-img-col rv">
-  <div style="height:1px;background:linear-gradient(to right,transparent,rgba(184,147,90,0.35),transparent)"></div>
-  <img class="about-img-main" src="./images/Photo 2.png" alt="Over ons">
-</div>
+    <div class="about-img-col rv">
+      <div style="height:1px;background:linear-gradient(to right,transparent,rgba(184,147,90,0.35),transparent)"></div>
+      <img class="about-img-main" src="./images/Photo 2.png" alt="Over ons">
+    </div>
     <div class="about-text-col rv d2">
       <p class="eyebrow">Ons verhaal</p>
-      <h2 class="story about-story-title">
-        Waar Marron traditie <i class="pkg-pkg">Heelt</i>
-      </h2>
+      <h2 class="story about-story-title">Waar Marron traditie <i class="pkg-pkg">Heelt</i></h2>
       <div class="gold-rule"></div>
-      <p class="s-body">Mokisa is Suriname’s eerste traditionele Marron Wellness Centrum. Hier komen eeuwenoude Marron-welzijnsbehandelingen perfect samen met hedendaagse zorg. Onze therapeuten zijn gespecialiseerd in authentieke Marron-technieken. Met hun kundige handen, kennis en gebruik van pure, natuurlijke kruidenextracten helpen zij uw natuurlijke balans terug te vinden en vitaliteit te herstellen.</p>
+      <p class="s-body">Mokisa is Suriname's eerste traditionele Marron Wellness Centrum. Hier komen eeuwenoude Marron-welzijnsbehandelingen perfect samen met hedendaagse zorg. Onze therapeuten zijn gespecialiseerd in authentieke Marron-technieken. Met hun kundige handen, kennis en gebruik van pure, natuurlijke kruidenextracten helpen zij uw natuurlijke balans terug te vinden en vitaliteit te herstellen.</p>
       <p class="s-body">Elke behandeling bij Mokisa is diep geworteld in traditionele kennis, die al generaties lang liefdevol wordt doorgegeven.</p>
       <p class="s-body">Alle prijzen zijn inclusief 10% BTW.</p>
       <div class="about-nums">
@@ -2235,10 +533,8 @@ footer{
   </div>
 </section>
 
-<!-- GALLERY STRIP -->
-
-
 <div class="gold-divider"></div>
+
 <!-- TREATMENTS -->
 <section id="treatments">
   <div class="treatments-hd rv">
@@ -2254,7 +550,6 @@ footer{
       <span class="ts-title">Traditionele behandelingen</span>
       <span class="ts-note">Sweti · Dampu · Ali Skin · Podosiri</span>
     </button>
-
     <button class="treatment-select-btn" type="button" onclick="showTreatmentGroup(event,'regular')">
       <span class="ts-kicker">Regulier</span>
       <span class="ts-title">Reguliere behandelingen</span>
@@ -2272,7 +567,6 @@ footer{
           </div>
           <p class="t-category-note">Behandelingen met kruiden, stoom, scrub en traditionele technieken voor reiniging, herstel en diepe ontspanning.</p>
         </div>
-
         <div class="t-rows">
           <div class="t-row rv">
             <div class="t-content">
@@ -2283,7 +577,6 @@ footer{
             </div>
             <div class="t-image"><img src="images/Sweti.png" alt="Sweti"></div>
           </div>
-
           <div class="t-row rv">
             <div class="t-content">
               <div class="t-pill">Kruidenwrap</div>
@@ -2293,7 +586,6 @@ footer{
             </div>
             <div class="t-image"><img src="images/Dampu.JPG" alt="Dampu"></div>
           </div>
-
           <div class="t-row rv">
             <div class="t-content">
               <div class="t-pill">Therapeutisch</div>
@@ -2303,7 +595,6 @@ footer{
             </div>
             <div class="t-image"><img src="images/Ali Skin.JPG" alt="Ali Skin"></div>
           </div>
-
           <div class="t-row rv">
             <div class="t-content">
               <div class="t-pill">Body Scrub</div>
@@ -2326,7 +617,6 @@ footer{
           </div>
           <p class="t-category-note">Klassieke massages voor spierherstel, ontspanning en het loslaten van spanning in het lichaam.</p>
         </div>
-
         <div class="t-rows">
           <div class="t-row rv">
             <div class="t-content">
@@ -2337,7 +627,6 @@ footer{
             </div>
             <div class="t-image"><img src="images/Deep tissue.JPG" alt="Deep Tissue"></div>
           </div>
-
           <div class="t-row rv">
             <div class="t-content">
               <div class="t-pill">Massage</div>
@@ -2352,7 +641,10 @@ footer{
     </div>
   </div>
 </section>
+
 <div class="gold-divider"></div>
+
+<!-- PACKAGES -->
 <section id="packages" class="packages">
   <div style="max-width:1300px;margin:0 auto">
     <div class="section-head rv vis">
@@ -2363,19 +655,17 @@ footer{
       <div class="gold-rule"></div>
       <p class="s-body">Combineer behandelingen voor een complete wellnesservaring. Alle prijzen zijn inclusief 10% BTW.</p>
     </div>
-
     <div class="pkg-grid">
       <div class="pkg-sidebar rv vis">
         <div class="pkg-tabs">
           <button class="pkg-btn on" onclick="showPkg(event,'therapeutic')">Therapeutic <span class="arrow">→</span></button>
-          <button class="pkg-btn" onclick="showPkg(event,'podo')">Podosiri<span class="arrow">→</span></button>
+          <button class="pkg-btn" onclick="showPkg(event,'podo')">Podosiri <span class="arrow">→</span></button>
           <button class="pkg-btn" onclick="showPkg(event,'sweti')">Sweti <span class="arrow">→</span></button>
           <button class="pkg-btn" onclick="showPkg(event,'dampu')">Dampu <span class="arrow">→</span></button>
           <button class="pkg-btn" onclick="showPkg(event,'kids')">Kids <span class="arrow">→</span></button>
           <button class="pkg-btn signature" onclick="showPkg(event,'signature')">Signature <span class="arrow">→</span></button>
         </div>
       </div>
-
       <div class="rv d1 vis">
         <div class="active pkg-panel on" id="pp-therapeutic">
           <div class="pkg-head">
@@ -2392,7 +682,6 @@ footer{
           </div>
           <div class="pkg-footer"><p class="pkg-note">*inclusief 10% BTW</p><button class="btn-sm" onclick="openBM()">Maak een afspraak</button></div>
         </div>
-
         <div class="pkg-panel" id="pp-podo">
           <div class="pkg-head">
             <div class="s-title">Podosiriscrub <i class="pkg-pkg">Behandelingen</i></div>
@@ -2407,32 +696,30 @@ footer{
           </div>
           <div class="pkg-footer"><p class="pkg-note">*inclusief 10% BTW</p><button class="btn-sm" onclick="openBM()">Maak een afspraak</button></div>
         </div>
-
         <div class="pkg-panel" id="pp-sweti">
           <div class="pkg-head">
             <div class="s-title">Sweti <i class="pkg-pkg">Behandelingen</i></div>
             <p class="pkg-desc">Combinaties met stoom voor reiniging, ontspanning, huidverzorging en herstel van het lichaam.</p>
           </div>
           <div class="pkg-rows">
-                       <div class="pkg-row"><div class="pkg-row-name">Sweti</div><div class="pkg-row-price">SRD 750</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Sweti</div><div class="pkg-row-price">SRD 750</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Dampu</div><div class="pkg-row-price">SRD 1,545</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Relax</div><div class="pkg-row-price">SRD 1,495</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Deeptissue</div><div class="pkg-row-price">SRD 1,545</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Sweti, Dampu &amp; Relax</div><div class="pkg-row-price">SRD 2,235</div></div>
-           <div class="pkg-row"><div class="pkg-row-name">Sweti, Dampu &amp; Deeptissue</div><div class="pkg-row-price">SRD 2,285</div></div>
-           <div class="pkg-row"><div class="pkg-row-name">Sweti, Podosiri Scrub &amp; Relax</div><div class="pkg-row-price">SRD 2,285</div></div>
-           <div class="pkg-row"><div class="pkg-row-name">Sweti, Podosiri Scrub &amp; Deeptissue</div><div class="pkg-row-price">SRD 2,335</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Sweti, Dampu &amp; Deeptissue</div><div class="pkg-row-price">SRD 2,285</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Sweti, Podosiri Scrub &amp; Relax</div><div class="pkg-row-price">SRD 2,285</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Sweti, Podosiri Scrub &amp; Deeptissue</div><div class="pkg-row-price">SRD 2,335</div></div>
           </div>
           <div class="pkg-footer"><p class="pkg-note">*inclusief 10% BTW</p><button class="btn-sm" onclick="openBM()">Maak een afspraak</button></div>
         </div>
-
         <div class="pkg-panel" id="pp-dampu">
           <div class="pkg-head">
             <div class="s-title">Dampu <i class="pkg-pkg">Behandelingen</i></div>
             <p class="pkg-desc">Gerichte combinaties voor spierpijn, gewrichtsklachten, specifieke lichaamsdelen en chronische klachten.</p>
           </div>
           <div class="pkg-rows">
-                       <div class="pkg-row"><div class="pkg-row-name">Dampu</div><div class="pkg-row-price">SRD 850</div></div>
+            <div class="pkg-row"><div class="pkg-row-name">Dampu</div><div class="pkg-row-price">SRD 850</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Dampu</div><div class="pkg-row-price">SRD 1,545</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Dampu &amp; Relax</div><div class="pkg-row-price">SRD 1,595</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Dampu &amp; Deeptissue</div><div class="pkg-row-price">SRD 1,645</div></div>
@@ -2441,7 +728,6 @@ footer{
           </div>
           <div class="pkg-footer"><p class="pkg-note">*inclusief 10% BTW</p><button class="btn-sm" onclick="openBM()">Maak een afspraak</button></div>
         </div>
-
         <div class="pkg-panel" id="pp-kids">
           <div class="pkg-head">
             <div class="s-title">Kids <i class="pkg-pkg">Behandelingen</i></div>
@@ -2454,7 +740,6 @@ footer{
           </div>
           <div class="pkg-footer"><p class="pkg-note">*inclusief 10% BTW</p><button class="btn-sm" onclick="openBM()">Maak een afspraak</button></div>
         </div>
-
         <div class="pkg-panel" id="pp-signature">
           <div class="pkg-head">
             <div class="s-title">Signature <i class="pkg-pkg">Pakketten</i></div>
@@ -2462,7 +747,7 @@ footer{
           </div>
           <div class="pkg-rows">
             <div class="pkg-row feat"><div><div class="pkg-row-name">Package+</div><div class="pkg-row-sub">Sweti · Dampu · Full Body Podosiri Scrub · Relax Massage · The ultimate Maroon experience</div></div><div class="pkg-row-price">SRD 2,900</div></div>
-            <div class="pkg-row feat"><div><div class="pkg-row-name">Uma Package</div><div class="pkg-row-sub">Sweti · Dampu  · Full Body Podosiri Scrub · Relax Massage · Women's complete renewal ritual</div></div><div class="pkg-row-price">SRD 3,250</div></div>
+            <div class="pkg-row feat"><div><div class="pkg-row-name">Uma Package</div><div class="pkg-row-sub">Sweti · Dampu · Full Body Podosiri Scrub · Relax Massage · Women's complete renewal ritual</div></div><div class="pkg-row-price">SRD 3,250</div></div>
           </div>
           <div class="pkg-footer"><p class="pkg-note">*inclusief 10% BTW</p><button class="btn-sm" onclick="openBM()">Maak een afspraak</button></div>
         </div>
@@ -2471,10 +756,10 @@ footer{
   </div>
 </section>
 
-
 <div class="gold-divider"></div>
+
 <!-- EDITORIAL BREAK -->
-<div class="stripe-bar"></div><div class="editorial" style="position:relative">
+<div class="editorial" style="position:relative">
   <div class="editorial-bg"></div>
   <div class="editorial-mask"></div>
   <div class="editorial-txt rv">
@@ -2482,21 +767,18 @@ footer{
     <p class="editorial-attr">Mokisa Wellness · Paramaribo</p>
   </div>
 </div>
-<div class="stripe-bar"></div>
 
 <div class="gold-divider"></div>
-<!-- PACKAGES -->
-
 
 <footer>
   <div class="foot-grid">
     <div>
-      <div style="margin-bottom:.75rem"><img src="data:image/png;base64,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6GjsNQUUFBTAv413BL09ISEBinGjRo20Wi0h5MKFC0uXLiWEVKtWrbS0FFeG7fPWW28VFhZGRUVhiwlfX1+NRkPXo48//rhfv37h4eEhISHUWbBnz55169bB/od/MSsri+rheKR0w3H6DWz18PBwGMwwzfCuf/zxRzyuxo0bFxQU3Llz5/PPP6ezJTQ0FBvE4r8zZ868desWfAEJCQm4VO/eveFgB7799tvWrVuTf09rS8yY2rVr7927V61Wd+rUSSKR1KhRA5toohXj7du3Dxw40KdPn8OHD+fm5jZs2BCT9eDBgwUFBb179x4zZgz2rX7nnXe+/PLLrKys06dPSySSOnXq3L59OzIysl69ejKZzM/Pb8+ePWq1unPnzgghfPfdd9Qjit3J1q1b99Zbbw0YMOD27dspKSmenp5+fn7r169/+PBh586dyeNe/sePH69evTq6sSLyplKplixZgjEPGDAAPU379u27atWq9PR0SuDu3bsXFRVhT9B79+6tX79epVKtWLGiqKioS5cuOHHu3LlY1Lp27YoOr7169YK/qlWrVr6+vvixDg4O6AI9e/bszp07YzaHh4djT+2mTZvqdLpDhw4FBQUFBQWFhYXp9fqWLVu6u7t/8cUXBQUFffr0kclkuFpmZiZVVUCh9957DyPBazp27BjP8y1btsRi17dvX57nFyxYMGDAgP79++/bt+/MmTNt27bV6/X79+/v27fvjBkzdDpd586d09LSTp8+3bdv3/Hjx5vN5r59+969e3fTpk1oWLljxw4stQqFAntKjBkzJiQkpH///pGRkbNnzz537lxhYWH//v179Oih0Wg+/PBD+KVGjRrVqVOn2NhYuvkzODx79mzstBgUFDRu3LiioqJDhw6JxeI2bdokJyefOnUKb2f69Om5ublvvvnmtWvXQkNDmzRpQghZtGgR3a8Ue77cu3fvxo0bzZs3l8lkjRs3PnToUG5ubocOHezt7bVa7dy5cwMDA7G1WkhICIZdUFAAyfHKnVgvKRqOplaDBg2aNGmSyWRKTk5+//33g4KC5syZgxr67t27BwYGLl++HE4js9n8+++/z58/v1u3bthOGkuA0WhUKBRms1mtVh8/fvyHH34wGAxDhw4Ft3/++ecff/xxyJAhEyZMMJlMqampw4YN8/Ly2rlzp8ViSUhI+OijjwghHTp0+Prrr319fc1m8/nz52fPnp2dnT1kyJCJEyfSsWFfzKysrF9//XXRokUICY4dO9bf3/+nn34ymUy0QAwhUIRkEJEihOzZs6d69erYK2DgwIH379/XarU7d+40GAx5eXlo7sFx3HvvvZeRkbF9+/aaNWuiqQW0uHPnzs2ePXvWrFn9+vUbN27cjRs3Bg0aNHnyZDc3N71ef/Dgwfnz55eVlUE5rFev3rx58+BXv3v37uzZs2NiYlq3br1y5Uo05fnPf/5TWFg4Z86czp07d+rUSRhgrFGjRlhY2Lhx465du0YI+eijj0aNGtWxY0ej0WhraxsaGoqGQRKJBK0wDhw4ULdu3YYNG6LiGv0l4XSk7vqcnByO4xwcHCQSyYYNG3bs2OHt7X3w4MHPPvvs3r17YWFhpaWlsJNRXr948eI2bdoolcr27ds7OTkdPHhw+vTp06dPr1atWsOGDX18fK5duzZhwgQo23g+Fotl+PDhkydPdnJy0mg0O3fuXLp0qcViWbVqFZ4DkgUIIdevXzcYDIGBgRzHHThwYMWKFY6OjidOnFi3bh3CgXPmzHnrrbc4jjt16tTcuXOnTp0aEhJiNpvj4uJGjx49atSoUaNGXb58uVWrVkajEYEM9FqZOnVqRETEq2qu+O9FhTrPU/aafFU5TFWMucI//dnEpr+jQvePucvfQwKXz4Czylwtn8haRRoqnaMQWU+Z90sjPVB74MiBbKnwLOoSK5/LWtkPFOZaC38XFR0VHl/+e5oeTI+h7VehiQi7McINg58jPKzCn1PZe7FqZFvZQlBh8W3VMQhh7lQV14QogyMdvmWq46DczWrwFT6QypKWraYH+WOP3gonj/AVVJZjz8pv/vmrOBszeyAMDAwMDAwMDAwMDAwMDAzPAf8HntA83LzPBIoAAAAASUVORK5CYII=" alt="Mokisa" style="height:48px;object-fit:contain;mix-blend-mode:screen;opacity:.6"></div>
+      <div style="margin-bottom:.75rem"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAADbCAIAAACTJN/JAAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9ArFIEtBxopAiQLZIOYWuA2EkQtg2IXV5SUAJkB4DYRSFBzkB2CpCtkY7ETkJiJxcUgdT3ANk2uTmlyQh3M/Ck5oUGA2kOIJZhKGYIYnBncAL5H6IkfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsO48QQ4RJQWJRIliIBYiZ0tIYGD4tZ2DgjWRgEL7AwMAVDQsIHG5TALvNnSEfCNMZchhSgSKeDHkMyQx6QJYRgwGDIYMZAKbWPz9HbOBQAABc0klEQVR42u1dZ3hURdues203vUMgJCEQOqEpoaNAIHSCvoCAigjSQUQBRRQQ6b2jUpROpARfupTQawIhCQmQ3tum7G4238734/6Y97gpINLUuX9wLZtTZs+Ze57+DEIM/whwHMcewr8QYvYI/t7vTywWiUQ8z+O/EomEEEL/y8DA8PpCJBLRz1KpVMhq9nD+LZoXewR/X52Z5/l27dp9+OGHrVq1srOzKyoqunbt2pYtW27evCkSiSwWC3tKDAyvI3XFYjHHcStWrODLwWw2z5s3D3KYGcYMDM9OsxeqOa9evZrneZPJZDQazY+BzzzPz507V6hLs6WB4d9loz4vgJMdO3bkeV5vMFgsln0SWCwWo9HI83yzZs1exBg4jmPsfY3mGHsELwIymUyhUFgsFolE8nynO672ySef8DxfIZfoNx9//PHzJTBUdywTjo6O7C0zAv9jlWeO49avX9+6dWuTycTzvEgkkkgkEolE/EcIKQGCQxVe3GQycRzXtGlTjuMqOwYcbtGiBSHEbDZXRkVJ5ahwkDCwxWLxmjVr3njjDcLc3Qz/SDAY27BhQ1lZ2ezZs2vWrPlXLiVkKZgpEoni4+PBia8I+P727dtWxipcPjPrpFJpr169rl+/bjAYHBwcWIX8WkgL9ghehJlqNptdunQ5ffo0IaS4uPjChQvXr19PSkrKy8srKyszm80SiUShUNjZ2Tk7O7u6ujo6OspkMoPBkJ+fn5mZmZCQEBsbm5ycTC8IWxfsNVssFxbPnz/foUMHi8VSIRtNJpNYLD5y5Ei/fv0wGDqqHODg4FCvXj1/f/9atWq5uLioVCpCSElJSX5+fn5+fn5+vlarNRqNIG1jY5NarVqTJk0+/PDD+vXrE0IOHz78yiuvCC/IwPCPUqEJISqVKi0tDf6kZ4BOp7t+/fq3337bpEmTffs2IkIV71PnTp0cWRWei+8//vhjHE+VbZlM9u6774aGhmZmZj7bqOA2GzFiBB0JA8M/VotGnNZgMCDYYzQaTSaTyWQym834YKwEQt1Yo9GsWrXKycmJPA7tchwXGxv78OHD8o5oi8VyuazIQ0ZGhlyh3t7YjUajUqkSiSQmJiYnJ8edOSQkRCZQWIS3aosVAoFQb2YAAAAASUVORK5CYII=" alt="Mokisa" style="height:48px;object-fit:contain;mix-blend-mode:screen;opacity:.6"></div>
       <p class="foot-tag">Traditional Maroon Wellness Centre — where ancestral healing wisdom and modern care come together. Rooted in Suriname, accessible to everyone.</p>
       <div class="foot-socials">
-        <a href="https://www.instagram.com/mokisabusidataa/" target="_blank_" class="soc">ig</a>
-       <a href="https://www.facebook.com/traditionalmaroonwellness/" target="_blank" class="soc">fb</a>
-<a href="https://wa.me/5978712055" target="_blank" class="soc">wa</a>      
+        <a href="https://www.instagram.com/mokisabusidataa/" target="_blank" class="soc">ig</a>
+        <a href="https://www.facebook.com/traditionalmaroonwellness/" target="_blank" class="soc">fb</a>
+        <a href="https://wa.me/5978712055" target="_blank" class="soc">wa</a>
       </div>
     </div>
     <div>
@@ -2523,206 +805,64 @@ footer{
   </div>
 </footer>
 
-<script>
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('stuck',scrollY>70);
-});
-
-const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')}),{threshold:.1});
-document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
-
-function showPkg(e,id){
-  if(e) e.preventDefault();
-
-  const root = document.getElementById('packages');
-  if(!root) return false;
-
-  const target = root.querySelector('#pp-' + id);
-  if(!target){
-    console.warn('Package panel not found:', 'pp-' + id);
-    return false;
-  }
-
-  root.querySelectorAll('.pkg-btn').forEach(btn => {
-    const isActive = btn.getAttribute('onclick') && btn.getAttribute('onclick').includes("'" + id + "'");
-    btn.classList.toggle('on', isActive);
-    btn.classList.toggle('active', isActive);
-  });
-
-  root.querySelectorAll('.pkg-panel').forEach(panel => {
-    panel.classList.remove('on','active');
-    panel.style.display = 'none';
-  });
-
-  target.classList.add('on','active');
-  target.style.display = 'block';
-
-  return false;
-}
-
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const t=document.querySelector(a.getAttribute('href'));
-    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
-    document.getElementById('mn').classList.remove('on');
-  });
-});
-
-function subForm(e){
-  e.preventDefault();
-  const b=e.target.querySelector('.f-submit');
-  b.textContent="Request Sent — We'll be in touch!";
-  b.style.background='#3a5030';
-  b.disabled=true;
-}
-
-function openBM(){document.getElementById('bmodal').style.display='flex';document.body.style.overflow='hidden'}
-function closeBM(){document.getElementById('bmodal').style.display='none';document.body.style.overflow=''}
-document.getElementById('bmodal').addEventListener('click',function(e){if(e.target===this)closeBM()});
-let selM='';
-function pickM(el,val){
-  selM=val;
-  document.querySelectorAll('.mopt').forEach(o=>{
-    o.style.borderColor='rgba(184,147,90,.2)';o.style.background='transparent';
-    if(o.querySelector('div:last-child'))o.querySelector('div:last-child').style.color='rgba(240,234,224,.4)';
-    if(o.querySelector('div:first-child'))o.querySelector('div:first-child').style.color='rgba(240,234,224,.6)';
-  });
-  el.style.borderColor='#B8935A';el.style.background='rgba(184,147,90,.1)';
-  el.querySelector('div:last-child').style.color='#B8935A';
-  el.querySelector('div:first-child').style.color='#B8935A';
-  document.getElementById('wmas').value=val;
-}
-function sendWA(e){
-  e.preventDefault();
-  if(!selM){alert('Please select your preferred masseuse.');return;}
-
-  const fn = document.getElementById('wfn').value.trim();
-  const ln = document.getElementById('wln').value.trim();
-  const wa = document.getElementById('wwa').value.trim();
-  const dt = document.getElementById('wdt').value;
- const rawDate = document.getElementById('wdt').value;
-const formattedDate = new Date(rawDate).toLocaleDateString('en-GB', {
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric'
-});
-  const tr = document.getElementById('wtr').value;
-  const notes = document.getElementById('wnt').value.trim();
-
-  const msg =
-`*New Booking - Mokisa Wellness*
-
-- *Name:* ${fn} ${ln}
-- *WhatsApp:* ${wa}
-
-- *Treatment:* ${tr}
-- *Date:* ${formattedDate}
-- *Notes:*
-${notes ? notes : "None"}
-
----
-Verstuurd via mokisawellness`;
-
-  const phone = '5978712055';
-  window.location.href = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(msg)}`;
-}
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- BOOKING MODAL -->
 <div id="bmodal" class="booking-modal">
   <div class="booking-card">
     <button class="booking-close" type="button" onclick="closeBM()">×</button>
-
     <h2 class="booking-title">Maak een afspraak</h2>
     <p class="booking-intro">Vul je gegevens in — je aanvraag gaat direct naar onze WhatsApp.</p>
     <div class="booking-line"></div>
-
     <form id="waform" onsubmit="sendWA(event)">
       <div class="booking-grid">
         <div class="booking-field">
           <label for="wa_first">Voornaam <span>*</span></label>
           <input id="wa_first" type="text" placeholder="Voornaam" required>
         </div>
-
         <div class="booking-field">
           <label for="wa_last">Achternaam</label>
           <input id="wa_last" type="text" placeholder="Achternaam">
         </div>
-
         <div class="booking-field">
           <label for="wa_phone">Je WhatsApp <span>*</span></label>
           <input id="wa_phone" type="tel" placeholder="+597 ..." required>
         </div>
-
         <div class="booking-field">
           <label for="wa_date">Gewenste datum <span>*</span></label>
           <input id="wa_date" type="date" required>
         </div>
-
         <div class="preference-wrap">
-<p class="preference-label"
-   data-nl="Heeft u moeite met een heer voor uw massage? <span>*</span>"
-   data-en="Do you have any issue with a male therapist for your massage? <span>*</span>">
-  Heeft u moeite met een heer voor uw massage? <span>*</span>
-</p>
-  <div class="preference-options">
-    <label>
-      <input type="radio" name="masseuse" value="Ja" required>
-<span class="preference-box"
-      data-nl="<span class='preference-icon'>✓</span>Ja"
-      data-en="<span class='preference-icon'>✓</span>Yes">
-  <span class="preference-icon">✓</span>Ja
-</span>    </label>
-
-    <label>
-      <input type="radio" name="masseuse" value="Nee" required>
-<span class="preference-box"
-      data-nl="<span class='preference-icon'>✓</span>Nee"
-      data-en="<span class='preference-icon'>✓</span>No">
-  <span class="preference-icon">✓</span>Nee
-</span>    </label>
-  </div>
-</div>
-
+          <p class="preference-label" data-nl="Heeft u moeite met een heer voor uw massage? <span>*</span>" data-en="Do you have any issue with a male therapist for your massage? <span>*</span>">Heeft u moeite met een heer voor uw massage? <span>*</span></p>
+          <div class="preference-options">
+            <label>
+              <input type="radio" name="masseuse" value="Ja" required>
+              <span class="preference-box" data-nl="<span class='preference-icon'>✓</span>Ja" data-en="<span class='preference-icon'>✓</span>Yes"><span class="preference-icon">✓</span>Ja</span>
+            </label>
+            <label>
+              <input type="radio" name="masseuse" value="Nee" required>
+              <span class="preference-box" data-nl="<span class='preference-icon'>✓</span>Nee" data-en="<span class='preference-icon'>✓</span>No"><span class="preference-icon">✓</span>Nee</span>
+            </label>
+          </div>
+        </div>
         <div class="booking-field full">
           <label for="wa_treatment">Behandeling / pakket <span>*</span></label>
           <select id="wa_treatment" required>
             <option value="">Selecteer...</option>
-
             <optgroup label="Traditionele behandelingen">
               <option>Sweti — SRD 750</option>
               <option>Dampu — SRD 850</option>
               <option>Ali Skin — SRD 950</option>
               <option>Podosiri Scrub — SRD 900</option>
             </optgroup>
-
             <optgroup label="Reguliere behandelingen">
               <option>Deep Tissue — SRD 850</option>
               <option>Relax — SRD 800</option>
             </optgroup>
-
             <optgroup label="Therapeutische pakketten">
               <option>Dampu &amp; Ali Skin — SRD 1,745</option>
               <option>Sweti &amp; Ali Skin — SRD 1,645</option>
               <option>Sweti, Dampu &amp; Ali Skin — SRD 2,385</option>
               <option>Podosiri Scrub, Dampu &amp; Ali Skin — SRD 2,535</option>
             </optgroup>
-
             <optgroup label="Podosiri pakketten">
               <option>Full Body Scrub — SRD 900</option>
               <option>Podosiri Scrub &amp; Sweti — SRD 1,595</option>
@@ -2730,7 +870,6 @@ Verstuurd via mokisawellness`;
               <option>Podosiri Scrub &amp; Relax — SRD 1,645</option>
               <option>Podosiri Scrub &amp; Deep Tissue — SRD 1,695</option>
             </optgroup>
-
             <optgroup label="Sweti combinaties">
               <option>Sweti &amp; Dampu — SRD 1,545</option>
               <option>Sweti &amp; Relax — SRD 1,495</option>
@@ -2739,100 +878,75 @@ Verstuurd via mokisawellness`;
               <option>Sweti, Dampu &amp; Deeptissue — SRD 2,285</option>
               <option>Sweti, Podosiri Scrub &amp; Relax — SRD 2,285</option>
               <option>Sweti, Podosiri Scrub &amp; Deeptissue — SRD 2,335</option>
-
             </optgroup>
-
             <optgroup label="Dampu combinaties">
               <option>Dampu &amp; Relax — SRD 1,595</option>
               <option>Dampu &amp; Deeptissue — SRD 1,645</option>
               <option>Dampu, podosiri Scrub &amp; Relax — SRD 2,385</option>
               <option>Dampu, podosiri Scrub &amp; Deeptissue — SRD 2,435</option>
             </optgroup>
-
             <optgroup label="Kinderbehandelingen">
-              <option>Pikin' Nengee — SRD 550</option>
-              <option>Nyoni — SRD 450</option>
-              <option>Pikin' Package — SRD 1,000</option>
+              <option>Pikin' Nengee — SRD 700</option>
+              <option>Nyoni — SRD 550</option>
+              <option>Pikin' Package — SRD 1,200</option>
             </optgroup>
-
             <optgroup label="Signature pakketten">
-              <option>Package+ — SRD 2,500</option>
-              <option>Uma Package — SRD 2,750</option>
+              <option>Package+ — SRD 2,900</option>
+              <option>Uma Package — SRD 3,250</option>
             </optgroup>
           </select>
         </div>
-
         <div class="booking-field full">
           <label for="wa_notes">Notities / gezondheidsklachten</label>
           <textarea id="wa_notes" placeholder="Gezondheidsklachten of speciale wensen..."></textarea>
         </div>
       </div>
 
+      <button type="button" class="add-guest-btn" id="addGuestBtn" onclick="toggleGuest()">+ Gast toevoegen</button>
 
-<button type="button" class="add-guest-btn" id="addGuestBtn" onclick="toggleGuest()">
-  + Gast toevoegen
-</button>
       <div class="guest-section guest-entry" id="guestSection">
         <div class="guest-head">
           <h3>Extra gast</h3>
           <button class="remove-guest-btn" type="button" onclick="removeGuest(this)">Gast verwijderen</button>
         </div>
-
         <div class="booking-grid">
           <div class="booking-field full">
             <label for="guest_name">Naam gast</label>
             <input id="guest_name" class="guest-name" type="text" placeholder="Naam gast">
           </div>
-
           <div class="preference-wrap">
-<p class="preference-label"
-   data-nl="Heeft de gast moeite met een heer voor de massage? <span>*</span>"
-   data-en="Does the guest have any issue with a male therapist for the massage? <span>*</span>">
-  Heeft de gast moeite met een heer voor de massage? <span>*</span>
-</p>           
-           <div class="preference-options">
+            <p class="preference-label" data-nl="Heeft de gast moeite met een heer voor de massage? <span>*</span>" data-en="Does the guest have any issue with a male therapist for the massage? <span>*</span>">Heeft de gast moeite met een heer voor de massage? <span>*</span></p>
+            <div class="preference-options">
               <label>
-  <input type="radio" name="guest_masseuse_1" class="guest-masseuse" value="Ja" required>
-<span class="preference-box"
-      data-nl="<span class='preference-icon'>✓</span>Ja"
-      data-en="<span class='preference-icon'>✓</span>Yes">
-  <span class="preference-icon">✓</span>Ja
-</span></label>
-
-<label>
-  <input type="radio" name="guest_masseuse_1" class="guest-masseuse" value="Nee" required>
-<span class="preference-box"
-      data-nl="<span class='preference-icon'>✓</span>Nee"
-      data-en="<span class='preference-icon'>✓</span>No">
-  <span class="preference-icon">✓</span>Nee
-</span></label>
+                <input type="radio" name="guest_masseuse_1" class="guest-masseuse" value="Ja" required>
+                <span class="preference-box" data-nl="<span class='preference-icon'>✓</span>Ja" data-en="<span class='preference-icon'>✓</span>Yes"><span class="preference-icon">✓</span>Ja</span>
+              </label>
+              <label>
+                <input type="radio" name="guest_masseuse_1" class="guest-masseuse" value="Nee" required>
+                <span class="preference-box" data-nl="<span class='preference-icon'>✓</span>Nee" data-en="<span class='preference-icon'>✓</span>No"><span class="preference-icon">✓</span>Nee</span>
+              </label>
             </div>
           </div>
-
           <div class="booking-field full">
             <label for="guest_treatment">Behandeling / pakket gast</label>
             <select id="guest_treatment" class="guest-treatment">
               <option value="">Selecteer...</option>
-
               <optgroup label="Traditionele behandelingen">
                 <option>Sweti — SRD 750</option>
                 <option>Dampu — SRD 850</option>
                 <option>Ali Skin — SRD 950</option>
                 <option>Podosiri Scrub — SRD 900</option>
               </optgroup>
-
               <optgroup label="Reguliere behandelingen">
                 <option>Deep Tissue — SRD 850</option>
                 <option>Relax — SRD 800</option>
               </optgroup>
-
               <optgroup label="Therapeutische pakketten">
                 <option>Dampu &amp; Ali Skin — SRD 1,745</option>
                 <option>Sweti &amp; Ali Skin — SRD 1,645</option>
                 <option>Sweti, Dampu &amp; Ali Skin — SRD 2,385</option>
                 <option>Podosiri Scrub, Dampu &amp; Ali Skin — SRD 2,535</option>
               </optgroup>
-
               <optgroup label="Podosiri pakketten">
                 <option>Full Body Scrub — SRD 900</option>
                 <option>Podosiri Scrub &amp; Sweti — SRD 1,595</option>
@@ -2840,7 +954,6 @@ Verstuurd via mokisawellness`;
                 <option>Podosiri Scrub &amp; Relax — SRD 1,645</option>
                 <option>Podosiri Scrub &amp; Deep Tissue — SRD 1,695</option>
               </optgroup>
-
               <optgroup label="Sweti combinaties">
                 <option>Sweti &amp; Dampu — SRD 1,545</option>
                 <option>Sweti &amp; Relax — SRD 1,495</option>
@@ -2849,27 +962,23 @@ Verstuurd via mokisawellness`;
                 <option>Sweti, Dampu &amp; Deeptissue — SRD 2,285</option>
                 <option>Sweti, podosiri Scrub &amp; Relax — SRD 2,285</option>
               </optgroup>
-
               <optgroup label="Dampu combinaties">
                 <option>Dampu &amp; Relax — SRD 1,595</option>
                 <option>Dampu &amp; Deeptissue — SRD 1,645</option>
                 <option>Dampu, podosiri Scrub &amp; Relax — SRD 2,385</option>
                 <option>Dampu, podosiri Scrub &amp; Deeptissue — SRD 2,435</option>
               </optgroup>
-
               <optgroup label="Kinderbehandelingen">
-                <option>Pikin' Nengee — SRD 550</option>
-                <option>Nyoni — SRD 450</option>
-                <option>Pikin' Package — SRD 1,000</option>
+                <option>Pikin' Nengee — SRD 700</option>
+                <option>Nyoni — SRD 550</option>
+                <option>Pikin' Package — SRD 1,200</option>
               </optgroup>
-
               <optgroup label="Signature pakketten">
-                <option>Package+ — SRD 2,500</option>
-                <option>Uma Package — SRD 2,750</option>
+                <option>Package+ — SRD 2,900</option>
+                <option>Uma Package — SRD 3,250</option>
               </optgroup>
             </select>
           </div>
-
           <div class="booking-field full">
             <label for="guest_notes">Notities / gezondheidsklachten gast</label>
             <textarea id="guest_notes" class="guest-notes" placeholder="Gezondheidsklachten of speciale wensen voor de gast..."></textarea>
@@ -2882,80 +991,103 @@ Verstuurd via mokisawellness`;
   </div>
 </div>
 
+<a class="wa-floating-book" href="#" onclick="event.preventDefault();openBM();return false;">
+  <span>📲</span>
+  Boek via WhatsApp
+</a>
 
+<!-- SINGLE CLEAN SCRIPT BLOCK - no duplicates -->
 <script>
-/* WhatsApp booking: premium form */
+window.addEventListener('scroll', function(){
+  document.getElementById('nav').classList.toggle('stuck', scrollY > 70);
+});
+
+var obs = new IntersectionObserver(function(e){ e.forEach(function(x){ if(x.isIntersecting) x.target.classList.add('vis'); }); }, {threshold:.1});
+document.querySelectorAll('.rv').forEach(function(el){ obs.observe(el); });
+
+function showPkg(e, id){
+  if(e) e.preventDefault();
+  var root = document.getElementById('packages');
+  if(!root) return false;
+  var target = root.querySelector('#pp-' + id);
+  if(!target) return false;
+  root.querySelectorAll('.pkg-btn').forEach(function(btn){
+    var isActive = btn.getAttribute('onclick') && btn.getAttribute('onclick').includes("'" + id + "'");
+    btn.classList.toggle('on', isActive);
+    btn.classList.toggle('active', isActive);
+  });
+  root.querySelectorAll('.pkg-panel').forEach(function(panel){
+    panel.classList.remove('on','active');
+    panel.style.display = 'none';
+  });
+  target.classList.add('on','active');
+  target.style.display = 'block';
+  return false;
+}
+
+function showTreatmentGroup(event, group){
+  document.querySelectorAll('.treatment-select-btn').forEach(function(b){ b.classList.remove('on'); });
+  document.querySelectorAll('.treatment-panel').forEach(function(p){ p.classList.remove('on'); });
+  if(event && event.currentTarget) event.currentTarget.classList.add('on');
+  var activePanel = document.getElementById('treatment-' + group);
+  if(activePanel) activePanel.classList.add('on');
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    var t = document.querySelector(a.getAttribute('href'));
+    if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
+    document.getElementById('mn').classList.remove('on');
+  });
+});
+
 window.openBM = function(){
   var modal = document.getElementById('bmodal');
-  if(modal){
-    modal.classList.add('on');
-    modal.style.display = 'flex';
-  }
+  if(modal){ modal.classList.add('on'); modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
 };
 
 window.closeBM = function(){
   var modal = document.getElementById('bmodal');
-  if(modal){
-    modal.classList.remove('on');
-    modal.style.display = 'none';
-  }
+  if(modal){ modal.classList.remove('on'); modal.style.display = 'none'; document.body.style.overflow = ''; }
 };
 
 window.sendWA = function(event){
   if(event) event.preventDefault();
-
   var first = document.getElementById('wa_first').value.trim();
   var last = document.getElementById('wa_last').value.trim();
   var phone = document.getElementById('wa_phone').value.trim();
-
   var rawDate = document.getElementById('wa_date').value;
   var date = rawDate;
   if(rawDate){
     var parts = rawDate.split('-');
-    if(parts.length === 3){
-      date = parts[2] + '/' + parts[1] + '/' + parts[0];
-    }
+    if(parts.length === 3){ date = parts[2] + '/' + parts[1] + '/' + parts[0]; }
   }
-
   var treatment = document.getElementById('wa_treatment').value;
   var maleTherapistEl = document.querySelector('input[name="masseuse"]:checked');
   var notes = document.getElementById('wa_notes').value.trim();
-
   if(!first || !phone || !date || !treatment || !maleTherapistEl){
     alert('Vul alle verplichte velden in.');
     return false;
   }
-
   var fullName = (first + ' ' + last).trim();
   var lang = document.documentElement.lang || 'nl';
-
   var guestSections = Array.prototype.slice.call(document.querySelectorAll('.guest-section.on'));
   var guests = [];
-
   for(var gi = 0; gi < guestSections.length; gi++){
     var gs = guestSections[gi];
     var guestNameEl = gs.querySelector('.guest-name, #guest_name');
     var guestTreatmentEl = gs.querySelector('.guest-treatment, #guest_treatment');
     var guestMasseuseEl = gs.querySelector('input[type="radio"]:checked');
     var guestNotesEl = gs.querySelector('.guest-notes, #guest_notes');
-
     var guestName = guestNameEl ? guestNameEl.value.trim() : '';
     var guestTreatment = guestTreatmentEl ? guestTreatmentEl.value : '';
     var guestNotes = guestNotesEl ? guestNotesEl.value.trim() : '';
-
     if(!guestName || !guestTreatment || !guestMasseuseEl){
       alert('Vul de gegevens van de extra gast volledig in of verwijder de gast.');
       return false;
     }
-
-    guests.push({
-      name: guestName,
-      treatment: guestTreatment,
-      maleTherapist: guestMasseuseEl.value,
-      notes: guestNotes
-    });
+    guests.push({ name: guestName, treatment: guestTreatment, maleTherapist: guestMasseuseEl.value, notes: guestNotes });
   }
-
   var guestMsg = guests.map(function(g, index){
     return '\n*Extra gast ' + (index + 1) + ':*\n' +
       '*Naam gast:* ' + g.name + '\n' +
@@ -2963,11 +1095,8 @@ window.sendWA = function(event){
       '*Heeft de gast moeite met een heer voor de massage?:* ' + g.maleTherapist + '\n' +
       '*Notities / gezondheidsklachten gast:* ' + (g.notes || 'Geen') + '\n';
   }).join('');
-
   var msg =
-    (lang === 'nl'
-      ? 'Hallo Mokisa, ik wil graag een boeking aanvragen.\n\n'
-      : 'Hello Mokisa, I would like to request a booking.\n\n') +
+    (lang === 'nl' ? 'Hallo Mokisa, ik wil graag een boeking aanvragen.\n\n' : 'Hello Mokisa, I would like to request a booking.\n\n') +
     '*Naam:* ' + fullName + '\n' +
     '*WhatsApp:* ' + phone + '\n' +
     '*Gewenste datum:* ' + date + '\n' +
@@ -2976,7 +1105,6 @@ window.sendWA = function(event){
     '*Notities / gezondheidsklachten:* ' + (notes || 'Geen') + '\n' +
     guestMsg +
     '\nVerstuurd via mokisawellness';
-
   window.open('https://api.whatsapp.com/send?phone=5978712055&text=' + encodeURIComponent(msg), '_blank');
   closeBM();
   return false;
@@ -2987,51 +1115,33 @@ window.guestCount = 1;
 window.toggleGuest = function(){
   var firstSection = document.getElementById('guestSection');
   if(!firstSection) return;
-
   if(!firstSection.classList.contains('on')){
     firstSection.classList.add('on');
     return;
   }
-
   window.guestCount += 1;
   var newSection = firstSection.cloneNode(true);
   newSection.id = 'guestSection_' + window.guestCount;
   newSection.classList.add('on');
-
   newSection.querySelectorAll('input, textarea').forEach(function(el){
-    if(el.type === 'radio'){
-      el.checked = false;
-      el.name = 'guest_masseuse_' + window.guestCount;
-    } else {
-      el.value = '';
-    }
-
-    if(el.id){
-      el.id = el.id + '_' + window.guestCount;
-    }
+    if(el.type === 'radio'){ el.checked = false; el.name = 'guest_masseuse_' + window.guestCount; }
+    else { el.value = ''; }
+    if(el.id){ el.id = el.id + '_' + window.guestCount; }
   });
-
   newSection.querySelectorAll('select').forEach(function(el){
     el.selectedIndex = 0;
-    if(el.id){
-      el.id = el.id + '_' + window.guestCount;
-    }
+    if(el.id){ el.id = el.id + '_' + window.guestCount; }
   });
-
   newSection.querySelectorAll('label[for]').forEach(function(label){
     var oldFor = label.getAttribute('for');
-    if(oldFor){
-      label.setAttribute('for', oldFor + '_' + window.guestCount);
-    }
+    if(oldFor){ label.setAttribute('for', oldFor + '_' + window.guestCount); }
   });
-
   firstSection.parentNode.insertBefore(newSection, document.querySelector('.booking-submit'));
 };
 
 window.removeGuest = function(button){
   var section = button ? button.closest('.guest-section') : document.getElementById('guestSection');
   if(!section) return;
-
   if(section.id === 'guestSection'){
     section.classList.remove('on');
     section.querySelectorAll('input[type="text"], textarea').forEach(function(el){ el.value = ''; });
@@ -3043,554 +1153,151 @@ window.removeGuest = function(button){
 };
 
 document.addEventListener('DOMContentLoaded', function(){
-  document.querySelectorAll('.wa-floating-book, .nav-cta, button').forEach(function(el){
-    var text = (el.textContent || '').toLowerCase();
-    if(el.classList.contains('wa-floating-book') || text.indexOf('request date') !== -1 || text.indexOf('book via whatsapp') !== -1){
-      el.addEventListener('click', function(e){
-        if(el.tagName.toLowerCase() !== 'button' || el.type !== 'submit'){
-          e.preventDefault();
-          openBM();
-          return false;
-        }
-      });
-    }
-  });
-
   var modal = document.getElementById('bmodal');
   if(modal){
-    modal.addEventListener('click', function(e){
-      if(e.target === modal) closeBM();
-    });
+    modal.addEventListener('click', function(e){ if(e.target === modal) closeBM(); });
   }
 });
-</script>
 
-
-window.guestCount = 1;
-
-window.toggleGuest = function(){
-  var firstSection = document.getElementById('guestSection');
-  if(!firstSection) return;
-
-  // First click: show the first guest block.
-  if(!firstSection.classList.contains('on')){
-    firstSection.classList.add('on');
-    return;
-  }
-
-  // Later clicks: duplicate the guest block so multiple guests can be added.
-  window.guestCount += 1;
-  var newSection = firstSection.cloneNode(true);
-  newSection.id = 'guestSection_' + window.guestCount;
-  newSection.classList.add('on');
-
-  newSection.querySelectorAll('input, textarea').forEach(function(el){
-    if(el.type === 'radio'){
-      el.checked = false;
-      el.name = 'guest_masseuse_' + window.guestCount;
-    } else {
-      el.value = '';
-    }
-
-    if(el.id){
-      el.id = el.id + '_' + window.guestCount;
-    }
-  });
-
-  newSection.querySelectorAll('select').forEach(function(el){
-    el.selectedIndex = 0;
-    if(el.id){
-      el.id = el.id + '_' + window.guestCount;
-    }
-  });
-
-  newSection.querySelectorAll('label[for]').forEach(function(label){
-    var oldFor = label.getAttribute('for');
-    if(oldFor){
-      label.setAttribute('for', oldFor + '_' + window.guestCount);
-    }
-  });
-
-  firstSection.parentNode.insertBefore(newSection, document.querySelector('.booking-submit'));
-};
-
-window.removeGuest = function(button){
-  var section = button ? button.closest('.guest-section') : document.getElementById('guestSection');
-  if(!section) return;
-
-  if(section.id === 'guestSection'){
-    section.classList.remove('on');
-    section.querySelectorAll('input[type="text"], textarea').forEach(function(el){ el.value = ''; });
-    section.querySelectorAll('select').forEach(function(el){ el.selectedIndex = 0; });
-    section.querySelectorAll('input[type="radio"]').forEach(function(el){ el.checked = false; });
-  } else {
-    section.remove();
-  }
-};
-
-
-document.addEventListener('DOMContentLoaded', function(){
-  document.querySelectorAll('.wa-floating-book, .nav-cta, button').forEach(function(el){
-    var text = (el.textContent || '').toLowerCase();
-    if(el.classList.contains('wa-floating-book') || text.indexOf('request date') !== -1 || text.indexOf('book via whatsapp') !== -1){
-      el.addEventListener('click', function(e){
-        if(el.tagName.toLowerCase() !== 'button' || el.type !== 'submit'){
-          e.preventDefault();
-          openBM();
-          return false;
-        }
-      });
-    }
-  });
-
-  var modal = document.getElementById('bmodal');
-  if(modal){
-    modal.addEventListener('click', function(e){
-      if(e.target === modal) closeBM();
-    });
-  }
-});
-</script>
-
-
-<a class="wa-floating-book" href="#" onclick="event.preventDefault();openBM();return false;">
-  <span>📲</span>
-  Boek via WhatsApp
-</a>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const buttons = document.querySelectorAll('[data-package]');
-    const panels = document.querySelectorAll('.pkg-panel');
-
-    function showPackage(name) {
-        buttons.forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.package === name);
-        });
-
-        panels.forEach(panel => {
-            if (panel.id === 'pkg-' + name) {
-                panel.style.display = 'block';
-            } else {
-                panel.style.display = 'none';
-            }
-        });
-    }
-
-    buttons.forEach(btn => {
-        btn.addEventListener('click', function () {
-            showPackage(this.dataset.package);
-        });
-    });
-
-    showPackage('therapeutic');
-});
-</script>
-
-
-
-
-
-
-<script>
-/* ===== Robust NL / EN Language Toggle - full content translation ===== */
-const I18N_NL_TO_EN = {
-  "Home": "Home",
-  "Over ons": "About",
-  "Behandelingen": "Treatments",
-  "Pakketten": "Packages",
-  "Maak een afspraak": "Request an appointment",
-  "Boek via WhatsApp": "Book via WhatsApp",
-  "Verstuur via WhatsApp": "Send via WhatsApp",
-  "Traditioneel Marron Wellness Centrum · Paramaribo, Suriname": "Traditional Maroon Wellness Centre · Paramaribo, Suriname",
-  "Ervaar wellness op een andere manier": "Experience wellness differently",
-  "Bekijk de behandelingen": "View Treatments",
-  "Ons verhaal": "Our Story",
-  "Waar Marron traditie": "Where Maroon Tradition",
-  "heelt": "Heals",
-  "Mokisa is Suriname’s eerste traditionele Marron Wellness Centrum — een bijzondere plek waar eeuwenoude Afro-Surinaamse healing rituelen samenkomen met hedendaagse zorg. Onze therapeuten zijn getraind in authentieke Marron technieken en gebruiken natuurlijke kruidenextracten, stoom en ervaren handen om balans en vitaliteit te herstellen.": "Mokisa is Suriname's first Traditional Maroon Wellness Centre — a special place where age-old Afro-Surinamese healing rituals meet contemporary care. Our therapists are trained in authentic Maroon techniques and use natural herbal extracts, steam and skilled hands to restore balance and vitality.",
-  "Van ontgiftende Sweti stoombaden en Dampu kruidenwraps tot diepe therapeutische Ali Skin massages en holistische bodyscrubs — elke behandeling is geworteld in botanische kennis die generaties lang is doorgegeven.": "From detoxifying Sweti steam baths and Dampu herb wraps to deep therapeutic Ali Skin massages and holistic body scrubs — every treatment is rooted in botanical knowledge passed down through generations.",
-  "Natuurlijke kruiden": "Natural Herbs",
-  "Wat wij aanbieden": "What we offer",
-  "Individuele": "Individual",
-  "Individuele behandelingen": "Individual Treatments",
-  "Kies eerst een categorie. Daarna verschijnen de behandelingen die daarbij horen. Alle prijzen zijn inclusief 10% BTW.": "First choose a category to view the treatments available. All prices include 10% VAT.",
-  "Traditioneel": "Traditional",
-  "Traditionele behandelingen": "Traditional Treatments",
-  "Regulier": "Regular",
-  "Reguliere behandelingen": "Regular Treatments",
-  "Marron Tradities": "Maroon Traditions",
-  "Behandelingen met kruiden, stoom, scrub en traditionele technieken voor reiniging, herstel en diepe ontspanning.": "Treatments with herbs, steam, scrubs and traditional techniques for cleansing, restoration and deep relaxation.",
-  "Zweten en stomen met natuurlijke kruiden. Ontgift via transpiratie, opent de poriën, stimuleert de doorbloeding en verlicht stress en vermoeidheid.": "Sweating and steaming with natural herbs. Detoxifies through perspiration, opens pores, stimulates circulation and relieves stress and fatigue.",
-  "Kruidenwrap": "Herbal Wrap",
-  "Het lichaam wordt gedept met een doek gedrenkt in een heet kruidenaftreksel. Hierbij worden dode huidcellen verwijderd en de lichaamsporiën geopend en gereinigd. Verder komt het lichaam volledig tot rust en wordt een gezonde bloed- en zuurstofcirculatie in het lichaam bevorderd.": "The body is gently dabbed with a cloth soaked in a hot herbal infusion. This helps remove dead skin cells and open and cleanse the pores. The treatment also allows the body to fully relax while supporting healthy blood and oxygen circulation throughout the body.",
-  "Therapeutisch": "Therapeutic",
-  "Therapeutische": "Therapeutic",
-  "Therapeutische massage met traditionele Marron technieken. Gericht op nek-, schouder- en rugpijn, gespannen spieren en vastzittende blokkades.": "Therapeutic massage with traditional Maroon techniques. Focused on neck, shoulder and back pain, tense muscles and stubborn blockages.",
-  "Volledige bodyscrub met açaí-extract om dode huidcellen en andere stoffen op het lichaam te verwijderen. Ondersteunt detox en geeft de huid een frisse, gezonde glow en laat de huid weer gezond ademen.": "Full body scrub with açaí extract to remove dead skin cells. Supports detox and gives the skin a fresh, healthy glow.",
-  "Massage & Ontspanning": "Massage & Relaxation",
-  "Klassieke massages voor spierherstel, ontspanning en het loslaten van spanning in het lichaam.": "Classic massages for muscle recovery, relaxation and releasing tension in the body.",
-  "Massage voor betere doorbloeding, het losmaken van spierblokkades, vermindering van lichaamspijn en diepe verlichting van spanning.": "Massage for better circulation, releasing muscle blockages, reducing body pain and deeply relieving tension.",
-  "Een zachte relaxmassage met heerlijk geurende olie om het lichaam tot rust te brengen, spanning los te laten en innerlijke balans te herstellen.": "A gentle relaxation massage with beautifully scented oil to calm the body, release tension and restore inner balance.",
-  "Gecombineerde": "Combined",
-  "Gecombineerde behandelingen": "Combined Treatments",
-  "Combineer behandelingen voor een complete wellnesservaring. Alle prijzen zijn inclusief 10% BTW.": "Combine treatments for a complete wellness experience. All prices include 10% VAT.",
-  "Therapeutische pakketten": "Therapeutic Packages",
-  "Podo behandelingen": "Podo Treatments",
-  "Sweti combinaties": "Sweti Combinations",
-  "Dampu combinaties": "Dampu Combinations",
-  "Kinderbehandelingen": "Kids Treatments",
-  "Signature pakketten": "Signature Packages",
-  "Combinaties van de traditionele behandelingen speciaal gericht op lichamelijke aandoeningen z.a. spierpijnen, pijnen op specifieke lichaamsdelen of chronische gewrichtspijnen.": "Combinations of traditional treatments specifically focused on physical complaints such as muscle pain, pain in specific body areas or chronic joint pain.",
-  "Combinaties met stoom voor reiniging, ontspanning, huidverzorging en herstel van het lichaam.": "Steam-based combinations for cleansing, relaxation, skin care and body restoration.",
-  "Gerichte combinaties voor spierpijn, gewrichtsklachten, specifieke lichaamsdelen en chronische klachten.": "Targeted combinations for muscle pain, joint complaints, specific body areas and chronic complaints.",
-  "Volledige bodyscrub met açaí-extract, gecombineerd met onze populairste behandelingen.": "Full body scrub with açaí extract, combined with our most popular treatments.",
-  "Zachte, zorgzame behandelingen ter ondersteuning van gezonde groei, weerstand, ontspanning en een stralende huid voor de kleintjes.": "Gentle, caring treatments that support healthy growth, immunity, relaxation and radiant skin for little ones.",
-  "De ultieme beleving van traditionele Marron wellness — onze meest bijzondere samengestelde ervaringen.": "The ultimate experience of traditional Maroon wellness — our most special curated experiences.",
-  "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap": "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap",
-  "Babymassage (0–3 jaar) · Ondersteunt gezonde lichamelijke groei, verlicht krampjes en slechte slaap": "Baby massage (ages 0–3) · Supports healthy physical growth, relieves cramps and poor sleep",
-  "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind": "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind",
-  "Sweti · Dampu · Full Body Podoscrub · Relaxmassage · De ultieme Marron ervaring": "Sweti · Dampu · Full Body Podoscrub · Relax Massage · The ultimate Maroon experience",
-  "Sweti · Dampu · Bakapasi · Full Body Podoscrub · Relaxmassage · Compleet vernieuwingsritueel voor vrouwen": "Sweti · Dampu · Bakapasi · Full Body Podoscrub · Relax Massage · Women's complete renewal ritual",
-  "Traditioneel Marron Wellness Centrum — waar voorouderlijke genezingswijsheid en moderne zorg samenkomen. Geworteld in Suriname, toegankelijk voor een ieder.": "Traditional Maroon Wellness Centre — where ancestral healing wisdom and modern care come together. Rooted in Suriname, accessible to everyone.",
-  "Navigatie": "Navigate",
-  "All prices incl. 10% BTW · Paramaribo, Suriname": "All prices incl. 10% VAT · Paramaribo, Suriname",
-  "Alle prijzen incl. 10% BTW · Paramaribo, Suriname": "All prices incl. 10% VAT · Paramaribo, Suriname",
-  "Vul je gegevens in — je aanvraag gaat direct naar onze WhatsApp.": "Fill in your details — your request goes directly to our WhatsApp.",
-  "Voornaam": "First name",
-  "Achternaam": "Last name",
-  "Je WhatsApp": "Your WhatsApp",
-  "Gewenste datum": "Preferred date",
-  "Voorkeur masseur/masseuse": "Masseuse preference",
-  "Vrouw": "Female",
-  "Man": "Male",
-  "Geen voorkeur": "No preference",
-  "Behandeling / pakket": "Treatment / package",
-  "Selecteer...": "Select...",
-  "Notities / gezondheidsklachten": "Notes / health conditions",
-  "Gezondheidsklachten of speciale wensen...": "Health conditions or special requests...",
-  "+ Gast toevoegen": "+ Add guest",
-  "Extra gast": "Additional guest",
-  "Gast verwijderen": "Remove guest",
-  "Naam gast": "Guest name",
-  "Voorkeur masseur/masseuse gast": "Guest masseuse preference",
-  "Behandeling / pakket gast": "Guest treatment / package",
-  "Notities / gezondheidsklachten gast": "Guest notes / health conditions",
-  "Gezondheidsklachten of speciale wensen voor de gast...": "Health conditions or special requests for the guest...",
-  "Selecteer datum...": "Select date...",
-  "incl. BTW": "incl. VAT",
-  "Marron": "Maroon",
-  "marron": "maroon",
-  "*inclusief 10% BTW": "*incl. 10% VAT",
- "Waar Marron traditie": "Where Maroon Tradition",
-"Heelt": "Heals",
-"Mokisa is Suriname\u2019s eerste traditionele Marron Wellness Centrum. Op deze bijzondere komen eeuwenoude N'Djuka-welzijnsbehandelingen perfect samen met hedendaagse zord. Onze therapeuten zijn gespecialiseerd in authentieke Marron-technieken.Met hun ervaren handen en gebruik van pure, natuurlijke kruidenextracten helpen zij u om uw natuurlijke balans en vitaliteit weer volledig te herstellen.": "Mokisa is Suriname's first traditional Maroon Wellness Centre. Here, centuries-old Maroon wellness treatments come together seamlessly with contemporary care. Our therapists specialise in authentic Maroon techniques. With skilled hands, knowledge and pure natural herbal extracts, they help you rediscover your natural balance and restore vitality.",
-"Elke behandeling bij Mokisa is diep geworteld in traditionele kennis, die al generaties lang liefdevol wordt doorgegeven.": "Every treatment at Mokisa is deeply rooted in traditional knowledge, lovingly passed down through generations.",
-};
-const I18N_EN_TO_NL = {
-  "Home": "Home",
-  "About": "Over ons",
-  "Treatments": "Behandelingen",
-  "Packages": "Pakketten",
-  "request an appointment": "Maak een afspraak",
-  "Book via WhatsApp": "Boek via WhatsApp",
-  "Send via WhatsApp": "Verstuur via WhatsApp",
-  "Traditional Maroon Wellness Centre · Paramaribo, Suriname": "Traditioneel Marron Wellness Centrum · Paramaribo, Suriname",
-  "Experience wellness differently": "Ervaar wellness op een andere manier",
-  "View Treatments": "Bekijk de behandelingen",
-  "Our Story": "Ons verhaal",
-  "Where Maroon Tradition": "Waar Marron traditie",
-  "Heals": "heelt",
-  "Mokisa is Suriname\u2019s first Traditional Maroon Wellness Centre — a special place where age-old Afro-Surinamese healing rituals meet contemporary care. Our therapists are trained in authentic Maroon techniques and use natural herbal extracts, steam and skilled hands to restore balance and vitality.": "Mokisa is Suriname’s eerste traditionele Marron Wellness Centrum — een bijzondere plek waar eeuwenoude Afro-Surinaamse healing rituelen samenkomen met hedendaagse zorg. Onze therapeuten zijn getraind in authentieke Marron technieken en gebruiken natuurlijke kruidenextracten, stoom en ervaren handen om balans en vitaliteit te herstellen.",
-  "From detoxifying Sweti steam baths and Dampu herb wraps to deep therapeutic Ali Skin massages and holistic body scrubs — every treatment is rooted in botanical knowledge passed down through generations.": "Van ontgiftende Sweti stoombaden en Dampu kruidenwraps tot diepe therapeutische Ali Skin massages en holistische bodyscrubs — elke behandeling is geworteld in botanische kennis die generaties lang is doorgegeven.",
-  "Natural Herbs": "Natuurlijke kruiden",
-  "What we offer": "Wat wij aanbieden",
-  "Individual": "Individuele",
-  "Individual Treatments": "Individuele behandelingen",
-  "First choose a category to view the treatments available. All prices include 10% VAT.": "Kies eerst een categorie. Daarna verschijnen de behandelingen die daarbij horen. Alle prijzen zijn inclusief 10% BTW.",
-  "Traditional": "Traditioneel",
-  "Traditional Treatments": "Traditionele behandelingen",
-  "Regular": "Regulier",
-  "Regular Treatments": "Reguliere behandelingen",
-  "Maroon Traditions": "Marron Tradities",
-  "Treatments with herbs, steam, scrubs and traditional techniques for cleansing, restoration and deep relaxation.": "Behandelingen met kruiden, stoom, scrub en traditionele technieken voor reiniging, herstel en diepe ontspanning.",
-  "Sweating and steaming with natural herbs. Detoxifies through perspiration, opens pores, stimulates circulation and relieves stress and fatigue.": "Zweten en stomen met natuurlijke kruiden. Ontgift via transpiratie, opent de poriën, stimuleert de doorbloeding en verlicht stress en vermoeidheid.",
-  "Herbal Wrap": "Kruidenwrap",
-  "The body is gently dabbed with a cloth soaked in a hot herbal infusion. This helps remove dead skin cells and open and cleanse the pores. The treatment also allows the body to fully relax while supporting healthy blood and oxygen circulation throughout the body.": "Het lichaam wordt gedept met een doek gedrenkt in een heet kruidenaftreksel. Hierbij worden dode huidcellen verwijderd en de lichaamsporiën geopend en gereinigd. Verder komt het lichaam volledig tot rust en wordt een gezonde bloed- en zuurstofcirculatie in het lichaam bevorderd.",
-  "Therapeutic": "Therapeutisch",
-  "Therapeutic massage with traditional Maroon techniques. Focused on neck, shoulder and back pain, tense muscles and stubborn blockages.": "Therapeutische massage met traditionele Marron technieken. Gericht op nek-, schouder- en rugpijn, gespannen spieren en vastzittende blokkades.",
-  "Full body scrub with açaí extract to remove dead skin cells. Supports detox and gives the skin a fresh, healthy glow.": "Volledige bodyscrub met açaí-extract om dode huidcellen en andere stoffen op het lichaam te verwijderen. Ondersteunt detox en geeft de huid een frisse, gezonde glow en laat de huid weer gezond ademen.",
-  "Massage & Relaxation": "Massage & Ontspanning",
-  "Classic massages for muscle recovery, relaxation and releasing tension in the body.": "Klassieke massages voor spierherstel, ontspanning en het loslaten van spanning in het lichaam.",
-  "Massage for better circulation, releasing muscle blockages, reducing body pain and deeply relieving tension.": "Massage voor betere doorbloeding, het losmaken van spierblokkades, vermindering van lichaamspijn en diepe verlichting van spanning.",
-  "A gentle relaxation massage with beautifully scented oil to calm the body, release tension and restore inner balance.": "Een zachte relaxmassage met heerlijk geurende olie om het lichaam tot rust te brengen, spanning los te laten en innerlijke balans te herstellen.",
-  "Combined": "Gecombineerde",
-  "Combined Treatments": "Gecombineerde behandelingen",
-  "Combine treatments for a complete wellness experience. All prices include 10% VAT.": "Combineer behandelingen voor een complete wellnesservaring. Alle prijzen zijn inclusief 10% BTW.",
-  "Therapeutic Packages": "Therapeutische pakketten",
-  "Podo Treatments": "Podo behandelingen",
-  "Sweti Combinations": "Sweti combinaties",
-  "Dampu Combinations": "Dampu combinaties",
-  "Kids Treatments": "Kinderbehandelingen",
-  "Signature Packages": "Signature pakketten",
-  "Combinations of traditional treatments specifically focused on physical complaints such as muscle pain, pain in specific body areas or chronic joint pain.": "Combinaties van de traditionele behandelingen speciaal gericht op lichamelijke aandoeningen z.a. spierpijnen, pijnen op specifieke lichaamsdelen of chronische gewrichtspijnen.",
-  "Steam-based combinations for cleansing, relaxation, skin care and body restoration.": "Combinaties met stoom voor reiniging, ontspanning, huidverzorging en herstel van het lichaam.",
-  "Targeted combinations for muscle pain, joint complaints, specific body areas and chronic complaints.": "Gerichte combinaties voor spierpijn, gewrichtsklachten, specifieke lichaamsdelen en chronische klachten.",
-  "Full body scrub with açaí extract, combined with our most popular treatments.": "Volledige bodyscrub met açaí-extract, gecombineerd met onze populairste behandelingen.",
-  "Gentle, caring treatments that support healthy growth, immunity, relaxation and radiant skin for little ones.": "Zachte, zorgzame behandelingen ter ondersteuning van gezonde groei, weerstand, ontspanning en een stralende huid voor de kleintjes.",
-  "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap": "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap",
-  "Baby massage (ages 0–3) · Supports healthy physical growth, relieves cramps and poor sleep": "Babymassage (0–3 jaar) · Ondersteunt gezonde lichamelijke groei, verlicht krampjes en slechte slaap",
-  "Podosiri Scrub &amp; Relax Massage · Created to give your child fresh, soft and radiant skin": "Podosiri Scrub &amp; Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind",
-  "The ultimate experience of traditional Maroon wellness — our most special curated experiences.": "De ultieme beleving van traditionele Marron wellness — onze meest bijzondere samengestelde ervaringen.",
-  "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap": "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap",
-  "Babymassage (0–3 jaar) · Ondersteunt gezonde lichamelijke groei, verlicht krampjes en slechte slaap": "Baby massage (ages 0–3) · Supports healthy physical growth, relieves cramps and poor sleep",
-  "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind": "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind",
-  "Sweti · Dampu · Full Body Podoscrub · Relax Massage · The ultimate Maroon experience": "Sweti · Dampu · Full Body Podoscrub · Relaxmassage · De ultieme Marron ervaring",
-  "Sweti · Dampu · Bakapasi · Full Body Podoscrub · Relax Massage · Women's complete renewal ritual": "Sweti · Dampu · Bakapasi · Full Body Podoscrub · Relaxmassage · Compleet vernieuwingsritueel voor vrouwen",
-  "Traditional Maroon Wellness Centre — where ancestral healing wisdom and modern care come together. Rooted in Suriname, accessible to everyone.": "Traditioneel Marron Wellness Centrum — waar voorouderlijke genezingswijsheid en moderne zorg samenkomen. Geworteld in Suriname, toegankelijk voor een ieder.",
-  "Navigate": "Navigatie",
-  "All prices incl. 10% VAT · Paramaribo, Suriname": "Alle prijzen incl. 10% BTW · Paramaribo, Suriname",
-  "Fill in your details — your request goes directly to our WhatsApp.": "Vul je gegevens in — je aanvraag gaat direct naar onze WhatsApp.",
-  "First name": "Voornaam",
-  "Last name": "Achternaam",
-  "Your WhatsApp": "Je WhatsApp",
-  "Preferred date": "Gewenste datum",
-  "Masseuse preference": "Voorkeur masseur/masseuse",
-  "Female": "Vrouw",
-  "Male": "Man",
-  "No preference": "Geen voorkeur",
-  "Treatment / package": "Behandeling / pakket",
-  "Select...": "Selecteer...",
-  "Notes / health conditions": "Notities / gezondheidsklachten",
-  "Health conditions or special requests...": "Gezondheidsklachten of speciale wensen...",
-  "+ Add guest": "+ Gast toevoegen",
-  "Additional guest": "Extra gast",
-  "Remove guest": "Gast verwijderen",
-  "Guest name": "Naam gast",
-  "Guest masseuse preference": "Voorkeur masseur/masseuse gast",
-  "Guest treatment / package": "Behandeling / pakket gast",
-  "Guest notes / health conditions": "Notities / gezondheidsklachten gast",
-  "Health conditions or special requests for the guest...": "Gezondheidsklachten of speciale wensen voor de gast...",
-  "Select date...": "Selecteer datum...",
-  "incl. VAT": "incl. BTW",
-  "Maroon": "Marron",
-  "maroon": "marron",
-  "*incl. 10% VAT": "*inclusief 10% BTW",
-  "Therapeutic Treatments": "Therapeutische behandelingen",
-  "Full Body Scrub": "Full Body Scrub",
-  "Deep Work": "Deep Work",
-  "Body Scrub": "Body Scrub",
-  "Massage": "Massage",
-  "Detox": "Detox",
- "Where Maroon Tradition": "Waar Marron traditie",
-"Heals": "Heelt",
-"Mokisa is Suriname's first traditional Maroon Wellness Centre. Here, centuries-old Maroon wellness treatments come together seamlessly with contemporary care. Our therapists specialise in authentic Maroon techniques. With skilled hands, knowledge and pure natural herbal extracts, they help you rediscover your natural balance and restore vitality.": "Mokisa is Suriname’s eerste traditionele Marron Wellness Centrum. Hier komen eeuwenoude Marron-welzijnsbehandelingen perfect samen met hedendaagse zorg. Onze therapeuten zijn gespecialiseerd in authentieke Marron-technieken. Met hun kundige handen, kennis en gebruik van pure, natuurlijke kruidenextracten helpen zij uw natuurlijke balans terug te vinden en vitaliteit te herstellen.",
-"Every treatment at Mokisa is deeply rooted in traditional knowledge, lovingly passed down through generations.": "Elke behandeling bij Mokisa is diep geworteld in traditionele kennis, die al generaties lang liefdevol wordt doorgegeven.",
-};
-
-/* ===== Client feedback text overrides ===== */
-Object.assign(I18N_NL_TO_EN, {
-  "Maak een afspraak": "Request an appointment",
-  "Ervaar wellness op een andere manier": "Experience wellness differently",
-  "Bekijk de behandelingen": "View Treatments",
-  "Kies eerst een categorie. Daarna verschijnen de behandelingen die daarbij horen. Alle prijzen zijn inclusief 10% BTW.": "First choose a category to view the treatments available. All prices include 10% VAT.",
-  "Combineer behandelingen voor een complete wellnesservaring. Alle prijzen zijn inclusief 10% BTW.": "Combine treatments for a complete wellness experience. All prices include 10% VAT.",
-  "Mokisa is Suriname’s eerste traditionele Marron Wellness Centrum. Hier komen eeuwenoude Marron-welzijnsbehandelingen perfect samen met hedendaagse zorg. Onze therapeuten zijn gespecialiseerd in authentieke Marron-technieken. Met hun kundige handen, kennis en gebruik van pure, natuurlijke kruidenextracten helpen zij uw natuurlijke balans terug te vinden en vitaliteit te herstellen.": "Mokisa is Suriname's first traditional Maroon Wellness Centre. Here, centuries-old Maroon wellness treatments come together seamlessly with contemporary care. Our therapists specialise in authentic Maroon techniques. With skilled hands, knowledge and pure natural herbal extracts, they help you rediscover your natural balance and restore vitality.",
-  "Elke behandeling bij Mokisa is diep geworteld in traditionele kennis, die al generaties lang liefdevol wordt doorgegeven.": "Every treatment at Mokisa is deeply rooted in traditional knowledge, lovingly passed down through generations.",
-  "Alle prijzen zijn inclusief 10% BTW.": "All prices include 10% VAT.",
-  "Volledige bodyscrub met açaí-extract om dode huidcellen en andere stoffen op het lichaam te verwijderen. Ondersteunt detox en geeft de huid een frisse, gezonde glow en laat de huid weer gezond ademen.": "Full body scrub with açaí extract to remove dead skin cells and other impurities from the body. Supports detox, gives the skin a fresh, healthy glow and lets the skin breathe healthily again.",
-  "Traditioneel Marron Wellness Centrum — waar voorouderlijke genezingswijsheid en moderne zorg samenkomen. Geworteld in Suriname, toegankelijk voor een ieder.": "Traditional Maroon Wellness Centre — where ancestral healing wisdom and modern care come together. Rooted in Suriname, accessible to everyone.",
-  "*inclusief 10% BTW": "*including 10% VAT",
-  "incl. BTW": "incl. VAT"
-});
-Object.assign(I18N_EN_TO_NL, {
-  "Request an appointment": "Maak een afspraak",
-  "Experience wellness differently": "Ervaar wellness op een andere manier",
-  "View Treatments": "Bekijk de behandelingen",
-  "First choose a category to view the treatments available. All prices include 10% VAT.": "Kies eerst een categorie. Daarna verschijnen de behandelingen die daarbij horen. Alle prijzen zijn inclusief 10% BTW.",
-  "Combine treatments for a complete wellness experience. All prices include 10% VAT.": "Combineer behandelingen voor een complete wellnesservaring. Alle prijzen zijn inclusief 10% BTW.",
-  "Mokisa is Suriname's first traditional Maroon Wellness Centre. Here, centuries-old Maroon wellness treatments come together seamlessly with contemporary care. Our therapists specialise in authentic Maroon techniques. With skilled hands, knowledge and pure natural herbal extracts, they help you rediscover your natural balance and restore vitality.": "Mokisa is Suriname’s eerste traditionele Marron Wellness Centrum. Hier komen eeuwenoude Marron-welzijnsbehandelingen perfect samen met hedendaagse zorg. Onze therapeuten zijn gespecialiseerd in authentieke Marron-technieken. Met hun kundige handen, kennis en gebruik van pure, natuurlijke kruidenextracten helpen zij uw natuurlijke balans terug te vinden en vitaliteit te herstellen.",
-  "All prices include 10% VAT.": "Alle prijzen zijn inclusief 10% BTW.",
-  "Full body scrub with açaí extract to remove dead skin cells and other impurities from the body. Supports detox, gives the skin a fresh, healthy glow and lets the skin breathe healthily again.": "Volledige bodyscrub met açaí-extract om dode huidcellen en andere stoffen op het lichaam te verwijderen. Ondersteunt detox en geeft de huid een frisse, gezonde glow en laat de huid weer gezond ademen.",
-  "Traditional Maroon Wellness Centre — where ancestral healing wisdom and modern care come together. Rooted in Suriname, accessible to everyone.": "Traditioneel Marron Wellness Centrum — waar voorouderlijke genezingswijsheid en moderne zorg samenkomen. Geworteld in Suriname, toegankelijk voor een ieder.",
-  "*including 10% VAT": "*inclusief 10% BTW",
-  "incl. VAT": "incl. BTW"
-});
-
-
-/* ===== V4 translation fixes: Kids package + Ali Skin important note ===== */
-Object.assign(I18N_NL_TO_EN, {
-  "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind": "Podosiri Scrub & Relax Massage · Created to give your child fresh, soft and radiant skin",
-  "Podosiri Scrub &amp; Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind": "Podosiri Scrub &amp; Relax Massage · Created to give your child fresh, soft and radiant skin",
-  "Pikin' Package": "Pikin' Package",
-  "Belangrijk om te weten:": "Important to know:",
-  "Belangrijk:": "Important:",
-  "De Ali Skin behandeling wordt uitgevoerd door een mannelijke therapeut.": "The Ali Skin treatment is performed by a male therapist."
-});
-Object.assign(I18N_EN_TO_NL, {
-  "Podosiri Scrub & Relax Massage · Created to give your child fresh, soft and radiant skin": "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind",
-  "Podosiri Scrub &amp; Relax Massage · Created to give your child fresh, soft and radiant skin": "Podosiri Scrub &amp; Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind",
-  "Important to know:": "Belangrijk om te weten:",
-  "Important:": "Belangrijk:",
-  "The Ali Skin treatment is performed by a male therapist.": "De Ali Skin behandeling wordt uitgevoerd door een mannelijke therapeut."
-});
-
+/* Ali Skin note helper */
 function mokisaAliSkinNoteHtml(shortLabel){
-  const lang = localStorage.getItem('mokisaLang') || document.documentElement.lang || 'nl';
+  var lang = localStorage.getItem('mokisaLang') || document.documentElement.lang || 'nl';
   if(lang === 'en'){
     return '<strong>' + (shortLabel ? 'Important:' : 'Important to know:') + '</strong> The Ali Skin treatment is performed by a male therapist.';
   }
   return '<strong>' + (shortLabel ? 'Belangrijk:' : 'Belangrijk om te weten:') + '</strong> De Ali Skin behandeling wordt uitgevoerd door een mannelijke therapeut.';
 }
 
-
-/* ===== V5 translation fixes: updated Dampu + Kids descriptions ===== */
-Object.assign(I18N_NL_TO_EN, {
-  "Het lichaam wordt gedept met een doek gedrenkt in een heet kruidenaftreksel. Hierbij worden dode huidcellen verwijderd en de lichaamsporiën geopend en gereinigd. Verder komt het lichaam volledig tot rust en wordt een gezonde bloed- en zuurstofcirculatie in het lichaam bevorderd.": "The body is gently dabbed with a cloth soaked in a hot herbal infusion. This helps remove dead skin cells and open and cleanse the pores. The treatment also allows the body to fully relax while supporting healthy blood and oxygen circulation throughout the body.",
-  "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind": "Podosiri Scrub & Relax Massage · Created to give your child fresh, soft and radiant skin",
-  "Podosiri Scrub &amp; Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind": "Podosiri Scrub &amp; Relax Massage · Created to give your child fresh, soft and radiant skin"
-});
-Object.assign(I18N_EN_TO_NL, {
-  "The body is gently dabbed with a cloth soaked in a hot herbal infusion. This helps remove dead skin cells and open and cleanse the pores. The treatment also allows the body to fully relax while supporting healthy blood and oxygen circulation throughout the body.": "Het lichaam wordt gedept met een doek gedrenkt in een heet kruidenaftreksel. Hierbij worden dode huidcellen verwijderd en de lichaamsporiën geopend en gereinigd. Verder komt het lichaam volledig tot rust en wordt een gezonde bloed- en zuurstofcirculatie in het lichaam bevorderd.",
-  "Podosiri Scrub & Relax Massage · Created to give your child fresh, soft and radiant skin": "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind",
-  "Podosiri Scrub &amp; Relax Massage · Created to give your child fresh, soft and radiant skin": "Podosiri Scrub &amp; Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind"
-});
-
-
-/* ===== V6 translation fixes: Kids package rows ===== */
-Object.assign(I18N_NL_TO_EN, {
-  "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap": "Kids massage (ages 3–12) · Relieves stress, strengthens the immune system and supports good sleep",
-  "Babymassage (0–3 jaar) · Ondersteunt gezonde lichamelijke groei, verlicht krampjes en slechte slaap": "Baby massage (ages 0–3) · Supports healthy physical growth, relieves cramps and poor sleep",
-  "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind": "Podosiri Scrub & Relax Massage · Created to give your child fresh, soft and radiant skin",
-  "Podosiri Scrub &amp; Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind": "Podosiri Scrub &amp; Relax Massage · Created to give your child fresh, soft and radiant skin"
-});
-Object.assign(I18N_EN_TO_NL, {
-  "Kids massage (ages 3–12) · Relieves stress, strengthens the immune system and supports good sleep": "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap",
-  "Baby massage (ages 0–3) · Supports healthy physical growth, relieves cramps and poor sleep": "Babymassage (0–3 jaar) · Ondersteunt gezonde lichamelijke groei, verlicht krampjes en slechte slaap",
-  "Podosiri Scrub & Relax Massage · Created to give your child fresh, soft and radiant skin": "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind",
-  "Podosiri Scrub &amp; Relax Massage · Created to give your child fresh, soft and radiant skin": "Podosiri Scrub &amp; Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind"
-});
+/* Language toggle */
+var I18N_NL_TO_EN = {
+  "Home":"Home","Over ons":"About","Behandelingen":"Treatments","Pakketten":"Packages",
+  "Maak een afspraak":"Request an appointment","Boek via WhatsApp":"Book via WhatsApp",
+  "Verstuur via WhatsApp":"Send via WhatsApp",
+  "Traditioneel Marron Wellness Centrum · Paramaribo, Suriname":"Traditional Maroon Wellness Centre · Paramaribo, Suriname",
+  "Ervaar wellness op een andere manier":"Experience wellness differently",
+  "Bekijk de behandelingen":"View Treatments","Ons verhaal":"Our Story",
+  "Waar Marron traditie":"Where Maroon Tradition","Heelt":"Heals",
+  "Mokisa is Suriname's eerste traditionele Marron Wellness Centrum. Hier komen eeuwenoude Marron-welzijnsbehandelingen perfect samen met hedendaagse zorg. Onze therapeuten zijn gespecialiseerd in authentieke Marron-technieken. Met hun kundige handen, kennis en gebruik van pure, natuurlijke kruidenextracten helpen zij uw natuurlijke balans terug te vinden en vitaliteit te herstellen.":"Mokisa is Suriname's first traditional Maroon Wellness Centre. Here, centuries-old Maroon wellness treatments come together seamlessly with contemporary care. Our therapists specialise in authentic Maroon techniques. With skilled hands, knowledge and pure natural herbal extracts, they help you rediscover your natural balance and restore vitality.",
+  "Elke behandeling bij Mokisa is diep geworteld in traditionele kennis, die al generaties lang liefdevol wordt doorgegeven.":"Every treatment at Mokisa is deeply rooted in traditional knowledge, lovingly passed down through generations.",
+  "Alle prijzen zijn inclusief 10% BTW.":"All prices include 10% VAT.",
+  "Wat wij aanbieden":"What we offer","Individuele":"Individual","Traditioneel":"Traditional","Regulier":"Regular",
+  "Marron Tradities":"Maroon Traditions","Kruidenwrap":"Herbal Wrap","Therapeutisch":"Therapeutic",
+  "Gecombineerde":"Combined","Kinderbehandelingen":"Kids Treatments",
+  "Kies eerst een categorie. Daarna verschijnen de behandelingen die daarbij horen. Alle prijzen zijn inclusief 10% BTW.":"First choose a category to view the treatments available. All prices include 10% VAT.",
+  "Combineer behandelingen voor een complete wellnesservaring. Alle prijzen zijn inclusief 10% BTW.":"Combine treatments for a complete wellness experience. All prices include 10% VAT.",
+  "Zweten en stomen met natuurlijke kruiden. Ontgift via transpiratie, opent de poriën, stimuleert de doorbloeding en verlicht stress en vermoeidheid.":"Sweating and steaming with natural herbs. Detoxifies through perspiration, opens pores, stimulates circulation and relieves stress and fatigue.",
+  "Het lichaam wordt gedept met een doek gedrenkt in een heet kruidenaftreksel. Hierbij worden dode huidcellen verwijderd en de lichaamsporiën geopend en gereinigd. Verder komt het lichaam volledig tot rust en wordt een gezonde bloed- en zuurstofcirculatie in het lichaam bevorderd.":"The body is gently dabbed with a cloth soaked in a hot herbal infusion. This helps remove dead skin cells and open and cleanse the pores. The treatment also allows the body to fully relax while supporting healthy blood and oxygen circulation throughout the body.",
+  "Therapeutische massage met traditionele Marron technieken. Gericht op nek-, schouder- en rugpijn, gespannen spieren en vastzittende blokkades.":"Therapeutic massage with traditional Maroon techniques. Focused on neck, shoulder and back pain, tense muscles and stubborn blockages.",
+  "Volledige bodyscrub met açaí-extract om dode huidcellen en andere stoffen op het lichaam te verwijderen. Ondersteunt detox en geeft de huid een frisse, gezonde glow en laat de huid weer gezond ademen.":"Full body scrub with açaí extract to remove dead skin cells and other impurities from the body. Supports detox, gives the skin a fresh, healthy glow and lets the skin breathe healthily again.",
+  "Massage & Ontspanning":"Massage & Relaxation",
+  "Klassieke massages voor spierherstel, ontspanning en het loslaten van spanning in het lichaam.":"Classic massages for muscle recovery, relaxation and releasing tension in the body.",
+  "Massage voor betere doorbloeding, het losmaken van spierblokkades, vermindering van lichaamspijn en diepe verlichting van spanning.":"Massage for better circulation, releasing muscle blockages, reducing body pain and deeply relieving tension.",
+  "Een zachte relaxmassage met heerlijk geurende olie om het lichaam tot rust te brengen, spanning los te laten en innerlijke balans te herstellen.":"A gentle relaxation massage with beautifully scented oil to calm the body, release tension and restore inner balance.",
+  "Combinaties van de traditionele behandelingen speciaal gericht op lichamelijke aandoeningen z.a. spierpijnen, pijnen op specifieke lichaamsdelen of chronische gewrichtspijnen.":"Combinations of traditional treatments specifically focused on physical complaints such as muscle pain, pain in specific body areas or chronic joint pain.",
+  "Combinaties met stoom voor reiniging, ontspanning, huidverzorging en herstel van het lichaam.":"Steam-based combinations for cleansing, relaxation, skin care and body restoration.",
+  "Gerichte combinaties voor spierpijn, gewrichtsklachten, specifieke lichaamsdelen en chronische klachten.":"Targeted combinations for muscle pain, joint complaints, specific body areas and chronic complaints.",
+  "Zachte, zorgzame behandelingen ter ondersteuning van gezonde groei, weerstand, ontspanning en een stralende huid voor de kleintjes.":"Gentle, caring treatments that support healthy growth, immunity, relaxation and radiant skin for little ones.",
+  "De ultieme beleving van traditionele Marron wellness — onze meest bijzondere samengestelde ervaringen.":"The ultimate experience of traditional Maroon wellness — our most special curated experiences.",
+  "Behandelingen met kruiden, stoom, scrub en traditionele technieken voor reiniging, herstel en diepe ontspanning.":"Treatments with herbs, steam, scrubs and traditional techniques for cleansing, restoration and deep relaxation.",
+  "Traditional Maroon Wellness Centre — where ancestral healing wisdom and modern care come together. Rooted in Suriname, accessible to everyone.":"Traditional Maroon Wellness Centre — where ancestral healing wisdom and modern care come together. Rooted in Suriname, accessible to everyone.",
+  "Navigatie":"Navigate","incl. BTW":"incl. VAT","Marron":"Maroon","marron":"maroon",
+  "*inclusief 10% BTW":"*including 10% VAT",
+  "Vul je gegevens in — je aanvraag gaat direct naar onze WhatsApp.":"Fill in your details — your request goes directly to our WhatsApp.",
+  "Voornaam":"First name","Achternaam":"Last name","Je WhatsApp":"Your WhatsApp",
+  "Gewenste datum":"Preferred date","Behandeling / pakket":"Treatment / package",
+  "Selecteer...":"Select...","Notities / gezondheidsklachten":"Notes / health conditions",
+  "Gezondheidsklachten of speciale wensen...":"Health conditions or special requests...",
+  "+ Gast toevoegen":"+ Add guest","Extra gast":"Additional guest","Gast verwijderen":"Remove guest",
+  "Naam gast":"Guest name","Behandeling / pakket gast":"Guest treatment / package",
+  "Notities / gezondheidsklachten gast":"Guest notes / health conditions",
+  "Gezondheidsklachten of speciale wensen voor de gast...":"Health conditions or special requests for the guest...",
+  "Kindermassage (3–12 jaar) · Verlicht stress, versterkt het immuunsysteem en bevordert goede slaap":"Kids massage (ages 3–12) · Relieves stress, strengthens the immune system and supports good sleep",
+  "Babymassage (0–3 jaar) · Ondersteunt gezonde lichamelijke groei, verlicht krampjes en slechte slaap":"Baby massage (ages 0–3) · Supports healthy physical growth, relieves cramps and poor sleep",
+  "Podosiri Scrub & Relaxmassage · Voor het laten ontstaan van een frisse, zachte en stralende huid voor uw kind":"Podosiri Scrub & Relax Massage · Created to give your child fresh, soft and radiant skin",
+  "Belangrijk om te weten:":"Important to know:","Belangrijk:":"Important:",
+  "De Ali Skin behandeling wordt uitgevoerd door een mannelijke therapeut.":"The Ali Skin treatment is performed by a male therapist."
+};
 
 function mokisaTranslateString(input, lang){
   if(input === null || input === undefined) return input;
-  const original = String(input);
+  var original = String(input);
   if(!original.trim()) return original;
-  const leading = original.match(/^\s*/)[0];
-  const trailing = original.match(/\s*$/)[0];
-  let out = original.trim();
-  const dict = lang === 'en' ? I18N_NL_TO_EN : I18N_EN_TO_NL;
-  Object.keys(dict).sort((a,b)=>b.length-a.length).forEach(key => {
-    const val = dict[key];
+  var leading = original.match(/^\s*/)[0];
+  var trailing = original.match(/\s*$/)[0];
+  var out = original.trim();
+  var dict = lang === 'en' ? I18N_NL_TO_EN : {};
+  Object.keys(dict).sort(function(a,b){ return b.length - a.length; }).forEach(function(key){
+    var val = dict[key];
     if(out === key) out = val;
     else if(out.includes(key)) out = out.split(key).join(val);
   });
-
-  /* Final safety pass: translate the word Maroon/Marron everywhere,
-     even if a line was not listed exactly in the dictionary. */
-  if (lang === 'en') {
-    out = out.replace(/\bMarron\b/g, 'Maroon').replace(/\bmarron\b/g, 'maroon');
-  } else {
-    out = out.replace(/\bMaroon\b/g, 'Marron').replace(/\bmaroon\b/g, 'marron');
-  }
-
+  if(lang === 'en'){ out = out.replace(/\bMarron\b/g,'Maroon').replace(/\bmarron\b/g,'maroon'); }
+  else { out = out.replace(/\bMaroon\b/g,'Marron').replace(/\bmaroon\b/g,'marron'); }
   return leading + out + trailing;
 }
+
 function setLang(lang){
   document.documentElement.lang = lang;
   localStorage.setItem('mokisaLang', lang);
-  document.querySelectorAll('[data-lang-btn]').forEach(btn => { btn.classList.toggle('on', btn.dataset.langBtn === lang); });
-  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
-    acceptNode(node){
+  document.querySelectorAll('[data-lang-btn]').forEach(function(btn){ btn.classList.toggle('on', btn.dataset.langBtn === lang); });
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+    acceptNode: function(node){
       if(!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
-      const parent = node.parentElement;
+      var parent = node.parentElement;
       if(!parent) return NodeFilter.FILTER_REJECT;
       if(['SCRIPT','STYLE','NOSCRIPT'].includes(parent.tagName)) return NodeFilter.FILTER_REJECT;
       return NodeFilter.FILTER_ACCEPT;
     }
   });
-  const nodes = [];
+  var nodes = [];
   while(walker.nextNode()) nodes.push(walker.currentNode);
-  nodes.forEach(node => {
+  nodes.forEach(function(node){
     if(!node.__mokisaOriginalText) node.__mokisaOriginalText = node.nodeValue;
     node.nodeValue = mokisaTranslateString(node.__mokisaOriginalText, lang);
   });
-  document.querySelectorAll('input[placeholder], textarea[placeholder]').forEach(el => {
+  document.querySelectorAll('input[placeholder], textarea[placeholder]').forEach(function(el){
     if(!el.dataset.mokisaOriginalPlaceholder) el.dataset.mokisaOriginalPlaceholder = el.placeholder;
     el.placeholder = mokisaTranslateString(el.dataset.mokisaOriginalPlaceholder, lang);
   });
-  document.querySelectorAll('option').forEach(el => {
+  document.querySelectorAll('option').forEach(function(el){
     if(!el.dataset.mokisaOriginalText) el.dataset.mokisaOriginalText = el.textContent;
     el.textContent = mokisaTranslateString(el.dataset.mokisaOriginalText, lang);
   });
-  document.querySelectorAll('optgroup').forEach(el => {
+  document.querySelectorAll('optgroup').forEach(function(el){
     if(!el.dataset.mokisaOriginalLabel) el.dataset.mokisaOriginalLabel = el.label;
     el.label = mokisaTranslateString(el.dataset.mokisaOriginalLabel, lang);
   });
-
-  document.querySelectorAll('.ali-skin-note').forEach(note => {
+  document.querySelectorAll('.ali-skin-note').forEach(function(note){
     note.innerHTML = mokisaAliSkinNoteHtml(note.classList.contains('booking-ali-skin-note'));
   });
+  document.querySelectorAll('[data-nl][data-en]').forEach(function(el){
+    el.innerHTML = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-nl');
+  });
 }
-document.addEventListener('DOMContentLoaded', function(){ setLang(localStorage.getItem('mokisaLang') || 'nl'); });
-function showTreatmentGroup(event, group){
-  const buttons = document.querySelectorAll('.treatment-select-btn');
-  const panels = document.querySelectorAll('.treatment-panel');
-  buttons.forEach(button => button.classList.remove('on'));
-  panels.forEach(panel => panel.classList.remove('on'));
-  if(event && event.currentTarget) event.currentTarget.classList.add('on');
-  const activePanel = document.getElementById('treatment-' + group);
-  if(activePanel) activePanel.classList.add('on');
-}
-</script>
 
-
-<style>
-.ali-skin-note{
-  margin-top:1rem;
-  padding:.9rem 1rem;
-  border:1px solid rgba(184,147,90,.35);
-  background:rgba(184,147,90,.08);
-  color:rgba(245,237,216,.72);
-  font-size:.82rem;
-  line-height:1.65;
-}
-.ali-skin-note strong{
-  color:var(--gold);
-}
-</style>
-
-<script>
 document.addEventListener('DOMContentLoaded', function(){
+  setLang(localStorage.getItem('mokisaLang') || 'nl');
 
+  /* Ali Skin note in treatment rows */
   document.querySelectorAll('.t-row').forEach(function(row){
-    const name = row.querySelector('.t-name');
-    const price = row.querySelector('.t-price');
-
-    if(
-      name &&
-      price &&
-      name.textContent.trim().toLowerCase() === 'ali skin' &&
-      !row.querySelector('.ali-skin-note')
-    ){
-      const note = document.createElement('div');
+    var name = row.querySelector('.t-name');
+    var price = row.querySelector('.t-price');
+    if(name && price && name.textContent.trim().toLowerCase() === 'ali skin' && !row.querySelector('.ali-skin-note')){
+      var note = document.createElement('div');
       note.className = 'ali-skin-note';
       note.innerHTML = mokisaAliSkinNoteHtml(false);
       price.insertAdjacentElement('afterend', note);
     }
   });
 
+  /* Ali Skin note in booking form */
   document.addEventListener('change', function(e){
     if(!e.target.matches('select')) return;
-
-    const select = e.target;
-    const value = (select.value || '').toLowerCase();
-    const field = select.closest('.booking-field') || select.parentElement;
-
+    var select = e.target;
+    var value = (select.value || '').toLowerCase();
+    var field = select.closest('.booking-field') || select.parentElement;
     if(!field) return;
-
-    let note = field.querySelector('.booking-ali-skin-note');
-
+    var note = field.querySelector('.booking-ali-skin-note');
     if(value.includes('ali skin')){
       if(!note){
         note = document.createElement('div');
@@ -3602,46 +1309,8 @@ document.addEventListener('DOMContentLoaded', function(){
       note.remove();
     }
   });
-
 });
 </script>
- 
 
-<script>
-/* ===== V6 hard fix: force data-nl/data-en content after every language switch ===== */
-(function(){
-  function mokisaApplyDataLanguage(lang){
-    document.querySelectorAll('[data-nl][data-en]').forEach(function(el){
-      el.innerHTML = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-nl');
-    });
-  }
-
-  var previousSetLang = window.setLang;
-  window.setLang = function(lang){
-    if(typeof previousSetLang === 'function'){
-      previousSetLang(lang);
-    }
-    mokisaApplyDataLanguage(lang);
-  };
-
-  document.addEventListener('DOMContentLoaded', function(){
-    var activeBtn = document.querySelector('[data-lang-btn].on');
-    var lang = localStorage.getItem('mokisaLang') || (activeBtn ? activeBtn.getAttribute('data-lang-btn') : 'nl');
-    mokisaApplyDataLanguage(lang);
-  });
-})();
-</script>
-<script>
-function mokisaAliSkinNoteHtml(shortLabel){
-  const lang = localStorage.getItem('mokisaLang') || document.documentElement.lang || 'nl';
-
-  if(lang === 'en'){
-    return '<strong>' + (shortLabel ? 'Important:' : 'Important to know:') + '</strong> The Ali Skin treatment is performed by a male therapist.';
-  }
-
-  return '<strong>' + (shortLabel ? 'Belangrijk:' : 'Belangrijk om te weten:') + '</strong> De Ali Skin behandeling wordt uitgevoerd door een mannelijke therapeut.';
-}
-</script>
- 
 </body>
 </html>
