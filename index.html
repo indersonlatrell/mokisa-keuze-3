@@ -1036,17 +1036,11 @@ function showTreatmentGroup(event, group){
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
   a.addEventListener('click', function(e){
     var href = a.getAttribute('href');
-
-    /* href="#" is used for buttons that open the booking modal.
-       Calling document.querySelector('#') throws an error and can stop
-       the WhatsApp booking flow, so only handle real section anchors here. */
     if(!href || href === '#') return;
-
     var t = document.querySelector(href);
     if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
-
-    var mobileNav = document.getElementById('mn');
-    if(mobileNav) mobileNav.classList.remove('on');
+    var mn = document.getElementById('mn');
+    if(mn) mn.classList.remove('on');
   });
 });
 
@@ -1114,17 +1108,19 @@ window.sendWA = function(event){
     '*Notities / gezondheidsklachten:* ' + (notes || 'Geen') + '\n' +
     guestMsg +
     '\nVerstuurd via mokisawellness';
-  window.open('https://api.whatsapp.com/send?phone=5978712055&text=' + encodeURIComponent(msg), '_blank');
+  var waUrl = 'https://wa.me/5978712055?text=' + encodeURIComponent(msg);
+  var opened = window.open(waUrl, '_blank', 'noopener');
+  if(!opened){ window.location.href = waUrl; }
   closeBM();
   return false;
 };
 
 window.guestCount = 1;
 
-function setGuestRequired(section, required){
+function setGuestSectionEnabled(section, enabled){
   if(!section) return;
-  section.querySelectorAll('.guest-masseuse').forEach(function(el){
-    el.required = required;
+  section.querySelectorAll('input, select, textarea').forEach(function(el){
+    el.disabled = !enabled;
   });
 }
 
@@ -1133,7 +1129,7 @@ window.toggleGuest = function(){
   if(!firstSection) return;
   if(!firstSection.classList.contains('on')){
     firstSection.classList.add('on');
-    setGuestRequired(firstSection, true);
+    setGuestSectionEnabled(firstSection, true);
     return;
   }
   window.guestCount += 1;
@@ -1141,11 +1137,7 @@ window.toggleGuest = function(){
   newSection.id = 'guestSection_' + window.guestCount;
   newSection.classList.add('on');
   newSection.querySelectorAll('input, textarea').forEach(function(el){
-    if(el.type === 'radio'){
-      el.checked = false;
-      el.name = 'guest_masseuse_' + window.guestCount;
-      el.required = true;
-    }
+    if(el.type === 'radio'){ el.checked = false; el.name = 'guest_masseuse_' + window.guestCount; }
     else { el.value = ''; }
     if(el.id){ el.id = el.id + '_' + window.guestCount; }
   });
@@ -1157,6 +1149,7 @@ window.toggleGuest = function(){
     var oldFor = label.getAttribute('for');
     if(oldFor){ label.setAttribute('for', oldFor + '_' + window.guestCount); }
   });
+  setGuestSectionEnabled(newSection, true);
   firstSection.parentNode.insertBefore(newSection, document.querySelector('.booking-submit'));
 };
 
@@ -1165,10 +1158,10 @@ window.removeGuest = function(button){
   if(!section) return;
   if(section.id === 'guestSection'){
     section.classList.remove('on');
-    setGuestRequired(section, false);
     section.querySelectorAll('input[type="text"], textarea').forEach(function(el){ el.value = ''; });
     section.querySelectorAll('select').forEach(function(el){ el.selectedIndex = 0; });
     section.querySelectorAll('input[type="radio"]').forEach(function(el){ el.checked = false; });
+    setGuestSectionEnabled(section, false);
   } else {
     section.remove();
   }
@@ -1178,6 +1171,10 @@ document.addEventListener('DOMContentLoaded', function(){
   var modal = document.getElementById('bmodal');
   if(modal){
     modal.addEventListener('click', function(e){ if(e.target === modal) closeBM(); });
+  }
+  var firstGuest = document.getElementById('guestSection');
+  if(firstGuest && !firstGuest.classList.contains('on')){
+    setGuestSectionEnabled(firstGuest, false);
   }
 });
 
