@@ -380,7 +380,7 @@ nav.stuck{background:rgba(247,239,226,.96)!important;border-bottom:1px solid var
 .lang-switch button{color:rgba(42,26,10,.52)!important;}
 .lang-switch button.on{color:var(--gold)!important;}
 .burger span{background:var(--text)!important;}
-#home{position:relative!important;min-height:100vh!important;height:auto!important;padding:0!important;display:flex!important;align-items:flex-end!important;overflow:hidden!important;background-image:url('./images/photo1.jpg')!important;background-size:cover!important;background-position:center center!important;background-repeat:no-repeat!important;}
+#home{position:relative!important;min-height:100vh!important;height:auto!important;padding:0!important;display:flex!important;align-items:flex-end!important;overflow:hidden!important;background-image:url('./images/photo1.jpg')!important; /* TODO klant: vervang dit pad zodra de nieuwe hero-foto gekozen is */background-size:cover!important;background-position:center center!important;background-repeat:no-repeat!important;}
 .hero-overlay{display:none!important;}
 #home .hero-overlay2{position:absolute!important;inset:0!important;display:block!important;background:linear-gradient(90deg,rgba(15,9,5,.66) 0%,rgba(15,9,5,.48) 34%,rgba(247,239,226,.34) 72%,rgba(247,239,226,.74) 100%)!important;}
 #home .hero-content{position:relative!important;z-index:2!important;padding:0 3.5rem 5rem!important;max-width:780px!important;}
@@ -448,6 +448,87 @@ footer{background:#EFE1CD!important;border-top:1px solid var(--border)!important
 #about .about-story-title .pkg-pkg{font-family:'TropicalBrush',cursive!important;color:var(--sand)!important;display:inline-block!important;white-space:nowrap!important;margin-left:.1rem!important;line-height:.82!important;transform:translateY(.08em)!important;overflow:visible!important;}
 @media(min-width:769px){#about .about-story-title{flex-wrap:nowrap!important;white-space:nowrap!important;font-size:clamp(2.6rem,4.2vw,4.5rem)!important;}#about .about-story-title .pkg-pkg{font-size:clamp(3.4rem,5.8vw,6.8rem)!important;}}
 @media(max-width:768px){#about .about-story-title{font-size:clamp(2.05rem,8.8vw,2.75rem)!important;line-height:1.03!important;gap:.25rem!important;}#about .about-story-title .pkg-pkg{font-size:clamp(2.2rem,11vw,3.2rem)!important;}}
+
+/* CUSTOMER CORRECTIONS - 2026-06-12
+   PDF notes applied:
+   1) white background throughout
+   2) use dark-brown logo in header/footer
+   3) brand brown for banners/buttons/gold-brown text
+   4) hero subtitle and booking CTA use clean sans-serif font
+   5) floating WhatsApp CTA changed to BOOK NOW / BOEK NU
+*/
+:root{
+  --cream:#2A1A0A!important;
+  --sand:#7A4F20!important;
+  --gold:#7A4F20!important;
+  --gold2:#8A5A22!important;
+  --bark:#2A1A0A!important;
+  --earth:#6B4422!important;
+  --body-bg:#FFFFFF!important;
+  --card-bg:#FFFFFF!important;
+  --panel-bg:#FFFFFF!important;
+  --soft-bg:#FFFFFF!important;
+  --line:#E8DDCF!important;
+  --border:rgba(122,79,32,.28)!important;
+  --text:#2A1A0A!important;
+  --muted:rgba(42,26,10,.72)!important;
+  --faint:rgba(42,26,10,.50)!important;
+}
+html,body,body,section,#about,#treatments,#packages,#booking,main{
+  background:#FFFFFF!important;
+}
+nav,nav.stuck,.mob-nav{
+  background:rgba(255,255,255,.96)!important;
+  border-bottom:1px solid rgba(122,79,32,.16)!important;
+}
+.marquee,
+.btn-fill,
+.btn-sm,
+.f-submit,
+#home .btn-fill{
+  background:#7A4F20!important;
+  color:#FFFFFF!important;
+}
+.marquee-item{color:#FFFFFF!important;}
+.btn-fill:hover,.btn-sm:hover,.f-submit:hover,#home .btn-fill:hover{
+  background:#8A5A22!important;
+  color:#FFFFFF!important;
+}
+.nav-cta,.btn-line,#home .btn-line{
+  color:#7A4F20!important;
+  border-color:#7A4F20!important;
+  background:rgba(255,255,255,.12)!important;
+}
+.nav-cta:hover,.btn-line:hover,#home .btn-line:hover{
+  background:#7A4F20!important;
+  color:#FFFFFF!important;
+}
+#home .hero-sub{
+  font-family:"Myriad Pro","DM Sans",Arial,sans-serif!important;
+  font-weight:500!important;
+  font-style:italic!important;
+  letter-spacing:.02em!important;
+}
+#home .btn-fill,
+#home .btn-line,
+.wa-floating-book{
+  font-family:"Myriad Pro","DM Sans",Arial,sans-serif!important;
+}
+.t-category,.t-row,.t-card,.pkg-row,.pkg-footer,.booking-card,.guest-section,.treatment-select-btn,
+.booking-field input,.booking-field select,.booking-field textarea,.preference-box{
+  background:#FFFFFF!important;
+}
+footer{background:#FFFFFF!important;}
+.wa-floating-book{
+  background:#25D366!important;
+  color:#FFFFFF!important;
+  border-radius:999px!important;
+  text-transform:uppercase!important;
+  letter-spacing:.12em!important;
+  font-weight:600!important;
+}
+.wa-floating-book:hover{background:#1db954!important;}
+
 </style>
 </head>
 <body>
@@ -462,7 +543,7 @@ footer{background:#EFE1CD!important;border-top:1px solid var(--border)!important
 </div>
 
 <nav id="nav">
-  <a href="#home" class="logo"><img src="./images/Logo Hoek-01.png" alt="Mokisa" style="height:48px;object-fit:contain;"></a>
+  <a href="#home" class="logo"><img src="./images/Logo donkerbruin.png" alt="Mokisa" style="height:48px;object-fit:contain;"></a>
   <ul class="nav-ul">
     <li><a href="#about">Over ons</a></li>
     <li><a href="#treatments">Behandelingen</a></li>
@@ -773,7 +854,7 @@ footer{background:#EFE1CD!important;border-top:1px solid var(--border)!important
 <footer>
   <div class="foot-grid">
     <div>
-      <div style="margin-bottom:.75rem"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAADbCAIAAACTJN/JAAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9ArFIEtBxopAiQLZIOYWuA2EkQtg2IXV5SUAJkB4DYRSFBzkB2CpCtkY7ETkJiJxcUgdT3ANk2uTmlyQh3M/Ck5oUGA2kOIJZhKGYIYnBncAL5H6IkfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsO48QQ4RJQWJRIliIBYiZ0tIYGD4tZ2DgjWRgEL7AwMAVDQsIHG5TALvNnSEfCNMZchhSgSKeDHkMyQx6QJYRgwGDIYMZAKbWPz9HbOBQAABc0klEQVR42u1dZ3hURdues203vUMgJCEQOqEpoaNAIHSCvoCAigjSQUQBRRQQ6b2jUpROpARfupTQawIhCQmQ3tum7G4238734/6Y97gpINLUuX9wLZtTZs+Ze57+DEIM/whwHMcewr8QYvYI/t7vTywWiUQ8z+O/EomEEEL/y8DA8PpCJBLRz1KpVMhq9nD+LZoXewR/X52Z5/l27dp9+OGHrVq1srOzKyoqunbt2pYtW27evCkSiSwWC3tKDAyvI3XFYjHHcStWrODLwWw2z5s3D3KYGcYMDM9OsxeqOa9evZrneZPJZDQazY+BzzzPz507V6hLs6WB4d9loz4vgJMdO3bkeV5vMFgsln0SWCwWo9HI83yzZs1exBg4jmPsfY3mGHsELwIymUyhUFgsFolE8nynO672ySef8DxfIZfoNx9//PHzJTBUdywTjo6O7C0zAv9jlWeO49avX9+6dWuTycTzvEgkkkgkEolE/EcIKQGCQxVe3GQycRzXtGlTjuMqOwYcbtGiBSHEbDZXRkVJ5ahwkDCwxWLxmjVr3njjDcLc3Qz/SDAY27BhQ1lZ2ezZs2vWrPlXLiVkKZgpEoni4+PBia8I+P727dtWxipcPjPrpFJpr169rl+/bjAYHBwcWIX8WkgL9ghehJlqNptdunQ5ffo0IaS4uPjChQvXr19PSkrKy8srKyszm80SiUShUNjZ2Tk7O7u6ujo6OspkMoPBkJ+fn5mZmZCQEBsbm5ycTC8IWxfsNVssFxbPnz/foUMHi8VSIRtNJpNYLD5y5Ei/fv0wGDqqHODg4FCvXj1/f/9atWq5uLioVCpCSElJSX5+fn5+fn5+vlarNRqNIG1jY5NarVqTJk0+/PDD+vXrE0IOHz78yiuvCC/IwPCPUqEJISqVKi0tDf6kZ4BOp7t+/fq3337bpEmTffs2IkIV71PnTp0cWRWei+8//vhjHE+VbZlM9u6774aGhmZmZj7bqOA2GzFiBB0JA8M/VotGnNZgMCDYYzQaTSaTyWQym834YKwEQt1Yo9GsWrXKycmJPA7tchwXGxv78OHD8o5oi8VyuazIQ0ZGhlyh3t7YjUajUqkSiSQmJiYnJ8edOSQkRCZQWIS3aosVAoFQb2YAAAAASUVORK5CYII=" alt="Mokisa" style="height:48px;object-fit:contain;mix-blend-mode:screen;opacity:.6"></div>
+      <div style="margin-bottom:.75rem"><img src="./images/Logo donkerbruin.png" alt="Mokisa" style="height:48px;object-fit:contain;"></div>
       <p class="foot-tag">Traditional Maroon Wellness Centre — where ancestral healing wisdom and modern care come together. Rooted in Suriname, accessible to everyone.</p>
       <div class="foot-socials">
         <a href="https://www.instagram.com/mokisabusidataa/" target="_blank" class="soc">ig</a>
@@ -991,9 +1072,9 @@ footer{background:#EFE1CD!important;border-top:1px solid var(--border)!important
   </div>
 </div>
 
-<a class="wa-floating-book" href="#" onclick="event.preventDefault();openBM();return false;">
-  <span>📲</span>
-  Boek via WhatsApp
+<a class="wa-floating-book" href="#" onclick="event.preventDefault();openBM();return false;" aria-label="Boek nu via WhatsApp">
+  <span aria-hidden="true">📲</span>
+  <span data-nl="BOEK NU" data-en="BOOK NOW">BOEK NU</span>
 </a>
 
 <!-- SINGLE CLEAN SCRIPT BLOCK - no duplicates -->
@@ -1190,7 +1271,7 @@ function mokisaAliSkinNoteHtml(shortLabel){
 /* Language toggle */
 var I18N_NL_TO_EN = {
   "Home":"Home","Over ons":"About","Behandelingen":"Treatments","Pakketten":"Packages",
-  "Maak een afspraak":"Request an appointment","Boek via WhatsApp":"Book via WhatsApp",
+  "Maak een afspraak":"Request an appointment","Boek via WhatsApp":"Book via WhatsApp","BOEK NU":"BOOK NOW",
   "Verstuur via WhatsApp":"Send via WhatsApp",
   "Traditioneel Marron Wellness Centrum · Paramaribo, Suriname":"Traditional Maroon Wellness Centre · Paramaribo, Suriname",
   "Ervaar wellness op een andere manier":"Experience wellness differently",
