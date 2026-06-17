@@ -536,6 +536,150 @@ footer{background:#FFFFFF!important;}
   fill:currentColor!important;
 }
 
+
+
+/* CLIENT CORRECTIONS - 2026-06-17
+   Applied from correction PDF:
+   - use client brown #93725a for brand brown/banners/buttons/text
+   - keep most page backgrounds white; footer may stay cream
+   - make decorative heading words normal italic instead of brush script
+   - WhatsApp floating button stays icon + BOOK
+   - social links in footer changed to icons
+   - hide long hero tagline on mobile
+*/
+:root{
+  --client-brown:#93725a!important;
+  --sand:#93725a!important;
+  --gold:#93725a!important;
+  --gold2:#7f614c!important;
+  --earth:#93725a!important;
+  --border:rgba(147,114,90,.30)!important;
+  --line:rgba(147,114,90,.18)!important;
+}
+html,body,main,section,#about,#treatments,#packages,#booking{
+  background:#fff!important;
+}
+.marquee,
+.btn-fill,
+.btn-sm,
+.f-submit,
+.booking-submit,
+#home .btn-fill{
+  background:#93725a!important;
+  color:#fff!important;
+}
+.marquee-item{color:#fff!important;}
+.btn-fill:hover,.btn-sm:hover,.f-submit:hover,.booking-submit:hover,#home .btn-fill:hover{
+  background:#7f614c!important;
+  color:#fff!important;
+}
+.nav-cta,.btn-line,#home .btn-line{
+  color:#93725a!important;
+  border-color:#93725a!important;
+}
+.nav-cta:hover,.btn-line:hover,#home .btn-line:hover{
+  background:#93725a!important;
+  color:#fff!important;
+}
+.eyebrow,.t-pill,.ts-kicker,.t-category-kicker,.pkg-row-price,.t-price,.foot-col-title,.preference-label,.booking-field label,
+.about-num .n,.about-num .l,.wellness-word,#home .wellness-word{
+  color:#93725a!important;
+}
+.gold-rule,.pkg-row::before,.price-row::before,.treat-row::before,.treatment-row::before,.gold-divider{
+  background:#93725a!important;
+}
+.t-category,.t-row,.t-card,.pkg-row,.pkg-footer,.booking-card,.guest-section,.treatment-select-btn,
+.booking-field input,.booking-field select,.booking-field textarea,.preference-box{
+  border-color:rgba(147,114,90,.30)!important;
+}
+.t-category-head,.t-row:hover,.t-card:hover,.pkg-row:hover,.treatment-select-btn:hover,.treatment-select-btn.on,
+.ali-skin-note,.booking-ali-skin-note{
+  background:rgba(147,114,90,.08)!important;
+  border-color:rgba(147,114,90,.34)!important;
+}
+/* Replace curly brush headings with regular italic serif, as requested in the notes. */
+.pkg-pkg,
+.clean,
+.story .pkg-pkg,
+.s-title .pkg-pkg,
+#about .about-story-title .pkg-pkg{
+  font-family:"Playfair Display", Georgia, serif!important;
+  font-style:italic!important;
+  font-weight:500!important;
+  color:#93725a!important;
+  font-size:1em!important;
+  line-height:1.05!important;
+  transform:none!important;
+  top:auto!important;
+}
+#about .about-story-title,
+.story,
+.s-title,
+.pkg-title{
+  align-items:baseline!important;
+  gap:.25em!important;
+}
+/* Use a clean non-curly ampersand in package row names. */
+.pkg-row-name,
+.pkg-row-sub{
+  font-family:"Myriad Pro","DM Sans",Arial,sans-serif!important;
+}
+/* Make the header appointment CTA visually match the navigation typography better. */
+.nav-ul a,
+.nav-cta{
+  font-family:"Myriad Pro","DM Sans",Arial,sans-serif!important;
+  font-weight:600!important;
+}
+.nav-cta{border-width:1px!important;}
+/* Keep the footer cream as permitted in the client's notes. */
+footer{
+  background:#efe4d4!important;
+  border-top:1px solid rgba(147,114,90,.25)!important;
+}
+.foot-tag,.foot-links a,.foot-links li,.foot-copy{
+  color:rgba(42,26,10,.76)!important;
+}
+/* Attempt to tint white logo PNGs toward the requested dark brown. */
+.logo img,
+footer img[alt="Mokisa"]{
+  filter:brightness(0) saturate(100%) invert(45%) sepia(10%) saturate(893%) hue-rotate(340deg) brightness(93%) contrast(84%)!important;
+}
+/* Footer social icons */
+.soc{
+  width:36px!important;
+  height:36px!important;
+  font-size:0!important;
+  color:#93725a!important;
+  border-color:rgba(147,114,90,.34)!important;
+  background:rgba(255,255,255,.20)!important;
+}
+.soc svg{
+  width:18px!important;
+  height:18px!important;
+  display:block!important;
+  fill:currentColor!important;
+}
+.soc:hover{
+  background:#93725a!important;
+  color:#fff!important;
+  border-color:#93725a!important;
+}
+/* Floating WhatsApp button: icon + BOOK, using the same clean button font. */
+.wa-floating-book{
+  background:#25D366!important;
+  color:#fff!important;
+  font-family:"Myriad Pro","DM Sans",Arial,sans-serif!important;
+  font-weight:700!important;
+  letter-spacing:.18em!important;
+  gap:.6rem!important;
+}
+.wa-floating-book:hover{background:#1db954!important;}
+.wa-floating-book .wa-icon{width:1.15rem!important;height:1.15rem!important;}
+@media(max-width:760px){
+  #home .hero-tag{display:none!important;}
+  .wa-floating-book{font-size:.72rem!important;}
+}
+
 </style>
 </head>
 <body>
@@ -862,11 +1006,17 @@ footer{background:#FFFFFF!important;}
   <div class="foot-grid">
     <div>
       <div style="margin-bottom:.75rem"><img src="./images/Text only.png" alt="Mokisa" style="height:48px;object-fit:contain;"></div>
-      <p class="foot-tag">Traditional Maroon Wellness Centre — where ancestral healing wisdom and modern care come together. Rooted in Suriname, accessible to everyone.</p>
-      <div class="foot-socials">
-        <a href="https://www.instagram.com/mokisabusidataa/" target="_blank" class="soc">ig</a>
-        <a href="https://www.facebook.com/traditionalmaroonwellness/" target="_blank" class="soc">fb</a>
-        <a href="https://wa.me/5978712055" target="_blank" class="soc">wa</a>
+      <p class="foot-tag">Traditioneel Marron Wellness Centrum — waar voorouderlijke genezingswijsheid en moderne zorg samenkomen. Geworteld in Suriname, toegankelijk voor een ieder.</p>
+      <div class="foot-socials" aria-label="Social media">
+        <a href="https://www.instagram.com/mokisabusidataa/" target="_blank" rel="noopener" class="soc" aria-label="Instagram">
+          <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2Zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2Zm5.05-2.55a1.12 1.12 0 1 1-1.12 1.12 1.12 1.12 0 0 1 1.12-1.12Z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/traditionalmaroonwellness/" target="_blank" rel="noopener" class="soc" aria-label="Facebook">
+          <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M14 8.2V6.7c0-.7.45-.86.78-.86h2V2.18L14.03 2C10.97 2 10.28 4.28 10.28 5.74V8.2H8v3.72h2.28V22H14V11.92h2.58l.34-3.72H14Z"/></svg>
+        </a>
+        <a href="https://wa.me/5978712055" target="_blank" rel="noopener" class="soc" aria-label="WhatsApp">
+          <svg aria-hidden="true" viewBox="0 0 32 32" focusable="false"><path d="M16.01 3C8.84 3 3 8.74 3 15.8c0 2.26.61 4.47 1.76 6.41L3 29l6.98-1.78A13.14 13.14 0 0 0 16.01 28C23.18 28 29 22.26 29 15.2 29 8.16 23.18 3 16.01 3Zm0 22.7c-1.9 0-3.75-.5-5.37-1.45l-.39-.23-4.14 1.06 1.1-4.01-.26-.41a10.47 10.47 0 0 1-1.6-5.56c0-5.79 4.78-10.5 10.66-10.5 5.87 0 10.64 4.71 10.64 10.5 0 5.9-4.77 10.6-10.64 10.6Zm5.84-7.84c-.32-.16-1.88-.91-2.17-1.02-.29-.1-.5-.16-.71.16-.21.31-.82 1.02-1 1.22-.18.21-.37.23-.69.08-.32-.16-1.35-.49-2.57-1.56-.95-.84-1.59-1.88-1.78-2.19-.18-.32-.02-.49.14-.64.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.39-.03-.55-.08-.16-.71-1.69-.97-2.32-.26-.61-.52-.53-.71-.54h-.61c-.21 0-.55.08-.84.39-.29.32-1.1 1.07-1.1 2.61 0 1.54 1.13 3.03 1.29 3.24.16.21 2.23 3.36 5.39 4.71.75.32 1.34.51 1.8.65.76.24 1.45.21 1.99.13.61-.09 1.88-.76 2.15-1.49.26-.73.26-1.35.18-1.49-.08-.13-.29-.21-.61-.37Z"/></svg>
+        </a>
       </div>
     </div>
     <div>
@@ -1280,7 +1430,7 @@ function mokisaAliSkinNoteHtml(shortLabel){
 /* Language toggle */
 var I18N_NL_TO_EN = {
   "Home":"Home","Over ons":"About","Behandelingen":"Treatments","Pakketten":"Packages",
-  "Maak een afspraak":"Request an appointment","Boek via WhatsApp":"Book via WhatsApp","BOEK NU":"BOOK NOW",
+  "Maak een afspraak":"Request an appointment","Boek via WhatsApp":"Book via WhatsApp","BOEK NU":"BOOK","BOOK":"BOOK",
   "Verstuur via WhatsApp":"Send via WhatsApp",
   "Traditioneel Marron Wellness Centrum · Paramaribo, Suriname":"Traditional Maroon Wellness Centre · Paramaribo, Suriname",
   "Ervaar wellness op een andere manier":"Experience wellness differently",
@@ -1308,7 +1458,7 @@ var I18N_NL_TO_EN = {
   "Zachte, zorgzame behandelingen ter ondersteuning van gezonde groei, weerstand, ontspanning en een stralende huid voor de kleintjes.":"Gentle, caring treatments that support healthy growth, immunity, relaxation and radiant skin for little ones.",
   "De ultieme beleving van traditionele Marron wellness — onze meest bijzondere samengestelde ervaringen.":"The ultimate experience of traditional Maroon wellness — our most special curated experiences.",
   "Behandelingen met kruiden, stoom, scrub en traditionele technieken voor reiniging, herstel en diepe ontspanning.":"Treatments with herbs, steam, scrubs and traditional techniques for cleansing, restoration and deep relaxation.",
-  "Traditional Maroon Wellness Centre — where ancestral healing wisdom and modern care come together. Rooted in Suriname, accessible to everyone.":"Traditional Maroon Wellness Centre — where ancestral healing wisdom and modern care come together. Rooted in Suriname, accessible to everyone.",
+  "Traditioneel Marron Wellness Centrum — waar voorouderlijke genezingswijsheid en moderne zorg samenkomen. Geworteld in Suriname, toegankelijk voor een ieder.":"Traditioneel Marron Wellness Centrum — waar voorouderlijke genezingswijsheid en moderne zorg samenkomen. Geworteld in Suriname, toegankelijk voor een ieder.",
   "Navigatie":"Navigate","incl. BTW":"incl. VAT","Marron":"Maroon","marron":"maroon",
   "*inclusief 10% BTW":"*including 10% VAT",
   "Vul je gegevens in — je aanvraag gaat direct naar onze WhatsApp.":"Fill in your details — your request goes directly to our WhatsApp.",
