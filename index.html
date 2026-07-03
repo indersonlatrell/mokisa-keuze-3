@@ -314,8 +314,8 @@ input[type=date]{color-scheme:dark}
 .booking-submit:hover{background:#1db954;}
 @media(max-width:700px){.booking-card{padding:1.5rem;}.booking-grid{grid-template-columns:1fr;}.preference-options{grid-template-columns:1fr;}.booking-title{font-size:1.9rem;}}
 
-#wa_date{color-scheme:dark;}
-#wa_date::-webkit-calendar-picker-indicator{cursor:pointer;filter:invert(77%) sepia(26%) saturate(559%) hue-rotate(358deg) brightness(88%) contrast(85%);}
+#wa_date,#wa_time{color-scheme:dark;}
+#wa_date::-webkit-calendar-picker-indicator,#wa_time::-webkit-calendar-picker-indicator{cursor:pointer;filter:invert(77%) sepia(26%) saturate(559%) hue-rotate(358deg) brightness(88%) contrast(85%);}
 
 /* Add guest button */
 .add-guest-btn{margin-top:1rem;width:100%;background:transparent;border:1px dashed rgba(214,168,90,.55);color:#2A1A0A;padding:.95rem 1rem;font-family:"Playfair Display",serif;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:all .25s ease;}
@@ -1323,7 +1323,7 @@ footer img[alt="Mokisa"]{
   <div class="booking-card">
     <button class="booking-close" type="button" onclick="closeBM()">×</button>
     <h2 class="booking-title">Maak een afspraak</h2>
-    <p class="booking-intro">Vul je gegevens in — je aanvraag gaat direct naar onze WhatsApp.</p>
+    <p class="booking-intro">Vul je gewenste datum en tijd in — je aanvraag gaat direct naar onze WhatsApp.</p>
     <div class="booking-line"></div>
     <form id="waform" onsubmit="sendWA(event)">
       <div class="booking-grid">
@@ -1342,6 +1342,10 @@ footer img[alt="Mokisa"]{
         <div class="booking-field">
           <label for="wa_date">Gewenste datum <span>*</span></label>
           <input id="wa_date" type="date" required>
+        </div>
+        <div class="booking-field">
+          <label for="wa_time">Gewenste tijd <span>*</span></label>
+          <input id="wa_time" type="time" required>
         </div>
         <div class="preference-wrap">
           <p class="preference-label" data-nl="Heeft u moeite met een heer voor uw massage? <span>*</span>" data-en="Do you have any issue with a male therapist for your massage? <span>*</span>">Heeft u moeite met een heer voor uw massage? <span>*</span></p>
@@ -1580,10 +1584,11 @@ window.sendWA = function(event){
     var parts = rawDate.split('-');
     if(parts.length === 3){ date = parts[2] + '/' + parts[1] + '/' + parts[0]; }
   }
+  var time = document.getElementById('wa_time').value;
   var treatment = document.getElementById('wa_treatment').value;
   var maleTherapistEl = document.querySelector('input[name="masseuse"]:checked');
   var notes = document.getElementById('wa_notes').value.trim();
-  if(!first || !phone || !date || !treatment || !maleTherapistEl){
+  if(!first || !phone || !date || !time || !treatment || !maleTherapistEl){
     alert('Vul alle verplichte velden in.');
     return false;
   }
@@ -1614,10 +1619,11 @@ window.sendWA = function(event){
       '*Notities / gezondheidsklachten gast:* ' + (g.notes || 'Geen') + '\n';
   }).join('');
   var msg =
-    (lang === 'nl' ? 'Hallo Mokisa, ik wil graag een boeking aanvragen.\n\n' : 'Hello Mokisa, I would like to request a booking.\n\n') +
+    (lang === 'nl' ? 'Beste Mokisa, ik wil graag een boeking aanvragen.\n\n' : 'Dear Mokisa, I would like to request a booking.\n\n') +
     '*Naam:* ' + fullName + '\n' +
     '*WhatsApp:* ' + phone + '\n' +
     '*Gewenste datum:* ' + date + '\n' +
+    '*Gewenste tijd:* ' + time + '\n' +
     '*Behandeling / pakket:* ' + treatment + '\n' +
     '*Heeft u moeite met een heer voor uw massage?:* ' + maleTherapistEl.value + '\n' +
     '*Notities / gezondheidsklachten:* ' + (notes || 'Geen') + '\n' +
@@ -1738,9 +1744,9 @@ var I18N_NL_TO_EN = {
 
   "Openingstijden":"Opening Hours","Maandag":"Monday","Dinsdag":"Tuesday","Woensdag":"Wednesday","Donderdag":"Thursday","Vrijdag":"Friday","Gesloten":"Closed","Let op:":"Note:","1e en laatste zaterdag van de maand open: 10.00u - 18.00u":"Open on the first and last Saturday of the month: 10.00u - 18.00u",
   "*inclusief 10% BTW":"*including 10% VAT",
-  "Vul je gegevens in — je aanvraag gaat direct naar onze WhatsApp.":"Fill in your details — your request goes directly to our WhatsApp.",
+  "Vul je gewenste datum en tijd in — je aanvraag gaat direct naar onze WhatsApp.":"Fill in your preferred date and time — your request goes directly to our WhatsApp.",
   "Voornaam":"First name","Achternaam":"Last name","Je WhatsApp":"Your WhatsApp",
-  "Gewenste datum":"Preferred date","Behandeling / pakket":"Treatment / package",
+  "Gewenste datum":"Preferred date","Gewenste tijd":"Preferred time","Behandeling / pakket":"Treatment / package",
   "Selecteer...":"Select...","Notities / gezondheidsklachten":"Notes / health conditions",
   "Gezondheidsklachten of speciale wensen...":"Health conditions or special requests...",
   "+ Gast toevoegen":"+ Add guest","Extra gast":"Additional guest","Gast verwijderen":"Remove guest",
