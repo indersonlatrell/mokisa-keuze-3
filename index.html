@@ -14,24 +14,32 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
-.crafted-by {
-    margin-top: 18px;
-    text-align: center;
-    font-size: 0.82rem;
-    color: rgba(255,255,255,0.55);
-    font-family: 'Myriad Pro', Arial, sans-serif;
-    letter-spacing: 0.08em;
+.crafted-by-zenta {
+  display: inline-block;
+  margin-top: 18px;
+  color: #c9a84f;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
 }
 
-.crafted-by a {
-    color: #C8A97E; /* Mokisa gold accent */
-    text-decoration: none;
-    font-weight: 600;
-    transition: color .3s ease;
+.crafted-by-zenta:hover {
+  color: #ffffff;
 }
 
-.crafted-by a:hover {
-    color: #ffffff;
+@media (max-width: 768px) {
+  .crafted-by-zenta {
+    margin-top: 14px;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
 }
  @font-face {
     font-family: 'TropicalBrush';
@@ -1341,6 +1349,7 @@ footer img[alt="Mokisa"]{
   </div>
   <div class="foot-bar">
     <span class="foot-copy">© 2026 Mokisa Wellness. All rights reserved.</span>
+   
     <span class="foot-copy">All prices incl. 10% BTW · Paramaribo, Suriname</span>
   </div>
 </footer>
