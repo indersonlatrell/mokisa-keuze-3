@@ -973,6 +973,40 @@ footer img[alt="Mokisa"]{
   }
 }
 
+/* August Relaxation promo */
+.august-promo-modal{position:fixed;inset:0;z-index:1700;display:none;align-items:center;justify-content:center;padding:1.25rem;background:rgba(42,26,10,.58);backdrop-filter:blur(12px);}
+.august-promo-modal.on{display:flex;}
+.august-promo-card{position:relative;width:min(880px,100%);max-height:92svh;overflow:auto;background:#FFF8ED;color:#2A1A0A;border:1px solid rgba(154,106,45,.28);box-shadow:0 34px 90px rgba(42,26,10,.38);display:grid;grid-template-columns:.92fr 1fr;}
+.august-promo-art{min-height:100%;background:#2A1A0A;}
+.august-promo-art img{width:100%;height:100%;min-height:420px;object-fit:cover;object-position:center;display:block;}
+.august-promo-content{padding:2.35rem;display:flex;flex-direction:column;gap:1.25rem;}
+.august-promo-close{position:absolute;top:1rem;right:1rem;width:38px;height:38px;border:1px solid rgba(154,106,45,.38);background:#FFF8ED;color:#72401E;font-size:1.2rem;line-height:1;cursor:pointer;z-index:2;}
+.august-promo-kicker{font-family:"Myriad Pro","DM Sans",Arial,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#9A6A2D;}
+.august-promo-title{font-family:"Playfair Display",serif;font-size:clamp(2.25rem,4.7vw,4.2rem);font-weight:400;line-height:.98;color:#2A1A0A;}
+.august-promo-title span{color:#9A6A2D;font-style:italic;}
+.august-promo-copy{font-size:.96rem;line-height:1.75;color:rgba(42,26,10,.7);}
+.august-promo-price{display:flex;align-items:flex-end;gap:.7rem;color:#9A6A2D;}
+.august-promo-price small{font-family:"Myriad Pro","DM Sans",Arial,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding-bottom:.45rem;}
+.august-promo-price strong{font-family:"Playfair Display",serif;font-size:3.4rem;font-weight:400;line-height:.9;}
+.august-promo-options{display:grid;gap:.7rem;}
+.august-promo-option{border:1px solid rgba(154,106,45,.22);background:#F3E8D8;padding:1rem;}
+.august-promo-option b{display:block;font-size:.92rem;font-weight:500;margin-bottom:.25rem;}
+.august-promo-option small{display:block;font-size:.76rem;line-height:1.55;color:rgba(42,26,10,.58);}
+.august-promo-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:.35rem;}
+.august-promo-actions button,.august-promo-actions a{border:0;text-decoration:none;font-family:"Myriad Pro","DM Sans",Arial,sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;padding:.9rem 1.1rem;cursor:pointer;}
+.august-promo-actions button{background:#72401E;color:#FFF8ED;}
+.august-promo-actions a{border:1px solid rgba(154,106,45,.34);color:#72401E;background:transparent;}
+.august-promo-valid{font-size:.76rem;line-height:1.65;color:rgba(42,26,10,.56);}
+.august-promo-row{border-color:rgba(154,106,45,.48)!important;background:#F3E8D8!important;}
+.august-promo-badge{display:inline-block;margin-left:.5rem;color:#9A6A2D;font-family:"Myriad Pro","DM Sans",Arial,sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;}
+@media(max-width:760px){
+  .august-promo-card{grid-template-columns:1fr;}
+  .august-promo-art img{min-height:0;aspect-ratio:16/10;}
+  .august-promo-content{padding:1.45rem;}
+  .august-promo-actions{flex-direction:column;}
+  .august-promo-actions button,.august-promo-actions a{text-align:center;width:100%;}
+}
+
 </style>
 </head>
 <body>
@@ -1003,6 +1037,37 @@ footer img[alt="Mokisa"]{
     <span></span><span></span><span></span>
   </div>
 </nav>
+
+<div class="august-promo-modal" id="augustPromo" aria-hidden="true">
+  <div class="august-promo-card" role="dialog" aria-modal="true" aria-labelledby="augustPromoTitle">
+    <button class="august-promo-close" type="button" onclick="closeAugustPromo()" aria-label="Sluit actie">x</button>
+    <div class="august-promo-art">
+      <img src="./images/august-relaxation.jpeg" alt="August Relaxation actie bij Mokisa Wellness">
+    </div>
+    <div class="august-promo-content">
+      <p class="august-promo-kicker">August Relaxation</p>
+      <h2 class="august-promo-title" id="augustPromoTitle">Relaxte <span>prijzen</span></h2>
+      <p class="august-promo-copy">Geniet deze maand van Mokisa's wellness combinaties. Kies je favoriete combinatie en reserveer direct via WhatsApp.</p>
+      <div class="august-promo-price"><small>Nu voor</small><strong>SRD 2000</strong></div>
+      <div class="august-promo-options">
+        <div class="august-promo-option">
+          <b>Sweti, Dampu &amp; Relaxmassage</b>
+          <small>Actie geldig van 11 t/m 29 augustus.</small>
+        </div>
+        <div class="august-promo-option">
+          <b>Podoscrub, Sweti &amp; Relaxmassage</b>
+          <small>Actie geldig van 11 t/m 29 augustus.</small>
+        </div>
+      </div>
+      <p class="august-promo-valid">Laat ons weten waarvoor jij kiest via WhatsApp of telefoon: +597 871-2055 | 0491900.</p>
+      <div class="august-promo-actions">
+        <button type="button" onclick="bookAugustPromo('August Relaxation: Sweti, Dampu &amp; Relaxmassage - SRD 2,000')">Kies optie 1</button>
+        <button type="button" onclick="bookAugustPromo('August Relaxation: Podoscrub, Sweti &amp; Relaxmassage - SRD 2,000')">Kies optie 2</button>
+        <a href="#packages" onclick="closeAugustPromo()">Bekijk pakketten</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- HERO -->
 <section id="home" style="padding:0;background-image:url('./images/photo1.jpg');background-size:cover;background-position:center center;background-repeat:no-repeat;">
@@ -1240,9 +1305,9 @@ footer img[alt="Mokisa"]{
             <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Dampu</div><div class="pkg-row-price">SRD 1,545</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Relax</div><div class="pkg-row-price">SRD 1,495</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Sweti &amp; Deeptissue</div><div class="pkg-row-price">SRD 1,545</div></div>
-            <div class="pkg-row"><div class="pkg-row-name">Sweti, Dampu &amp; Relax</div><div class="pkg-row-price">SRD 2,235</div></div>
+            <div class="pkg-row august-promo-row"><div><div class="pkg-row-name">Sweti, Dampu &amp; Relaxmassage <span class="august-promo-badge">August actie</span></div><div class="pkg-row-sub">Actie geldig van 11 t/m 29 augustus</div></div><div class="pkg-row-price">SRD 2,000</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Sweti, Dampu &amp; Deeptissue</div><div class="pkg-row-price">SRD 2,285</div></div>
-            <div class="pkg-row"><div class="pkg-row-name">Sweti, Podosiri Scrub &amp; Relax</div><div class="pkg-row-price">SRD 2,285</div></div>
+            <div class="pkg-row august-promo-row"><div><div class="pkg-row-name">Podoscrub, Sweti &amp; Relaxmassage <span class="august-promo-badge">August actie</span></div><div class="pkg-row-sub">Actie geldig van 11 t/m 29 augustus</div></div><div class="pkg-row-price">SRD 2,000</div></div>
             <div class="pkg-row"><div class="pkg-row-name">Sweti, Podosiri Scrub &amp; Deeptissue</div><div class="pkg-row-price">SRD 2,335</div></div>
           </div>
           <div class="pkg-footer"><p class="pkg-note">*inclusief 10% BTW</p><button class="btn-sm" onclick="openBM()">Maak een afspraak</button></div>
@@ -1440,9 +1505,9 @@ footer img[alt="Mokisa"]{
               <option>Sweti &amp; Dampu — SRD 1,545</option>
               <option>Sweti &amp; Relax — SRD 1,495</option>
               <option>Sweti &amp; Deeptissue — SRD 1,545</option>
-              <option>Sweti, Dampu &amp; Relax — SRD 2,235</option>
+              <option>August Relaxation: Sweti, Dampu &amp; Relaxmassage - SRD 2,000</option>
               <option>Sweti, Dampu &amp; Deeptissue — SRD 2,285</option>
-              <option>Sweti, Podosiri Scrub &amp; Relax — SRD 2,285</option>
+              <option>August Relaxation: Podoscrub, Sweti &amp; Relaxmassage - SRD 2,000</option>
               <option>Sweti, Podosiri Scrub &amp; Deeptissue — SRD 2,335</option>
             </optgroup>
             <optgroup label="Dampu combinaties">
@@ -1520,14 +1585,14 @@ footer img[alt="Mokisa"]{
                 <option>Podosiri Scrub &amp; Relax — SRD 1,645</option>
                 <option>Podosiri Scrub &amp; Deep Tissue — SRD 1,695</option>
               </optgroup>
-              <optgroup label="Sweti combinaties">
-                <option>Sweti &amp; Dampu — SRD 1,545</option>
-                <option>Sweti &amp; Relax — SRD 1,495</option>
-                <option>Sweti &amp; Deeptissue — SRD 1,545</option>
-                <option>Sweti, Dampu &amp; Relax — SRD 2,235</option>
-                <option>Sweti, Dampu &amp; Deeptissue — SRD 2,285</option>
-                <option>Sweti, podosiri Scrub &amp; Relax — SRD 2,285</option>
-              </optgroup>
+            <optgroup label="Sweti combinaties">
+              <option>Sweti &amp; Dampu — SRD 1,545</option>
+              <option>Sweti &amp; Relax — SRD 1,495</option>
+              <option>Sweti &amp; Deeptissue — SRD 1,545</option>
+              <option>August Relaxation: Sweti, Dampu &amp; Relaxmassage - SRD 2,000</option>
+              <option>Sweti, Dampu &amp; Deeptissue — SRD 2,285</option>
+              <option>August Relaxation: Podoscrub, Sweti &amp; Relaxmassage - SRD 2,000</option>
+            </optgroup>
               <optgroup label="Dampu combinaties">
                 <option>Dampu &amp; Relax — SRD 1,595</option>
                 <option>Dampu &amp; Deeptissue — SRD 1,645</option>
@@ -1619,6 +1684,35 @@ window.openBM = function(){
 window.closeBM = function(){
   var modal = document.getElementById('bmodal');
   if(modal){ modal.classList.remove('on'); modal.style.display = 'none'; document.body.style.overflow = ''; }
+};
+
+window.openAugustPromo = function(){
+  var modal = document.getElementById('augustPromo');
+  if(modal){
+    modal.classList.add('on');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+};
+
+window.closeAugustPromo = function(){
+  var modal = document.getElementById('augustPromo');
+  if(modal){
+    modal.classList.remove('on');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+    sessionStorage.setItem('mokisaAugustPromoClosed','true');
+  }
+};
+
+window.bookAugustPromo = function(choice){
+  closeAugustPromo();
+  openBM();
+  var select = document.getElementById('wa_treatment');
+  if(select && choice){
+    select.value = choice;
+    select.dispatchEvent(new Event('change', {bubbles:true}));
+  }
 };
 
 window.sendWA = function(event){
@@ -1741,9 +1835,23 @@ document.addEventListener('DOMContentLoaded', function(){
   if(modal){
     modal.addEventListener('click', function(e){ if(e.target === modal) closeBM(); });
   }
+  var promo = document.getElementById('augustPromo');
+  if(promo){
+    promo.addEventListener('click', function(e){ if(e.target === promo) closeAugustPromo(); });
+    if(sessionStorage.getItem('mokisaAugustPromoClosed') !== 'true'){
+      setTimeout(openAugustPromo, 700);
+    }
+  }
   var firstGuest = document.getElementById('guestSection');
   if(firstGuest && !firstGuest.classList.contains('on')){
     setGuestSectionEnabled(firstGuest, false);
+  }
+});
+
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){
+    var promo = document.getElementById('augustPromo');
+    if(promo && promo.classList.contains('on')) closeAugustPromo();
   }
 });
 
