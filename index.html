@@ -1071,8 +1071,8 @@ footer img[alt="Mokisa"]{
       </div>
       <p class="august-promo-valid">Laat ons weten waarvoor jij kiest via WhatsApp of telefoon: +597 871-2055 | 0491900.</p>
       <div class="august-promo-actions">
-        <button type="button" onclick="bookAugustPromo('August Relaxation: Sweti, Dampu &amp; Relaxmassage - SRD 2,000')">Kies optie 1</button>
-        <button type="button" onclick="bookAugustPromo('August Relaxation: Podoscrub, Sweti &amp; Relaxmassage - SRD 2,000')">Kies optie 2</button>
+        <button type="button" data-promo-choice="August Relaxation: Sweti, Dampu & Relaxmassage - SRD 2,000" onclick="bookAugustPromo(this.dataset.promoChoice)">Kies optie 1</button>
+        <button type="button" data-promo-choice="August Relaxation: Podoscrub, Sweti & Relaxmassage - SRD 2,000" onclick="bookAugustPromo(this.dataset.promoChoice)">Kies optie 2</button>
         <a href="#packages" onclick="closeAugustPromo()">Bekijk pakketten</a>
       </div>
     </div>
@@ -1711,7 +1711,6 @@ window.closeAugustPromo = function(){
     modal.classList.remove('on');
     modal.setAttribute('aria-hidden','true');
     document.body.style.overflow = '';
-    sessionStorage.setItem('mokisaAugustPromoClosed','true');
   }
 };
 
@@ -1721,6 +1720,17 @@ window.bookAugustPromo = function(choice){
   var select = document.getElementById('wa_treatment');
   if(select && choice){
     select.value = choice;
+    if(select.value !== choice){
+      Array.prototype.slice.call(select.options).some(function(option){
+        var cleanOption = option.textContent.replace(/\s+/g,' ').trim();
+        var cleanChoice = choice.replace(/\s+/g,' ').trim();
+        if(cleanOption === cleanChoice){
+          select.value = option.value;
+          return true;
+        }
+        return false;
+      });
+    }
     select.dispatchEvent(new Event('change', {bubbles:true}));
   }
 };
@@ -1848,9 +1858,7 @@ document.addEventListener('DOMContentLoaded', function(){
   var promo = document.getElementById('augustPromo');
   if(promo){
     promo.addEventListener('click', function(e){ if(e.target === promo) closeAugustPromo(); });
-    if(sessionStorage.getItem('mokisaAugustPromoClosed') !== 'true'){
-      setTimeout(openAugustPromo, 700);
-    }
+    setTimeout(openAugustPromo, 700);
   }
   var firstGuest = document.getElementById('guestSection');
   if(firstGuest && !firstGuest.classList.contains('on')){
