@@ -964,12 +964,79 @@ footer img[alt="Mokisa"]{
   color:#72401E!important;
   font-family:"Myriad Pro","DM Sans",Arial,sans-serif!important;
 }
+
+/* CLOSURE POPUP - 2026-09-20 */
+.closure-popup{
+  position:fixed;
+  inset:0;
+  z-index:1550;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:1.2rem;
+  background:rgba(42,26,10,.56);
+  backdrop-filter:blur(10px);
+}
+.closure-popup.on{
+  display:flex;
+}
+.closure-popup-card{
+  position:relative;
+  width:min(520px,100%);
+  max-height:calc(100dvh - 2.4rem);
+  background:#fff;
+  border:1px solid rgba(114,64,30,.28);
+  box-shadow:0 30px 90px rgba(42,26,10,.32);
+  overflow:hidden;
+}
+.closure-popup-img{
+  display:block;
+  width:100%;
+  max-height:calc(100dvh - 2.4rem);
+  object-fit:contain;
+  background:#21130c;
+}
+.closure-popup-close{
+  position:absolute;
+  top:.7rem;
+  right:.7rem;
+  width:42px;
+  height:42px;
+  border:1px solid rgba(255,255,255,.62);
+  border-radius:50%;
+  background:rgba(15,9,5,.72);
+  color:#fff;
+  font-size:1.55rem;
+  line-height:1;
+  cursor:pointer;
+  box-shadow:0 8px 24px rgba(0,0,0,.28);
+  transition:background .2s ease,transform .2s ease;
+}
+.closure-popup-close:hover,
+.closure-popup-close:focus{
+  background:#72401E;
+  transform:scale(1.04);
+  outline:none;
+}
 @media(max-width:760px){
   .opening-hours li{
     font-size:.84rem!important;
   }
   .opening-note{
     font-size:.82rem!important;
+  }
+  .closure-popup{
+    padding:.85rem;
+  }
+  .closure-popup-card,
+  .closure-popup-img{
+    max-height:calc(100dvh - 1.7rem);
+  }
+  .closure-popup-close{
+    width:40px;
+    height:40px;
+    top:.55rem;
+    right:.55rem;
   }
 }
 
@@ -1365,6 +1432,14 @@ footer img[alt="Mokisa"]{
   </div>
 </footer>
 
+<!-- CLOSURE POPUP -->
+<div id="closurePopup" class="closure-popup" role="dialog" aria-modal="true" aria-label="Mokisa tijdelijk gesloten">
+  <div class="closure-popup-card">
+    <button class="closure-popup-close" type="button" aria-label="Sluit melding" onclick="closeClosurePopup()">×</button>
+    <img class="closure-popup-img" src="./images/closure-popup.jpeg" alt="Mokisa Wellness is gesloten van 22 september tot en met 5 oktober.">
+  </div>
+</div>
+
 <!-- BOOKING MODAL -->
 <div id="bmodal" class="booking-modal">
   <div class="booking-card">
@@ -1615,6 +1690,25 @@ window.closeBM = function(){
   if(modal){ modal.classList.remove('on'); modal.style.display = 'none'; document.body.style.overflow = ''; }
 };
 
+window.openClosurePopup = function(){
+  var modal = document.getElementById('closurePopup');
+  if(modal){
+    modal.classList.add('on');
+    document.body.style.overflow = 'hidden';
+  }
+};
+
+window.closeClosurePopup = function(){
+  var modal = document.getElementById('closurePopup');
+  var bookingModal = document.getElementById('bmodal');
+  if(modal){
+    modal.classList.remove('on');
+  }
+  if(!bookingModal || !bookingModal.classList.contains('on')){
+    document.body.style.overflow = '';
+  }
+};
+
 window.sendWA = function(event){
   if(event) event.preventDefault();
   var first = document.getElementById('wa_first').value.trim();
@@ -1735,6 +1829,14 @@ document.addEventListener('DOMContentLoaded', function(){
   if(modal){
     modal.addEventListener('click', function(e){ if(e.target === modal) closeBM(); });
   }
+  var closurePopup = document.getElementById('closurePopup');
+  if(closurePopup){
+    closurePopup.addEventListener('click', function(e){ if(e.target === closurePopup) closeClosurePopup(); });
+    window.setTimeout(openClosurePopup, 450);
+  }
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeClosurePopup();
+  });
   var firstGuest = document.getElementById('guestSection');
   if(firstGuest && !firstGuest.classList.contains('on')){
     setGuestSectionEnabled(firstGuest, false);
