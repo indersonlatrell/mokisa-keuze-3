@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://mokisawellness.com">
 <meta name="twitter:card" content="summary_large_image">
  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&amp;family=DM+Sans:wght@200;300;400;500&amp;display=swap" rel="stylesheet">
 <style>
 .crafted-by-zenta {
   display: inline-flex;
@@ -965,78 +965,12 @@ footer img[alt="Mokisa"]{
   font-family:"Myriad Pro","DM Sans",Arial,sans-serif!important;
 }
 
-/* CLOSURE POPUP - 2026-09-20 */
-.closure-popup{
-  position:fixed;
-  inset:0;
-  z-index:1550;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:1.2rem;
-  background:rgba(42,26,10,.56);
-  backdrop-filter:blur(10px);
-}
-.closure-popup.on{
-  display:flex;
-}
-.closure-popup-card{
-  position:relative;
-  width:min(520px,100%);
-  max-height:calc(100dvh - 2.4rem);
-  background:#fff;
-  border:1px solid rgba(114,64,30,.28);
-  box-shadow:0 30px 90px rgba(42,26,10,.32);
-  overflow:hidden;
-}
-.closure-popup-img{
-  display:block;
-  width:100%;
-  max-height:calc(100dvh - 2.4rem);
-  object-fit:contain;
-  background:#21130c;
-}
-.closure-popup-close{
-  position:absolute;
-  top:.7rem;
-  right:.7rem;
-  width:42px;
-  height:42px;
-  border:1px solid rgba(255,255,255,.62);
-  border-radius:50%;
-  background:rgba(15,9,5,.72);
-  color:#fff;
-  font-size:1.55rem;
-  line-height:1;
-  cursor:pointer;
-  box-shadow:0 8px 24px rgba(0,0,0,.28);
-  transition:background .2s ease,transform .2s ease;
-}
-.closure-popup-close:hover,
-.closure-popup-close:focus{
-  background:#72401E;
-  transform:scale(1.04);
-  outline:none;
-}
 @media(max-width:760px){
   .opening-hours li{
     font-size:.84rem!important;
   }
   .opening-note{
     font-size:.82rem!important;
-  }
-  .closure-popup{
-    padding:.85rem;
-  }
-  .closure-popup-card,
-  .closure-popup-img{
-    max-height:calc(100dvh - 1.7rem);
-  }
-  .closure-popup-close{
-    width:40px;
-    height:40px;
-    top:.55rem;
-    right:.55rem;
   }
 }
 
@@ -1117,7 +1051,7 @@ footer img[alt="Mokisa"]{
       <p class="s-body">Elke behandeling bij Mokisa is diep geworteld in traditionele kennis, die al generaties lang liefdevol wordt doorgegeven.</p>
       <p class="s-body">Alle prijzen zijn inclusief 10% BTW.</p>
       <div class="about-nums">
-        <div class="about-num"><div class="n">6+</div><div class="l">Behandelingen</div></div>
+        <div class="about-num"><div class="n">7+</div><div class="l">Behandelingen</div></div>
         <div class="about-num"><div class="n">15+</div><div class="l">Pakketten</div></div>
         <div class="about-num"><div class="n">100%</div><div class="l">Natuurlijke kruiden</div></div>
       </div>
@@ -1140,7 +1074,7 @@ footer img[alt="Mokisa"]{
     <button class="treatment-select-btn on" type="button" onclick="showTreatmentGroup(event,'traditional')">
       <span class="ts-kicker">Traditioneel</span>
       <span class="ts-title">Traditionele behandelingen</span>
-      <span class="ts-note">Sweti · Dampu · Ali Skin · Podosiri</span>
+      <span class="ts-note">Sweti · Dampu · Ali Skin · Podosiri · Bakapasi</span>
     </button>
     <button class="treatment-select-btn" type="button" onclick="showTreatmentGroup(event,'regular')">
       <span class="ts-kicker">Regulier</span>
@@ -1200,7 +1134,7 @@ footer img[alt="Mokisa"]{
             <div class="t-content">
               <div class="t-pill">Vaginale Stoom</div>
               <div class="t-name">Bakapasi</div>
-              <p class="t-desc">Is een stoombad van gekochte traditionele kruiden voor de vaginale reiniging waarbij de vrouw op een nachtemmer zit, zich tot haar middel bedekt met een pangi en zo de stoom tot haar neemt. Zo een stoombad dient onder andere de resterende bloedresten na de bevalling/menstruatie te verwijderen en de baar-moeder te laten samentrekken.</p>
+              <p class="t-desc">Een traditioneel stoombad van gekookte kruiden voor de intieme verzorging van de vrouw. Tijdens de behandeling neemt de vrouw plaats boven de warme kruidenstoom en bedekt zij zich tot haar middel met een pangi. Binnen de traditionele Marroncultuur wordt Bakapasi onder andere toegepast na de menstruatie of bevalling als onderdeel van een traditioneel reinigings- en herstelritueel.</p>
               <div class="t-price">SRD 700 <small>incl. BTW</small></div>
             </div>
             <div class="t-image"><img src="images/Bakapasi.png" alt="Baka pasi"></div>
@@ -1400,7 +1334,7 @@ footer img[alt="Mokisa"]{
       <div class="foot-col-title">Behandelingen</div>
       <ul class="foot-links">
         <li>Sweti</li><li>Dampu</li><li>Ali Skin</li>
-        <li>Deep Tissue</li><li>Relax Massage</li><li>Podosiri</li>
+        <li>Deep Tissue</li><li>Relax Massage</li><li>Podosiri</li><li>Bakapasi</li>
       </ul>
     </div>
     <div>
@@ -1431,14 +1365,6 @@ footer img[alt="Mokisa"]{
     <span class="foot-copy">All prices incl. 10% BTW · Paramaribo, Suriname</span>
   </div>
 </footer>
-
-<!-- CLOSURE POPUP -->
-<div id="closurePopup" class="closure-popup" role="dialog" aria-modal="true" aria-label="Mokisa tijdelijk gesloten">
-  <div class="closure-popup-card">
-    <button class="closure-popup-close" type="button" aria-label="Sluit melding" onclick="closeClosurePopup()">×</button>
-    <img class="closure-popup-img" src="./images/closure-popup.jpeg" alt="Mokisa Wellness is gesloten van 22 september tot en met 5 oktober.">
-  </div>
-</div>
 
 <!-- BOOKING MODAL -->
 <div id="bmodal" class="booking-modal">
@@ -1491,6 +1417,7 @@ footer img[alt="Mokisa"]{
               <option>Dampu — SRD 850</option>
               <option>Ali Skin — SRD 950</option>
               <option>Podosiri Scrub — SRD 900</option>
+              <option>Bakapasi — SRD 700</option>
             </optgroup>
             <optgroup label="Reguliere behandelingen">
               <option>Deep Tissue — SRD 850</option>
@@ -1573,6 +1500,7 @@ footer img[alt="Mokisa"]{
                 <option>Dampu — SRD 850</option>
                 <option>Ali Skin — SRD 950</option>
                 <option>Podosiri Scrub — SRD 900</option>
+                <option>Bakapasi — SRD 700</option>
               </optgroup>
               <optgroup label="Reguliere behandelingen">
                 <option>Deep Tissue — SRD 850</option>
@@ -1688,25 +1616,6 @@ window.openBM = function(){
 window.closeBM = function(){
   var modal = document.getElementById('bmodal');
   if(modal){ modal.classList.remove('on'); modal.style.display = 'none'; document.body.style.overflow = ''; }
-};
-
-window.openClosurePopup = function(){
-  var modal = document.getElementById('closurePopup');
-  if(modal){
-    modal.classList.add('on');
-    document.body.style.overflow = 'hidden';
-  }
-};
-
-window.closeClosurePopup = function(){
-  var modal = document.getElementById('closurePopup');
-  var bookingModal = document.getElementById('bmodal');
-  if(modal){
-    modal.classList.remove('on');
-  }
-  if(!bookingModal || !bookingModal.classList.contains('on')){
-    document.body.style.overflow = '';
-  }
 };
 
 window.sendWA = function(event){
@@ -1829,14 +1738,6 @@ document.addEventListener('DOMContentLoaded', function(){
   if(modal){
     modal.addEventListener('click', function(e){ if(e.target === modal) closeBM(); });
   }
-  var closurePopup = document.getElementById('closurePopup');
-  if(closurePopup){
-    closurePopup.addEventListener('click', function(e){ if(e.target === closurePopup) closeClosurePopup(); });
-    window.setTimeout(openClosurePopup, 450);
-  }
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape') closeClosurePopup();
-  });
   var firstGuest = document.getElementById('guestSection');
   if(firstGuest && !firstGuest.classList.contains('on')){
     setGuestSectionEnabled(firstGuest, false);
@@ -1866,6 +1767,7 @@ var I18N_NL_TO_EN = {
   "Alle prijzen zijn inclusief 10% BTW.":"All prices include 10% VAT.",
   "Wat wij aanbieden":"What we offer","Individuele":"Individual","Traditioneel":"Traditional","Regulier":"Regular",
   "Marron Tradities":"Maroon Traditions","Kruidenwrap":"Herbal Wrap","Therapeutisch":"Therapeutic",
+  "Vaginale Stoom":"Vaginal Steam",
   "Gecombineerde":"Combined","Kinderbehandelingen":"Kids Treatments",
   "Kies eerst een categorie. Daarna verschijnen de behandelingen die daarbij horen. Alle prijzen zijn inclusief 10% BTW.":"First choose a category to view the treatments available. All prices include 10% VAT.",
   "Combineer behandelingen voor een complete wellnesservaring. Alle prijzen zijn inclusief 10% BTW.":"Combine treatments for a complete wellness experience. All prices include 10% VAT.",
@@ -1873,6 +1775,7 @@ var I18N_NL_TO_EN = {
   "Het lichaam wordt gedept met een doek gedrenkt in een heet kruidenaftreksel. Hierbij worden dode huidcellen verwijderd en de lichaamsporiën geopend en gereinigd. Verder komt het lichaam volledig tot rust en wordt een gezonde bloed- en zuurstofcirculatie in het lichaam bevorderd.":"The body is gently dabbed with a cloth soaked in a hot herbal infusion. This helps remove dead skin cells and open and cleanse the pores. The treatment also allows the body to fully relax while supporting healthy blood and oxygen circulation throughout the body.",
   "Therapeutische massage met traditionele Marron technieken. Gericht op nek-, schouder- en rugpijn, gespannen spieren en vastzittende blokkades.":"Therapeutic massage with traditional Maroon techniques. Focused on neck, shoulder and back pain, tense muscles and stubborn blockages.",
   "Volledige bodyscrub met açaí-extract om dode huidcellen en andere stoffen op het lichaam te verwijderen. Ondersteunt detox en geeft de huid een frisse, gezonde glow en laat de huid weer gezond ademen.":"Full body scrub with açaí extract to remove dead skin cells and other impurities from the body. Supports detox, gives the skin a fresh, healthy glow and lets the skin breathe healthily again.",
+  "Een traditioneel stoombad van gekookte kruiden voor de intieme verzorging van de vrouw. Tijdens de behandeling neemt de vrouw plaats boven de warme kruidenstoom en bedekt zij zich tot haar middel met een pangi. Binnen de traditionele Marroncultuur wordt Bakapasi onder andere toegepast na de menstruatie of bevalling als onderdeel van een traditioneel reinigings- en herstelritueel.":"A traditional steam bath prepared with boiled herbs for women's intimate care. During the treatment, the woman sits above the warm herbal steam and covers herself up to the waist with a pangi. Within Maroon tradition, Bakapasi is used after menstruation or childbirth as part of a traditional cleansing and recovery ritual.",
   "Massage en Ontspanning":"Massage and Relaxation",
   "Klassieke massages voor spierherstel, ontspanning en het loslaten van spanning in het lichaam.":"Classic massages for muscle recovery, relaxation and releasing tension in the body.",
   "Massage voor betere doorbloeding, het losmaken van spierblokkades, vermindering van lichaamspijn en diepe verlichting van spanning.":"Massage for better circulation, releasing muscle blockages, reducing body pain and deeply relieving tension.",
